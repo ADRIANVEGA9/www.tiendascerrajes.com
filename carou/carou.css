@@ -1,0 +1,92 @@
+/*------------ @font-face ------------------*/
+@font-face{
+font-family:'TChevin';
+src: url('../fonts/Chevin-Medium.otf')   format('opentype');
+}
+/*------------------ETIQUETAS-----------------*/
+body{
+	margin: 0;
+}
+img{
+	border:0;
+	text-decoration: none;
+}
+#anterior{
+	float: left;
+	left: 0px;
+	position: relative;
+	top: -75px;
+	display: none;
+}
+#siguiente{
+	float: right;
+	position: relative;
+	right: 0px;
+	top: -75px;
+	display: none;
+}
+.list_carousel {
+	background-color: #FFF;
+	box-shadow: 0 0 0px #1B1B1F;
+	color: #71BF44;
+	font-family: "TChevin","Trebuchet MS";
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 30px;
+	margin: 0 auto;
+	margin: 0;
+	padding: 0px;
+	width: 657px;
+}
+.list_carousel ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: block;
+}
+.list_carousel li {
+	border: none;
+	color: #7E8083;/*COLOR TEXTO*/
+	display: block;
+	float: left;
+	font-family: "TChevin","Trebuchet MS";
+	font-size: 11px;
+	height: 122px;
+	margin: 7px;
+	padding: 0;
+	text-align: justify;
+	width: 152px;
+}
+.list_carousel li a{
+	border: none;
+	color: #7E8083;/*COLOR TEXTO*/
+	display: block;
+	float: left;
+	font-family: "TChevin","Trebuchet MS";
+	font-size: 11px;
+	height: 122px;
+	margin: 10px;
+	padding: 0;
+	width: 152px;
+}
+.list_carousel li p{/*quitar el doble espacio en p*/
+	margin: 0;
+	line-height: 12px;
+}
+.clearfix {
+	float: none;
+	clear: both;
+}
+.prev {
+	margin-left: 10px;
+	line-height: 20px;
+}
+.next {
+	margin-right: 10px;
+	line-height: 20px;
+}
+.timer {
+	background-color: #999;
+	height: 6px;
+	width: 0px;
+}
