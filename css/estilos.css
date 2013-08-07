@@ -1528,14 +1528,14 @@ color: #333;
 	vertical-align: top;
 }
 .sublinea {
-	background: #71BF44 !important;
-	color: #FFF !important;
+	background: #EFE !important;
+	color: #71BF44 !important;
 	float: right;
 	line-height: 40px;
-	width: 90% !important;
+	transition: all 5s ease;
+	/*width: 90% !important;*/
 }
 .sublinea:hover, .sublineaActivo {
-	border-bottom: 1px solid #DDD;
 	color: #2E3B4D !important;
 }
 .verde

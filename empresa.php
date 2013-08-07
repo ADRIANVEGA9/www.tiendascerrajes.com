@@ -60,12 +60,12 @@ var IE7_PNG_SUFFIX = ".png";
 								<br><br><br>
 								<p>Tiendas Cerrajes nace con la fusión de Chapas y Herrajes del Centro y la visión de Grupo Cerrajes debido a las nuevas necesidades de diseño que hoy por hoy rigen en el mundo.</p>
 								<br><br><p>El nuevo concepto que hemos desarrollado “Tiendas Cerrajes”, hace más sencillo, fácil y creativo, para ti como nuestro cliente y amigo, el diseño integral de tus espacios, acercándote un nuevo mercado de menudeo con nuevos y más innovadores productos y servicios que le darán ese gran toque especial a tus proyectos</p>
-								<br><br><p>Tiendas Cerrajes, ha desarrollado su propia página web: www.tiendascerrajes.com donde podrás obtener información sobre nuestros productos, promociones exclusivas, tendencias y diseño, noticias, tips, manuales  y fichas técnicas del producto, así como enlaces en redes sociales como Facebook donde podrás interactuar, comentar y compartir experiencias con otros de nuestros amigos.</p>
+								<br><br><p>Tiendas Cerrajes, ha desarrollado su propio sitio web: www.tiendascerrajes.com donde podrás obtener información sobre nuestros productos, promociones exclusivas, tendencias y diseño, noticias, tips, manuales  y fichas técnicas del producto, así como enlaces en redes sociales como Facebook donde podrás interactuar, comentar y compartir experiencias con otros de nuestros amigos.</p>
 							</section>
 							<section id="qs2" >
 								<br><br>
 								<span>Misi&oacute;n</span>
-								<br><br><p>Sobrepasar las expectativas de nuestros clientes en herrajes y soluciones integrales a través de alternativas innovadoras que den un compromiso de servicio con excelencia por parte de cada uno de nuestros asociados, creando en cada hogar un espacio Cerrajes®</p>
+								<br><br><p>Sobrepasar las expectativas de nuestros clientes en herrajes, soluciones integrales y alternativas innovadoras.<br><br>A través del compromiso de nuestro equipo de asociados para proporcionar un servicio de excelencia, creando en cada hogar un espacio Tiendas Cerrajes<!-- ® --></p>
 								<br><br>
 								<span>visi&oacute;n</span>
 								<br><br><p>Ser la mejor unidad de negocio del grupo Cerrajes a través de su talento humano, un espacio creativo, innovador y con éxito comercial.</p>

@@ -21,14 +21,14 @@ if (isset($txt_criterio)) {
 //Ya no usamos la clásica query de consulta como mysql_query ahora por definición de la función creada por adodb usamos la siguiente:
 $query= $db->Execute("SELECT    tblIC_Producto.Clave_Producto, Descripcion2, Descripcion, Foto, tblIC_ProductoPrecio.Precio,  Peso, Clave_Categoria, Clave_Categoria_Sub_1, cAlto, cAncho, cLargo, cMaterial, cAcabados, cMedida, cDescripcion3, Clave_UM, Comentario, clave_proveedor
 
-FROM         tblIC_Producto  INNER JOIN
-          tblIC_ProductoPrecio ON tblIC_Producto.Clave_Producto = tblIC_ProductoPrecio.Clave_Producto
-WHERE
-(dbo.tblIC_ProductoPrecio.Lista_Precio = 1) AND
-/*(dbo.tblIC_Producto.Peso > 0) AND*/
-((dbo.tblIC_Producto.Descripcion LIKE '%" . $txt_criterio . "%') OR (dbo.tblIC_Producto.Clave_Producto LIKE '%" . $txt_criterio . "%'))
-ORDER BY
-tblIC_Producto.Clave_Producto ASC");
+		FROM         tblIC_Producto  INNER JOIN
+		          tblIC_ProductoPrecio ON tblIC_Producto.Clave_Producto = tblIC_ProductoPrecio.Clave_Producto
+		WHERE
+		(dbo.tblIC_ProductoPrecio.Lista_Precio = 1) AND
+		/*(dbo.tblIC_Producto.Peso > 0) AND*/
+		((dbo.tblIC_Producto.Descripcion LIKE '%" . $txt_criterio . "%') OR (dbo.tblIC_Producto.Clave_Producto LIKE '%" . $txt_criterio . "%'))
+		ORDER BY
+		tblIC_Producto.Clave_Producto ASC");
 
 // Verificamos si hemos realizado bien nuestro Query
 if(!$query){
@@ -107,7 +107,7 @@ var IE7_PNG_SUFFIX = ".png";
 						{
 					$precio = number_format($row["Precio"], 2, '.', ',');
 				  	$peso = number_format($row["Peso"], 2, '.', ',');
-				  	$precioIVA=($precio)*(1.16);
+				  	$precioIVA=number_format((($precio)*(1.16)), 2, '.', ',');
 				  	$b=$k+1;
 						 //echo $b."<br>";
 					     // echo "C&oacute;digo: ".$row["Clave_Producto"]."<br>";
