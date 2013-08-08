@@ -153,7 +153,7 @@ Shadowbox.init({
 													if (($row_menusublinea['sublinea'])==($id_sublinea))
 													{
 													?>
-														<a class="sublinea sublineaActivo" href="producto.php?id=<?php echo $row_linea['id']; ?>&id_sublinea=<?php echo $row_menusublinea['sublinea'];?>">
+														<a class="sublinea sublineaActivo" >
 													<?	echo $row_menusublinea['descripcion'].'</a>'; 
 													} else
 													{
