@@ -38,52 +38,34 @@ $query_menul= $db->Execute("SELECT t_sublinea.id_linea, t_sublinea.id, t_linea.d
 							 WHERE
 							 t_sublinea.id = 1
 							 ORDER BY t_sublinea.id_linea ASC");
-
 // Verificamos si hemos realizado bien nuestro Query
 if(!$query_menul){
 exit("Error en la consulta SQL");
 }
 
 $query_menusublinea= $db->Execute("SELECT id, sublinea, descripcion FROM t_sublinea WHERE id_linea = '$id' ORDER BY sublinea");
-
 // Verificamos si hemos realizado bien nuestro Query
 if(!$query_menusublinea){
 exit("Error en la consulta SQL");
 }
 
-// mysql_select_db($database_productos, $productos);
-// $query_menul = sprintf("SELECT t_sublinea.id_linea, t_sublinea.id, t_linea.descripcion, t_sublinea.sublinea, t_sublinea.descripcion as 'descripcion_sublinea' FROM t_sublinea
-// INNER JOIN t_linea ON t_sublinea.id_linea = t_linea.id
-// WHERE
-// t_sublinea.id = 1
-// ORDER BY t_sublinea.id_linea ASC");
-// $menul = mysql_query($query_menul, $productos) or die(mysql_error());
-// $row_menul = mysql_fetch_assoc($menul);
-// $totalRows_menul = mysql_num_rows($menul);
+$query_linea= $db->Execute("SELECT * FROM t_linea WHERE id = '$id'");
+// Verificamos si hemos realizado bien nuestro Query
+if(!$query_linea){
+exit("Error en la consulta SQL");
+}
 
-// mysql_select_db($database_productos, $productos);
-// $query_linea = sprintf("SELECT * FROM t_linea WHERE id = '$id'");
-// $linea = mysql_query($query_linea, $productos) or die(mysql_error());
-// $row_linea = mysql_fetch_assoc($linea);
-// $totalRows_linea = mysql_num_rows($linea);
-
-// mysql_select_db($database_productos, $productos);
-// $query_sublinea = sprintf("SELECT * FROM t_sublinea WHERE id_linea = '$id'");
-// $sublinea = mysql_query($query_sublinea, $productos) or die(mysql_error());
-// $row_sublinea = mysql_fetch_assoc($sublinea);
-// $totalRows_sublinea = mysql_num_rows($sublinea);
-
-// mysql_select_db($database_productos, $productos);
-// $query_txtsublinea = sprintf("SELECT * FROM t_sublinea WHERE id_linea = '$id' AND sublinea = '$id_sublinea'");
-// $txtsublinea = mysql_query($query_txtsublinea, $productos) or die(mysql_error());
-// $row_txtsublinea = mysql_fetch_assoc($txtsublinea);
-// $totalRows_txtsublinea = mysql_num_rows($txtsublinea);
-
-// mysql_select_db($database_productos, $productos);
-// $query_menusublinea = sprintf(" SELECT id, sublinea, descripcion FROM t_sublinea WHERE id_linea = '$id' ORDER BY sublinea");
-// $menusublinea = mysql_query($query_menusublinea, $productos) or die(mysql_error());
-// $row_menusublinea = mysql_fetch_assoc($menusublinea);
-// $totalRows_menusublinea = mysql_num_rows($menusublinea);
+$query_txtsublinea= $db->Execute("SELECT t_linea.descripcion, t_sublinea.descripcion AS 'descripcion_sublinea', t_sublinea.frase, t_sublinea.sublinea, t_sublinea.id_linea
+				FROM
+				t_linea
+				INNER JOIN t_sublinea ON t_linea.id = t_sublinea.id_linea
+				WHERE
+				t_sublinea.id_linea = '$id' AND
+				t_sublinea.sublinea = '$id_sublinea'");
+// Verificamos si hemos realizado bien nuestro Query
+if(!$query_txtsublinea){
+exit("Error en la consulta SQL");
+}
 
 // mysql_select_db($database_productos, $productos);
 // $query_product = sprintf("SELECT * FROM t_productos WHERE id_linea = '$id' AND id_sublinea = '$id_sublinea'");
@@ -159,32 +141,35 @@ Shadowbox.init({
 											}
 											?>
 							<?php }
-							exit("&nbsp;");
 							 ?>
 						</ul>
 					</article>
 				</article>
 				<article id="c_derP">
  <!-- cuando ya se ha seleccionado alguna sublinea entonces esta con valor <> 99 / si la linea no tiene sublineas entra directo a productos y el total de sublineas entonces es =1 por lo cual sublinea =99-->
-<!-- 						<section id="textoP"> 
+						<section id="textoP"> 
 							<span> 
 							<?php 
-								if ($row_sublinea['sublinea'] <> 99) 
+							foreach($query_txtsublinea as $k => $row_txtsublinea)
+							{
+								if ($id_sublinea <> 99) 
 									{
-										echo $row_linea['descripcion'].' . ';
-										echo $row_txtsublinea['descripcion'].' ';  
+										echo $row_txtsublinea['descripcion'].' . ';
+										echo $row_txtsublinea['descripcion_sublinea'].' ';  
 									}
 								else
 									{
-										echo $row_linea['descripcion'];
+										echo $row_txtsublinea['descripcion'];
 									}
 							?>
 							</span>
-							<p ><?php echo $row_txtsublinea['frase'];  ?></p>
-							<br>
-							<p><?php echo $row_txtsublinea['texto'];  ?></p>
+								<p ><?php echo $row_txtsublinea['frase'];  ?></p>
+								<br>
+								<p><?php echo $row_txtsublinea['texto'];  ?></p>
+							<?php
+							} ?>
 						</section>
-						<?php if ($totalRows_product>0)
+<!-- 						<?php if ($totalRows_product>0)
 						{ ?>
 							<div id="itemCampos">
 								<article id="item_imagen">Imagen</article>
@@ -216,6 +201,7 @@ Shadowbox.init({
 				</article>
 			</article>
 		</div>	
+<?php exit("&nbsp;"); ?>
 	</div>
 </body>
 </html>
