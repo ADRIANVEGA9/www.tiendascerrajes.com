@@ -3,6 +3,15 @@
 $m=10;
 //Mandamos llamar este archivo donde contiene la cadena de conexión a SQL Server
 include("sqlserver.inc.php");  
+
+/***VARIABLES POR GET ***/
+$numero1 = count($_GET);
+$tags1 = array_keys($_GET);// obtiene los nombres de las varibles
+$valores1 = array_values($_GET);// obtiene los valores de las varibles
+
+for($i=0;$i<$numero1;$i++){// crea las variables y les asigna el valor
+$$tags1[$i]=$valores1[$i];
+}
 /***VARIABLES POR POST ***/
 $numero = count($_POST);
 $tags = array_keys($_POST); // obtiene los nombres de las varibles
@@ -13,10 +22,10 @@ $$tags[$i]=$valores[$i];
 }
 /*ahora solo hay que llamar las variables por su nombre*/
 
-if (isset($txt_criterio)) {
+if ($txt_criterio<>"") {
   $txt_criterio = $txt_criterio;
 } else {
-	$txt_criterio='06010377';
+	$txt_criterio='cerrajes';
 }
 //Ya no usamos la clásica query de consulta como mysql_query ahora por definición de la función creada por adodb usamos la siguiente:
 $query= $db->Execute("SELECT    tblIC_Producto.Clave_Producto, Descripcion2, Descripcion, Foto, tblIC_ProductoPrecio.Precio,  Peso, Clave_Categoria, Clave_Categoria_Sub_1, cAlto, cAncho, cLargo, cMaterial, cAcabados, cMedida, cDescripcion3, Clave_UM, Comentario, clave_proveedor
@@ -128,7 +137,7 @@ var IE7_PNG_SUFFIX = ".png";
 									<div id="itm">
 										<section><?php echo $row['registros']; ?></section>
 										<figure id="itm_imagen"> <img src="ver/ver.php?codigo=<?php echo $row['Clave_Producto'];  ?>"/> </figure>
-										<article id="itm_nombre"><?php echo $row['clave_proveedor'];  ?></article>
+										<article id="itm_nombre"><?php echo $row['Descripcion2'];  ?></article>
 										<article id="itm_codigo"><?php echo $row["Clave_Producto"];  ?></article>
 										<article id="itm_descripcion"><?php echo $row["Descripcion"];  ?></article>
 										<figure id="itm_ficha"> <img src="imagenesSitio/productos/adobe.jpg"> </figure>

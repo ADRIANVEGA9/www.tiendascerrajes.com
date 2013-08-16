@@ -11,6 +11,16 @@ src: url('../fonts/Chevin-Light.otf')   format('opentype');
 font-family:'TChevinThin';
 src: url('../fonts/Chevin-Thin.otf')   format('opentype');
 }
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 @keyframes cfFadeInOut {
     0% {
       opacity:1;
@@ -115,6 +125,14 @@ td
 }
 
 /* -----------  #id's  ------------- */
+#btn_buscar{
+	background: url(../imagenesSitio/busca.jpg) no-repeat center;
+	background-color: #7AC143;
+	float: left;
+	height: 100%;
+	vertical-align: middle;
+	width: 30px
+}
 #buscador {
 	display: inline-block;
 	float: right;
@@ -153,18 +171,19 @@ td
 	top: -3px;
 }
 #buscadorT input[type="text"]{
-	background: none;
-	.background-color: #D2D2D2;
+	background: #DDD;
 	border: none;
 	color: #2E3B4D;
-	height: 20px;
+	display: inline-block;
+	float: left;
+	height: 23px;
 	margin: 0;
 	outline: 0;
 	padding: 2px;
-	position: absolute;
+	position: relative;
 	text-decoration: none;
 	vertical-align: middle;
-	width: 155px;
+	width: 150px;
 }
 #buscadorF {/*utilizado para centrar verticalmente la imagen del buscador*/
 	float: left;
@@ -533,6 +552,10 @@ td
 	height: 430px;
 	text-align: center;
 	margin-top: 150px;
+}
+#form_buscar{
+	height: 27px;
+	width: 200px;
 }
 #imagenNP {
 	display: inline-block;
@@ -1170,7 +1193,7 @@ td
 	font-size: 11px;
 	height: 406px;
 	overflow: hidden;
-	width: 29.3%;
+	width: 29%;
 }
 #sbit_info figure
 {
@@ -1418,6 +1441,27 @@ color: #333;
 	cursor:pointer;
 	height: 42px; 
 	width: 124px; 
+}
+.btn {
+	border: 1px solid transparent;
+	display: inline-block;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 0;
+	padding: 0px 6px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+}
+.btn-primary {
+	background-color: #78BD42;
+	border-color: #7AC143;
+	color: #fff;
+}
+.btn-primary:hover {
+	background-color: #7AC143;
+	border-color: #68A33A;
+	color: #fff;
 }
 .curved-hz-1:before 
 {
