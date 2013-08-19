@@ -33,11 +33,11 @@ if (isset($id_sublinea)) {
 }
 
 //Ya no usamos la clásica query de consulta como mysql_query ahora por definición de la función creada por adodb usamos la siguiente:
-$query_menul= $db->Execute("SELECT t_sublinea.id_linea, t_sublinea.id, t_linea.descripcion, t_sublinea.sublinea, t_sublinea.descripcion as 'descripcion_sublinea' FROM t_sublinea
-							 INNER JOIN t_linea ON t_sublinea.id_linea = t_linea.id
-							 WHERE
-							 t_sublinea.id = 1
-							 ORDER BY t_sublinea.id_linea ASC");
+$query_menul= $db->Execute("SELECT t_sublinea.id_linea, t_sublinea.id, t_linea.descripcion, t_sublinea.sublinea, t_sublinea.descripcion as 'descripcion_sublinea' 
+							FROM t_sublinea	INNER JOIN t_linea ON t_sublinea.id_linea = t_linea.id
+							WHERE
+							t_sublinea.id = 1
+							ORDER BY t_sublinea.id_linea ASC");
 // Verificamos si hemos realizado bien nuestro Query
 if(!$query_menul){
 exit("Error en la consulta SQL");
@@ -67,11 +67,12 @@ if(!$query_txtsublinea){
 exit("Error en la consulta SQL");
 }
 
-// mysql_select_db($database_productos, $productos);
-// $query_product = sprintf("SELECT * FROM t_productos WHERE id_linea = '$id' AND id_sublinea = '$id_sublinea'");
-// $product = mysql_query($query_product, $productos) or die(mysql_error());
-// $row_product = mysql_fetch_assoc($product);
-// $totalRows_product = mysql_num_rows($product);
+$query_product= $db->Execute("SELECT * FROM tblIC_Producto WHERE cid_linea = '$id' AND cid_sublinea = '$id_sublinea'");
+				$totalRows_product = $query_product->_numOfRows;//Conocer el numero de registros en la consulta
+// Verificamos si hemos realizado bien nuestro Query
+if(!$query_product){
+exit("Error en la consulta SQL");
+}
 
 ?>
 <?php $m=2; ?>
@@ -169,7 +170,7 @@ Shadowbox.init({
 							<?php
 							} ?>
 						</section>
-<!-- 						<?php if ($totalRows_product>0)
+						<?php if ($totalRows_product>0)
 						{ ?>
 							<div id="itemCampos">
 								<article id="item_imagen">Imagen</article>
@@ -180,24 +181,23 @@ Shadowbox.init({
 								<article id="item_carrito">Comprar</article>
 								<article id="item_precio">Precio</article>
 							</div>
-							<?php 
-								do 
+ 							<?php 
+								foreach($query_product as $k => $row_product) 
 								{ ?>
 									<div id="itm">
-									<a href=".itemA.php?id=<?php echo $row_product['codigo'];  ?>&line=<?php echo $row_product['id_linea'];  ?>&subline=<?php echo $row_product['id_sublinea'];  ?>" rel="shadowbox[item];width=800;height=488">
-										<figure id="itm_imagen">  <img src="ver/ver.php?codigo=<?php echo $row_product['codigo'];  ?>"/> </figure>
-										<article id="itm_nombre"><?php echo $row_product['nombre'];  ?></article>
-										<article id="itm_codigo"><?php echo $row_product['codigo'];  ?></article>
-										<article id="itm_descripcion"><?php echo $row_product['descripcion'];  ?></article>
+									<a href=".itemA.php?id=<?php echo $row_product['Clave_producto'];  ?>&line=<?php echo $row_product['cid_linea'];  ?>&subline=<?php echo $row_product['cid_sublinea'];  ?>" rel="shadowbox[item];width=800;height=488">
+										<figure id="itm_imagen">  <img src="ver/ver.php?codigo=<?php echo $row_product['Clave_producto'];  ?>"/> </figure>
+										<article id="itm_nombre"><?php echo $row_product['Descripcion2'];  ?></article>
+										<article id="itm_codigo"><?php echo $row_product['Clave_producto'];  ?></article>
+										<article id="itm_descripcion"><?php echo $row_product['Descripcion'];  ?></article>
 									</a>
 										<figure id="itm_ficha"><a href="#"> <img src="imagenesSitio/productos/adobe.jpg"> </a></figure>
 										<figure id="itm_carrito"><a href="#"> <img src="imagenesSitio/productos/carrito.jpg"> </a></figure>
 										<article id="itm_precio"> $999,999.99</article>
 									</div>
 							<?php } 
-									while ($row_product = mysql_fetch_assoc($product));
 						} //end if 
-								?> -->
+								?> 
 				</article>
 			</article>
 		</div>	
