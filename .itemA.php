@@ -64,42 +64,38 @@ $totalRows_sublinea = mysql_num_rows($sublinea);
 </head>
 <body style="background-color: rgba(255, 255, 255, 0.90)">
 
-    <section id="item">
-	<div class="drop-shadow curved curved-hz-1"></div>
-        	<section id="sbit_titulo">
-	          <section id="sbit_nombre"><span><?php echo $row_product['nombre'];  ?></span></section>
-	          <section id="sbit_familia"><span><?php echo $row_sublinea['descripcion']; ?></span></section>
-          </section>
-          <section id="sbit_cuerpo">
-          		<section id="sbit_imagen">
-                <section id="sbit_imgcentrar">
-                  <img src="ver/ver.php?codigo=<?php echo $row_product['codigo'];  ?>">
-                </section>
-              </section>
-          		<section id="sbit_info">
-                  <section id="sbit_texto">
-                    <span>descripci&oacute;n</span> 
-                    <p>
-                   <?php echo $row_product['descripcionL'];  ?>
-                    </p><br>
-                    <span>caracter&iacute;sticas</span>
-                    <br>
-                    <section id="sbit_caract">
-                      <span class="sbit_caract">C&oacute;digo</span><p class="sbit_caract"><?php echo $row_product['codigo'];  ?></p>
-                      <span class="sbit_caract">UM</span><p class="sbit_caract"><?php echo $row_product['um'];  ?></p>
-                      <span class="sbit_caract">Material</span><p class="sbit_caract"><?php echo $row_product['material'];  ?></p>
-                      <span class="sbit_caract">Acabados</span><p class="sbit_caract"><?php echo $row_product['acabado'];  ?></p>
-                      <span class="sbit_caract">Medida</span><p class="sbit_caract"><?php echo $row_product['medida'];  ?></p>
-                      <span class="sbit_caract">Caracteristicas</span><p class="sbit_caract"><?php echo $row_product['caracteristicas'];  ?></p>
-                      <span class="sbit_caract">Precio</span><p id="itm_precio" class="sbit_caract"><?php echo "$999,999.99";  ?></p>
-                       
-                    </section>
-                  <figure><img src="imagenesSitio/productos/icon_adobe.jpg"><img src="Imagenessitio/productos/icon_carrito.jpg"></figure>
-                  </section>
-                </section>
-          </section>
-              <section id="sbit_linea"><span><?php echo $row_linea['descripcion']; ?></span></section>
-              <div class="drop-shadow2 curved2 curved-hz-2"></div>
+<section id="item">
+ <div class="drop-shadow curved curved-hz-1"></div>
+  	<section id="sbit_titulo">
+      <section id="sbit_nombre"><span><?php echo $row_product['nombre'];  ?></span></section>
+      <section id="sbit_familia"><span><?php echo $row_sublinea['descripcion']; ?></span></section>
     </section>
+    <section id="sbit_cuerpo">
+  		<section id="sbit_imagen">
+        <section id="sbit_imgcentrar">
+          <img src="ver/ver.php?codigo=<?php echo $row_product['codigo'];  ?>">
+        </section>
+      </section>
+  		<section id="sbit_info">
+        <section id="sbit_texto">
+          <span>descripci&oacute;n</span> 
+          <p><?php echo $row_product['descripcionL']; ?></p><br>
+          <span>caracter&iacute;sticas</span><br>
+          <section id="sbit_caract">
+            <span class="sbit_caract">C&oacute;digo</span><p class="sbit_caract"><?php echo $row_product['codigo'];  ?></p>
+            <span class="sbit_caract">UM</span><p class="sbit_caract"><?php echo $row_product['um'];  ?></p>
+            <span class="sbit_caract">Material</span><p class="sbit_caract"><?php echo $row_product['material'];  ?></p>
+            <span class="sbit_caract">Acabados</span><p class="sbit_caract"><?php echo $row_product['acabado'];  ?></p>
+            <span class="sbit_caract">Medida</span><p class="sbit_caract"><?php echo $row_product['medida'];  ?></p>
+            <span class="sbit_caract">Caracteristicas</span><p class="sbit_caract"><?php echo $row_product['caracteristicas'];  ?></p>
+            <span class="sbit_caract">Precio</span><p id="itm_precio" class="sbit_caract"><?php echo "$999,999.99";  ?></p> 
+          </section>
+          <figure><img src="imagenesSitio/productos/icon_adobe.jpg"><img src="Imagenessitio/productos/icon_carrito.jpg"></figure>
+        </section>
+      </section>
+    </section>
+          <section id="sbit_linea"><span><?php echo $row_linea['descripcion']; ?></span></section>
+          <div class="drop-shadow2 curved2 curved-hz-2"></div>
+</section>
 </body>
 </html>

@@ -67,8 +67,12 @@ if(!$query_txtsublinea){
 exit("Error en la consulta SQL");
 }
 
-$query_product= $db->Execute("SELECT * FROM tblIC_Producto WHERE cid_linea = '$id' AND cid_sublinea = '$id_sublinea'");
-				$totalRows_product = $query_product->_numOfRows;//Conocer el numero de registros en la consulta
+$query_product= $db->Execute("SELECT tblIC_Producto.Clave_Producto, Descripcion2, Descripcion, Foto, tblIC_ProductoPrecio.Precio, Peso, cAlto, cAncho, cLargo, cMaterial, cAcabados, cMedida, cDescripcion3, Clave_UM, Comentario, cid_linea, cid_sublinea
+			FROM tblIC_Producto INNER JOIN
+			tblIC_ProductoPrecio ON tblIC_Producto.Clave_Producto = tblIC_ProductoPrecio.Clave_Producto
+			WHERE (tblIC_ProductoPrecio.Lista_Precio = 1)  AND (cid_linea = '$id') AND (cid_sublinea = '$id_sublinea')
+			ORDER BY tblIC_Producto.Clave_Producto ASC");
+$totalRows_product = $query_product->_numOfRows;//Conocer el numero de registros en la consulta
 // Verificamos si hemos realizado bien nuestro Query
 if(!$query_product){
 exit("Error en la consulta SQL");
@@ -183,17 +187,20 @@ Shadowbox.init({
 							</div>
  							<?php 
 								foreach($query_product as $k => $row_product) 
-								{ ?>
+								{ 
+								$precio = number_format($row_product["Precio"], 2, '.', ',');
+							  	$precioIVA=number_format((($precio)*(1.16)), 2, '.', ',');
+									?>
 									<div id="itm">
-									<a href=".itemA.php?id=<?php echo $row_product['Clave_producto'];  ?>&line=<?php echo $row_product['cid_linea'];  ?>&subline=<?php echo $row_product['cid_sublinea'];  ?>" rel="shadowbox[item];width=800;height=488">
-										<figure id="itm_imagen">  <img src="ver/ver.php?codigo=<?php echo $row_product['Clave_producto'];  ?>"/> </figure>
+									<a href=".itemA.php?id=<?php echo $row_product['Clave_Producto'];  ?>&line=<?php echo $row_product['cid_linea'];  ?>&subline=<?php echo $row_product['cid_sublinea'];  ?>" rel="shadowbox[item];width=800;height=488">
+										<figure id="itm_imagen">  <img src="ver/ver.php?codigo=<?php echo $row_product['Clave_Producto'];  ?>"/> </figure>
 										<article id="itm_nombre"><?php echo $row_product['Descripcion2'];  ?></article>
-										<article id="itm_codigo"><?php echo $row_product['Clave_producto'];  ?></article>
+										<article id="itm_codigo"><?php echo $row_product['Clave_Producto'];  ?></article>
 										<article id="itm_descripcion"><?php echo $row_product['Descripcion'];  ?></article>
 									</a>
 										<figure id="itm_ficha"><a href="#"> <img src="imagenesSitio/productos/adobe.jpg"> </a></figure>
 										<figure id="itm_carrito"><a href="#"> <img src="imagenesSitio/productos/carrito.jpg"> </a></figure>
-										<article id="itm_precio"> $999,999.99</article>
+										<article id="itm_precio"> <?php echo '$ '.$precioIVA;?></article>
 									</div>
 							<?php } 
 						} //end if 

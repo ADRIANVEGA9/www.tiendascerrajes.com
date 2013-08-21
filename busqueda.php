@@ -42,10 +42,7 @@ $query= $db->Execute("SELECT    tblIC_Producto.Clave_Producto, Descripcion2, Des
 // Verificamos si hemos realizado bien nuestro Query
 if(!$query){
 exit("Error en la consulta SQL");
-} // else 
-// {
-// echo "Consulta SQL exitosa"."<br>"."<br>";
-// }
+} 
 ?>
 <html lang="es">
 <head>

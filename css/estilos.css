@@ -138,7 +138,7 @@ td
 	float: right;
 	height: 69px;
 	position: relative;
-	right: -130px;
+	right: -140px;
 	top: 15px;
 	vertical-align: top;
 	width: 22%;
@@ -676,6 +676,7 @@ td
 }
 #item_precio
 {
+	text-align: right;
 	width: 10%
 }
 #item_img {
@@ -685,7 +686,7 @@ td
 }
 #itm 
 {
-	background: rgba(250,250,250,.95);
+	/*background: rgba(250,250,250,.95);*/
 	border-top-color: #FFF;
 	border-top-style: solid;
 	border-top-width: 2px;
@@ -695,7 +696,8 @@ td
 	font-size: 11px;
 	font-weight: normal;
 	max-height: 150px;
-	min-height: 50px;
+	/*min-height: 50px;*/
+	padding: 5px 0px 5px 0px;
 	width: 104%;
 }
 #itm a{
@@ -752,6 +754,7 @@ td
 	color: #71BF44;
 	font-size: 12px;
 	line-height: 20px;
+	text-align: right;
 	text-shadow: 1px 1px #DDD;
 	width: 10%;
 }
