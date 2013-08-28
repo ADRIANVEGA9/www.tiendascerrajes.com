@@ -2,7 +2,7 @@
 <?php
 $m=10;
 //Mandamos llamar este archivo donde contiene la cadena de conexión a SQL Server
-include("sqlserver.inc.php");  
+include("connections/sqlserver.inc.php");  
 
 /***VARIABLES POR GET ***/
 $numero1 = count($_GET);

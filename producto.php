@@ -1,33 +1,7 @@
-<?php require_once('Connections/productos.php'); ?>
-<?php 
-if (!function_exists("GetSQLValueString")) {
-function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
-{
-  if (PHP_VERSION < 6) {
-    $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
-  }
-  $theValue = function_exists("mysql_real_escape_string") ? mysql_real_escape_string($theValue) : mysql_escape_string($theValue);
-  switch ($theType) {
-    case "text":
-      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;    
-    case "long":
-    case "int":
-      $theValue = ($theValue != "") ? intval($theValue) : "NULL";
-      break;
-    case "double":
-      $theValue = ($theValue != "") ? doubleval($theValue) : "NULL";
-      break;
-    case "date":
-      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;
-    case "defined":
-      $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
-      break;
-  }
-  return $theValue;
-}
-}
+<!doctype html>
+<?php //Mandamos llamar este archivo donde contiene la cadena de conexión a SQL Server
+include("connections/sqlserver.inc.php");  
+
 /***VARIABLES POR GET ***/
 $numero1 = count($_GET);
 $tags1 = array_keys($_GET);// obtiene los nombres de las varibles
@@ -58,48 +32,53 @@ if (isset($id_sublinea)) {
 	$id_sublinea='01';
 }
 
-mysql_select_db($database_productos, $productos);
-$query_menul = sprintf("SELECT t_sublinea.id_linea, t_sublinea.id, t_linea.descripcion, t_sublinea.sublinea, t_sublinea.descripcion as 'descripcion_sublinea' FROM t_sublinea
-INNER JOIN t_linea ON t_sublinea.id_linea = t_linea.id
-WHERE
-t_sublinea.id = 1
-ORDER BY t_sublinea.id_linea ASC");
-$menul = mysql_query($query_menul, $productos) or die(mysql_error());
-$row_menul = mysql_fetch_assoc($menul);
-$totalRows_menul = mysql_num_rows($menul);
+//Ya no usamos la clásica query de consulta como mysql_query ahora por definición de la función creada por adodb usamos la siguiente:
+$query_menul= $db->Execute("SELECT t_sublinea.id_linea, t_sublinea.id, t_linea.descripcion, t_sublinea.sublinea, t_sublinea.descripcion as 'descripcion_sublinea' 
+							FROM t_sublinea	INNER JOIN t_linea ON t_sublinea.id_linea = t_linea.id
+							WHERE
+							t_sublinea.id = 1
+							ORDER BY t_sublinea.id_linea ASC");
+// Verificamos si hemos realizado bien nuestro Query
+if(!$query_menul){
+exit("Error en la consulta SQL");
+}
 
-mysql_select_db($database_productos, $productos);
-$query_linea = sprintf("SELECT * FROM t_linea WHERE id = '$id'");
-$linea = mysql_query($query_linea, $productos) or die(mysql_error());
-$row_linea = mysql_fetch_assoc($linea);
-$totalRows_linea = mysql_num_rows($linea);
+$query_menusublinea= $db->Execute("SELECT id, sublinea, descripcion FROM t_sublinea WHERE id_linea = '$id' ORDER BY sublinea");
+// Verificamos si hemos realizado bien nuestro Query
+if(!$query_menusublinea){
+exit("Error en la consulta SQL");
+}
 
-mysql_select_db($database_productos, $productos);
-$query_sublinea = sprintf("SELECT * FROM t_sublinea WHERE id_linea = '$id'");
-$sublinea = mysql_query($query_sublinea, $productos) or die(mysql_error());
-$row_sublinea = mysql_fetch_assoc($sublinea);
-$totalRows_sublinea = mysql_num_rows($sublinea);
+$query_linea= $db->Execute("SELECT * FROM t_linea WHERE id = '$id'");
+// Verificamos si hemos realizado bien nuestro Query
+if(!$query_linea){
+exit("Error en la consulta SQL");
+}
 
-mysql_select_db($database_productos, $productos);
-$query_txtsublinea = sprintf("SELECT * FROM t_sublinea WHERE id_linea = '$id' AND sublinea = '$id_sublinea'");
-$txtsublinea = mysql_query($query_txtsublinea, $productos) or die(mysql_error());
-$row_txtsublinea = mysql_fetch_assoc($txtsublinea);
-$totalRows_txtsublinea = mysql_num_rows($txtsublinea);
+$query_txtsublinea= $db->Execute("SELECT t_linea.descripcion, t_sublinea.descripcion AS 'descripcion_sublinea', t_sublinea.frase, t_sublinea.sublinea, t_sublinea.id_linea
+				FROM
+				t_linea
+				INNER JOIN t_sublinea ON t_linea.id = t_sublinea.id_linea
+				WHERE
+				t_sublinea.id_linea = '$id' AND
+				t_sublinea.sublinea = '$id_sublinea'");
+// Verificamos si hemos realizado bien nuestro Query
+if(!$query_txtsublinea){
+exit("Error en la consulta SQL");
+}
 
-mysql_select_db($database_productos, $productos);
-$query_menusublinea = sprintf(" SELECT id, sublinea, descripcion FROM t_sublinea WHERE id_linea = '$id' ORDER BY sublinea");
-$menusublinea = mysql_query($query_menusublinea, $productos) or die(mysql_error());
-$row_menusublinea = mysql_fetch_assoc($menusublinea);
-$totalRows_menusublinea = mysql_num_rows($menusublinea);
-
-mysql_select_db($database_productos, $productos);
-$query_product = sprintf("SELECT * FROM t_productos WHERE id_linea = '$id' AND id_sublinea = '$id_sublinea'");
-$product = mysql_query($query_product, $productos) or die(mysql_error());
-$row_product = mysql_fetch_assoc($product);
-$totalRows_product = mysql_num_rows($product);
+$query_product= $db->Execute("SELECT tblIC_Producto.Clave_Producto, Descripcion2, Descripcion, Foto, tblIC_ProductoPrecio.Precio, Peso, cAlto, cAncho, cLargo, cMaterial, cAcabados, cMedida, cDescripcion3, Clave_UM, Comentario, cid_linea, cid_sublinea, cficha
+			FROM tblIC_Producto INNER JOIN
+			tblIC_ProductoPrecio ON tblIC_Producto.Clave_Producto = tblIC_ProductoPrecio.Clave_Producto
+			WHERE (tblIC_ProductoPrecio.Lista_Precio = 1)  AND (cid_linea = '$id') AND (cid_sublinea = '$id_sublinea')
+			ORDER BY tblIC_Producto.Clave_Producto ASC");
+$totalRows_product = $query_product->_numOfRows;//Conocer el numero de registros en la consulta
+// Verificamos si hemos realizado bien nuestro Query
+if(!$query_product){
+exit("Error en la consulta SQL");
+}
 
 ?>
-<!doctype html>
 <?php $m=2; ?>
 <html lang="es">
 <head>
@@ -141,12 +120,12 @@ Shadowbox.init({
 					<article id="menuProdHome">
 						<ul>
 							<?php
-							do {
+							foreach($query_menul as $k1 => $row_menul) {
 							?>
-								<li><a href="producto.php?id=<?php echo $row_menul['id_linea'];?>&id_sublinea=<?php echo $row_menul['sublinea'];?>" class="<?php if ($id==$row_menul['id_linea']){ echo activoP;} ?>"><?php echo $row_menul['descripcion'];?></a> </li>	
+								<li><a href="productoA.php?id=<?php echo $row_menul['id_linea'];?>&id_sublinea=<?php echo $row_menul['sublinea'];?>" class="<?php if ($id==$row_menul['id_linea']){ echo activoP;} ?>"><?php echo $row_menul['descripcion'];?></a> </li>	
 										<?php
 											if ($row_menul['id_linea']==$id) {
-											do
+											foreach($query_menusublinea as $k => $row_menusublinea)
 											{	
 												if (($row_menul['sublinea'] <> 99) AND ($row_menul['id_linea']==$id))
 												{ 
@@ -158,17 +137,15 @@ Shadowbox.init({
 													} else
 													{
 													?>
-														<a class="sublinea" href="producto.php?id=<?php echo $row_linea['id']; ?>&id_sublinea=<?php echo $row_menusublinea['sublinea'];?>">
+														<a class="sublinea" href="productoA.php?id=<?php echo $row_menul['id_linea']; ?>&id_sublinea=<?php echo $row_menusublinea['sublinea'];?>">
 													<?	echo $row_menusublinea['descripcion'].'</a>'; 														
 													}
 
 												}
 											}
-											while (($row_menusublinea = mysql_fetch_assoc($menusublinea))); 
 											}
 											?>
 							<?php }
-							while ($row_menul = mysql_fetch_assoc($menul)); 
 							 ?>
 						</ul>
 					</article>
@@ -178,20 +155,24 @@ Shadowbox.init({
 						<section id="textoP"> 
 							<span> 
 							<?php 
-								if ($row_sublinea['sublinea'] <> 99) 
+							foreach($query_txtsublinea as $k => $row_txtsublinea)
+							{
+								if ($id_sublinea <> 99) 
 									{
-										echo $row_linea['descripcion'].' . ';
-										echo $row_txtsublinea['descripcion'].' ';  
+										echo $row_txtsublinea['descripcion'].' . ';
+										echo $row_txtsublinea['descripcion_sublinea'].' ';  
 									}
 								else
 									{
-										echo $row_linea['descripcion'];
+										echo $row_txtsublinea['descripcion'];
 									}
 							?>
 							</span>
-							<p ><?php echo $row_txtsublinea['frase'];  ?></p>
-							<br>
-							<p><?php echo $row_txtsublinea['texto'];  ?></p>
+								<p ><?php echo $row_txtsublinea['frase'];  ?></p>
+								<br>
+								<p><?php echo $row_txtsublinea['texto'];  ?></p>
+							<?php
+							} ?>
 						</section>
 						<?php if ($totalRows_product>0)
 						{ ?>
@@ -204,27 +185,30 @@ Shadowbox.init({
 								<article id="item_carrito">Comprar</article>
 								<article id="item_precio">Precio</article>
 							</div>
-							<?php 
-								do 
-								{ ?>
+ 							<?php 
+								foreach($query_product as $k => $row_product) 
+								{ 
+								$precio = number_format($row_product["Precio"], 2, '.', ',');
+							  	$precioIVA=number_format((($precio)*(1.16)), 2, '.', ',');
+									?>
 									<div id="itm">
-									<a href=".item.php?id=<?php echo $row_product['codigo'];  ?>&line=<?php echo $row_product['id_linea'];  ?>&subline=<?php echo $row_product['id_sublinea'];  ?>" rel="shadowbox[item];width=800;height=488">
-										<figure id="itm_imagen">  <img src="ver/ver.php?codigo=<?php echo $row_product['codigo'];  ?>"/> </figure>
-										<article id="itm_nombre"><?php echo $row_product['nombre'];  ?></article>
-										<article id="itm_codigo"><?php echo $row_product['codigo'];  ?></article>
-										<article id="itm_descripcion"><?php echo $row_product['descripcion'];  ?></article>
+									<a href=".item.php?id=<?php echo $row_product['Clave_Producto'];  ?>&line=<?php echo $row_product['cid_linea'];  ?>&subline=<?php echo $row_product['cid_sublinea'];  ?>" rel="shadowbox[item];width=800;height=488">
+										<figure id="itm_imagen">  <img src="ver/ver.php?codigo=<?php echo $row_product['Clave_Producto'];  ?>"/> </figure>
+										<article id="itm_nombre"><?php echo $row_product['Descripcion2'];  ?></article>
+										<article id="itm_codigo"><?php echo $row_product['Clave_Producto'];  ?></article>
+										<article id="itm_descripcion"><?php echo $row_product['Descripcion'];  ?></article>
 									</a>
-										<figure id="itm_ficha"><a href="#"> <img src="imagenesSitio/productos/adobe.jpg"> </a></figure>
+										<figure id="itm_ficha"><?php if ($row_product['cficha']) {?><a href="http://cerrajes.me/fichas/<?php echo  $row_product['cficha'].'.pdf';?>" target="_blank"><?php }?> <img src="imagenesSitio/productos/adobe.jpg"> </a></figure>
 										<figure id="itm_carrito"><a href="#"> <img src="imagenesSitio/productos/carrito.jpg"> </a></figure>
-										<article id="itm_precio"> $999,999.99</article>
+										<article id="itm_precio"> <?php echo '$ '.$precioIVA;?></article>
 									</div>
 							<?php } 
-									while ($row_product = mysql_fetch_assoc($product));
 						} //end if 
-								?>
+								?> 
 				</article>
 			</article>
 		</div>	
+<?php exit("&nbsp;"); ?>
 	</div>
 </body>
 </html>

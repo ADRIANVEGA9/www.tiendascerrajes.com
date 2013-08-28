@@ -1570,9 +1570,10 @@ color: #333;
 
 .sbit_caract
  {
-	width: 50%;
 	display: inline-block;
+	text-align: left !important;
 	vertical-align: top;
+	width: 50% !important;
 }
 .sublinea {
 	background: #EFE !important;
