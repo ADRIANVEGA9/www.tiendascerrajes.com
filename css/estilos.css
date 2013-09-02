@@ -739,10 +739,16 @@ td
 	width: 30%;
 }
 #itm_carrito,
-#itm_ficha {
+#itm_ficha 
+{
 	line-height: 20px;
+	transition: all 1s ease;
 	vertical-align: middle;
 	width: 5%;
+}
+#itm_ficha a img:hover
+{
+	transform: scale(1.05);
 }
 #itm_imagen img 
 {
@@ -1138,8 +1144,7 @@ td
 {
 	background: #FFF;
 	height: 405px;
-	position: absolute;
-	top: 52px;
+	margin-top: 2px;
 	width: 800px;
 	z-index: -3;
 }
@@ -1153,17 +1158,18 @@ td
 	margin-top: 20px;
 	padding: 0;
 	vertical-align: top;
-	width: 49.6%;
 }
 #sbit_familia
 {
 	color:#7AC14F;
+	float: right;
 	text-align: right;
-	right: 100%
+	right: 100%;
+	width:34%;
 }
 #sbit_familia span
 {
-	margin-right: 5%;
+	margin-right: 3%;
 }
 #sbit_imagen,
 #sbit_info
@@ -1200,8 +1206,14 @@ td
 }
 #sbit_info figure
 {
-	margin: 20px;
+	display: inline-block;
+	margin: 0px;
 	text-align: justify;
+}
+
+#sbit_info figure a 
+{
+	display: inline-block;
 }
 #sbit_linea
 {
@@ -1224,9 +1236,13 @@ td
 	margin-right: 40px;
 	position: relative;
 }
+#sbit_nombre
+{	
+	width: 64%;
+}
 #sbit_nombre span
 {
-	margin-left: 5%;
+	margin-left: 3%;
 }
 #sbit_texto
 {
@@ -1238,6 +1254,11 @@ td
 	color: #7AC14F;
 	font-weight: bold;
 	text-transform: uppercase;
+}
+#sbit_texto figure a img:hover 
+{
+	transition: all 0.5s ease;
+	transform: scale(.95);
 }
 #sbit_titulo
 {
@@ -1496,6 +1517,7 @@ color: #333;
     margin: 0 auto;
     position: relative;
     width: 100%;
+    z-index: 5;
 }
 .drop-shadow2 {
 	background: #D5E8C9;

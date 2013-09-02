@@ -28,14 +28,14 @@ if ($txt_criterio<>"") {
 	$txt_criterio='cerrajes';
 }
 //Ya no usamos la clásica query de consulta como mysql_query ahora por definición de la función creada por adodb usamos la siguiente:
-$query= $db->Execute("SELECT    tblIC_Producto.Clave_Producto, Descripcion2, Descripcion, Foto, tblIC_ProductoPrecio.Precio,  Peso, Clave_Categoria, Clave_Categoria_Sub_1, cAlto, cAncho, cLargo, cMaterial, cAcabados, cMedida, cDescripcion3, Clave_UM, Comentario, clave_proveedor
-
+$query= $db->Execute("SELECT    tblIC_Producto.Clave_Producto, Descripcion2, Descripcion, Foto, tblIC_ProductoPrecio.Precio,  Peso, Clave_Categoria, Clave_Categoria_Sub_1, cAlto, cAncho, cLargo, cMaterial, cAcabados, cMedida, cDescripcion3, Clave_UM, Comentario, clave_proveedor, cficha, cid_linea
 		FROM         tblIC_Producto  INNER JOIN
 		          tblIC_ProductoPrecio ON tblIC_Producto.Clave_Producto = tblIC_ProductoPrecio.Clave_Producto
 		WHERE
-		(dbo.tblIC_ProductoPrecio.Lista_Precio = 1) AND
+		(tblIC_Producto.cid_linea IS NOT NULL) AND
+		(tblIC_ProductoPrecio.Lista_Precio = 1) AND
 		/*(dbo.tblIC_Producto.Peso > 0) AND*/
-		((dbo.tblIC_Producto.Descripcion LIKE '%" . $txt_criterio . "%') OR (dbo.tblIC_Producto.Clave_Producto LIKE '%" . $txt_criterio . "%'))
+		((tblIC_Producto.Descripcion LIKE '%" . $txt_criterio . "%') OR (tblIC_Producto.Clave_Producto LIKE '%" . $txt_criterio . "%'))
 		ORDER BY
 		tblIC_Producto.Clave_Producto ASC");
 
@@ -53,12 +53,15 @@ exit("Error en la consulta SQL");
 <script src="js/prefixfree.min.js"></script>
 
 <script src="js/jquery-1.7.2.min.js"></script>
-<script src="js/jquery-ui-1.8.18.custom.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script src="js/jquery.smooth-scroll.min.js"></script>
 <script src="js/lightbox.js"></script>
 
 <title>Busqueda <?php echo $txt_criterio; ?> - Tiendas Cerrajes&reg; Un espacio creativo e innovador dise&ntilde;ado para ti...</title>
-<script>
+
+<link rel="stylesheet" type="text/css" href="Shadowbox/shadowbox.css">
+<script type="text/javascript" src="Shadowbox/shadowbox.js"></script>
+<script type="text/javascript">
 	document.createElement('article');
 	document.createElement('aside');
 	document.createElement('figure');
@@ -67,6 +70,14 @@ exit("Error en la consulta SQL");
 	document.createElement('hgroup');
 	document.createElement('nav');
 	document.createElement('section');
+
+Shadowbox.init({
+    displayCounter:false,
+    handleOversize: "resize",
+    modal: true, //evita que se cierre con click fuera del recuadro principal
+    overlayColor: "#000",
+    overlayOpacity: 0.8
+});
 </script><!--[if IE ]><script type="text/javascript">
 function MM_showHideLayers() { //v9.0
   var i,p,v,obj,args=MM_showHideLayers.arguments;
@@ -113,33 +124,17 @@ var IE7_PNG_SUFFIX = ".png";
 						{
 					$precio = number_format($row["Precio"], 2, '.', ',');
 				  	$peso = number_format($row["Peso"], 2, '.', ',');
-				  	$precioIVA=number_format((($precio)*(1.16)), 2, '.', ',');
-				  	$b=$k+1;
-						 //echo $b."<br>";
-					     // echo "C&oacute;digo: ".$row["Clave_Producto"]."<br>";
-					     // echo "Nombre: ".$row["Descripcion2"]."<br>";
-					     // echo "Descripci&oacute;n: ".$row["Descripcion"]."<br>";
-					     // echo "Alto: ".$row["cAlto"]."<br>";
-					     // echo "Ancho: ".$row["cAncho"]."<br>";
-					     // echo "Largo: ".$row["cLargo"]."<br>";
-					     // echo "Acabado: ".$row["cAcabados"]."<br>";
-					     // echo "Medida: ".$row["cMedida"]."<br>";
-					     // echo "Descripci&oacute;n: ".$row["cAcabados"]."<br>";
-					     // echo "UM: ".$row["Clave_UM"]."<br>";
-					     // echo "Caracteristicas: ".$row["Comentario"]."<br>";
-					     // echo "Material: ".$row["cMaterial"]."<br>";
-					     // echo "Peso: ".$peso."<br>";
-					     // echo "Precio: ".$precio."<br>"."<br>";
-			     	?>
+				  	$precioIVA=number_format((($precio)*(1.16)), 2, '.', ',');			     	?>
 									<div id="itm">
-										<section><?php echo $row['registros']; ?></section>
-										<figure id="itm_imagen"> <img src="ver/ver.php?codigo=<?php echo $row['Clave_Producto'];  ?>"/> </figure>
+									<a href=".item.php?id=<?php echo $row['Clave_Producto'];  ?>" rel="shadowbox[item];width=800;height=488">
+										<figure id="itm_imagen">  <img src="ver/ver.php?codigo=<?php echo $row['Clave_Producto'];  ?>"/> </figure>
 										<article id="itm_nombre"><?php echo $row['Descripcion2'];  ?></article>
-										<article id="itm_codigo"><?php echo $row["Clave_Producto"];  ?></article>
-										<article id="itm_descripcion"><?php echo $row["Descripcion"];  ?></article>
-										<figure id="itm_ficha"> <img src="imagenesSitio/productos/adobe.jpg"> </figure>
-										<figure id="itm_carrito"> <img src="imagenesSitio/productos/carrito.jpg"> </figure>
-										<article id="itm_precio"> <?php echo $precioIVA;?> </article>
+										<article id="itm_codigo"><?php echo $row['Clave_Producto'];  ?></article>
+										<article id="itm_descripcion"><?php echo $row['Descripcion'];  ?></article>
+									</a>
+										<figure id="itm_ficha"><?php if ($row['cficha']) {?><a href="http://cerrajes.me/fichas/<?php echo  $row['cficha'].'.pdf';?>" target="_blank"><?php }?> <img src="imagenesSitio/productos/adobe.jpg"> </a></figure>
+										<figure id="itm_carrito"><a href="#"> <img src="imagenesSitio/productos/carrito.jpg"> </a></figure>
+										<article id="itm_precio"> <?php echo '$ '.$precioIVA;?></article>
 									</div>
 							<?php
 						}

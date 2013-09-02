@@ -122,7 +122,7 @@ Shadowbox.init({
 							<?php
 							foreach($query_menul as $k1 => $row_menul) {
 							?>
-								<li><a href="productoA.php?id=<?php echo $row_menul['id_linea'];?>&id_sublinea=<?php echo $row_menul['sublinea'];?>" class="<?php if ($id==$row_menul['id_linea']){ echo activoP;} ?>"><?php echo $row_menul['descripcion'];?></a> </li>	
+								<li><a href="producto.php?id=<?php echo $row_menul['id_linea'];?>&id_sublinea=<?php echo $row_menul['sublinea'];?>" class="<?php if ($id==$row_menul['id_linea']){ echo activoP;} ?>"><?php echo $row_menul['descripcion'];?></a> </li>	
 										<?php
 											if ($row_menul['id_linea']==$id) {
 											foreach($query_menusublinea as $k => $row_menusublinea)
@@ -137,7 +137,7 @@ Shadowbox.init({
 													} else
 													{
 													?>
-														<a class="sublinea" href="productoA.php?id=<?php echo $row_menul['id_linea']; ?>&id_sublinea=<?php echo $row_menusublinea['sublinea'];?>">
+														<a class="sublinea" href="producto.php?id=<?php echo $row_menul['id_linea']; ?>&id_sublinea=<?php echo $row_menusublinea['sublinea'];?>">
 													<?	echo $row_menusublinea['descripcion'].'</a>'; 														
 													}
 
@@ -192,7 +192,7 @@ Shadowbox.init({
 							  	$precioIVA=number_format((($precio)*(1.16)), 2, '.', ',');
 									?>
 									<div id="itm">
-									<a href=".item.php?id=<?php echo $row_product['Clave_Producto'];  ?>&line=<?php echo $row_product['cid_linea'];  ?>&subline=<?php echo $row_product['cid_sublinea'];  ?>" rel="shadowbox[item];width=800;height=488">
+									<a href=".item.php?id=<?php echo $row_product['Clave_Producto'];  ?>" rel="shadowbox[item];width=800;height=488">
 										<figure id="itm_imagen">  <img src="ver/ver.php?codigo=<?php echo $row_product['Clave_Producto'];  ?>"/> </figure>
 										<article id="itm_nombre"><?php echo $row_product['Descripcion2'];  ?></article>
 										<article id="itm_codigo"><?php echo $row_product['Clave_Producto'];  ?></article>

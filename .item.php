@@ -22,20 +22,20 @@ $$tags[$i]=$valores[$i];
 if (isset($id)) {
   $id = $id;
 } else {
-  $id='9900';
+  $id='03020412';
 }
 
-$query_product= $db->Execute("SELECT tblIC_Producto.Clave_Producto, t_linea.descripcion AS linea, t_sublinea.descripcion AS sublinea, cid_linea, cid_sublinea, Descripcion2, tblIC_Producto.Descripcion, Foto, tblIC_ProductoPrecio.Precio, Peso, cAlto, cAncho, cLargo, cMaterial, cAcabados, cMedida, cDescripcion3, Clave_UM, Comentario
+$query_product= $db->Execute("SELECT tblIC_Producto.Clave_Producto, t_linea.descripcion AS linea, t_sublinea.descripcion AS sublinea, cid_linea, cid_sublinea, Descripcion2, tblIC_Producto.Descripcion, Foto, tblIC_ProductoPrecio.Precio, Peso, cAlto, cAncho, cLargo, cMaterial, cAcabados, cMedida, cDescripcion3, Clave_UM, Comentario, cficha
 FROM
 tblIC_Producto
 INNER JOIN tblIC_ProductoPrecio ON tblIC_Producto.Clave_Producto = tblIC_ProductoPrecio.Clave_Producto
 INNER JOIN t_linea ON tblIC_Producto.cid_linea = t_linea.id
 INNER JOIN t_sublinea ON tblIC_Producto.cid_linea = t_sublinea.id_linea AND tblIC_Producto.cid_sublinea = t_sublinea.sublinea
 WHERE
+(tblIC_Producto.Clave_Producto = '$id') AND
 (tblIC_ProductoPrecio.Lista_Precio = 1) AND
-(tblIC_Producto.cid_linea = '$line') AND
-(tblIC_Producto.cid_sublinea = '$subline') AND
-(tblIC_Producto.Clave_Producto = '$id')");
+(t_linea.id = tblIC_Producto.cid_linea ) AND
+(t_sublinea.sublinea = tblIC_Producto.cid_sublinea)");
 // Verificamos si hemos realizado bien nuestro Query
 if(!$query_product){
 exit("Error en la consulta SQL");
@@ -94,7 +94,7 @@ foreach($query_product as $k => $row_product)
               <span class="sbit_caract">Caracteristicas</span><p class="sbit_caract"><?php echo $row_product['Comentario'];  ?></p>
               <span class="sbit_caract">Precio</span><p id="itm_precio" class="sbit_caract"><?php echo '$ '.$precioIVA;?></p> 
             </section>
-            <figure><img src="imagenesSitio/productos/icon_adobe.jpg"><img src="Imagenessitio/productos/icon_carrito.jpg"></figure>
+            <figure><?php if ($row_product['cficha']) {?><a href="http://cerrajes.me/fichas/<?php echo  $row_product['cficha'].'.pdf';?>" target="_blank"><?php }?> <img src="imagenesSitio/productos/icon_adobe.jpg"></a></figure><figure><img src="Imagenessitio/productos/icon_carrito.jpg"></figure>
           </section>
         </section>
       </section>
