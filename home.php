@@ -22,16 +22,16 @@ Shadowbox.init({
 });
 </script>
 <script type="text/javascript">
-$(document).ready(function(){
-	setTimeout(function() {
-	    Shadowbox.open({
-    	    content:    '<article><img src="imagenesSitio/inicio_02.png"></article>',
-    	    player:     "html",
-    	    width:      "800",
-    	    height:     "546"
-    	});
-	}, 500);
-});
+// $(document).ready(function(){
+// 	setTimeout(function() {
+// 	    Shadowbox.open({
+//     	    content:    '<article><img src="imagenesSitio/inicio_02.png"></article>',
+//     	    player:     "html",
+//     	    width:      "800",
+//     	    height:     "546"
+//     	});
+// 	}, 500);
+// });
 </script>
 <title>Tiendas Cerrajes&reg; Un espacio creativo e innovador dise&ntilde;ado para ti...</title>
 <script>

@@ -25,7 +25,7 @@ $$tags[$i]=$valores[$i];
 if ($txt_criterio<>"") {
   $txt_criterio = $txt_criterio;
 } else {
-	$txt_criterio='cerrajes';
+	$txt_criterio='&nbsp;';
 }
 //Ya no usamos la clásica query de consulta como mysql_query ahora por definición de la función creada por adodb usamos la siguiente:
 $query= $db->Execute("SELECT    tblIC_Producto.Clave_Producto, Descripcion2, Descripcion, Foto, tblIC_ProductoPrecio.Precio,  Peso, Clave_Categoria, Clave_Categoria_Sub_1, cAlto, cAncho, cLargo, cMaterial, cAcabados, cMedida, cDescripcion3, Clave_UM, Comentario, clave_proveedor, cficha, cid_linea
@@ -38,7 +38,7 @@ $query= $db->Execute("SELECT    tblIC_Producto.Clave_Producto, Descripcion2, Des
 		((tblIC_Producto.Descripcion LIKE '%" . $txt_criterio . "%') OR (tblIC_Producto.Clave_Producto LIKE '%" . $txt_criterio . "%'))
 		ORDER BY
 		tblIC_Producto.Clave_Producto ASC");
-
+$totalRows = $query->_numOfRows;
 // Verificamos si hemos realizado bien nuestro Query
 if(!$query){
 exit("Error en la consulta SQL");
@@ -110,21 +110,24 @@ var IE7_PNG_SUFFIX = ".png";
 
 			<article id="contenido715">
 				<article id="busqueda">
+				<?php 
+					if 	($totalRows<>0)
+					{ ?>
 				    <div id="itemCampos">
 						<article id="item_imagen">Imagen</article>
 						<article id="item_nombre">Nombre</article>
 						<article id="item_codigo">C&oacute;digo</article>
 						<article id="item_descripcion">Descripci&oacute;n</article>
 						<article id="item_ficha">Ficha</article>
-						<article id="item_carrito">Comprar</article>
+						<!-- <article id="item_carrito">Comprar</article> -->
 						<article id="item_precio">Precio</article>
 					</div>
-					<?php 
+				<?php 
 					foreach($query as $k => $row)
 						{
-					$precio = number_format($row["Precio"], 2, '.', ',');
-				  	$peso = number_format($row["Peso"], 2, '.', ',');
-				  	$precioIVA=number_format((($precio)*(1.16)), 2, '.', ',');			     	?>
+						  	$peso = number_format($row["Peso"], 2, '.', ',');
+						  	$iva = ($row["Precio"])*(1.16);
+						  	$precioIVA=number_format(($iva), 2, '.', ',');			     	?>
 									<div id="itm">
 									<a href=".item.php?id=<?php echo $row['Clave_Producto'];  ?>" rel="shadowbox[item];width=800;height=488">
 										<figure id="itm_imagen">  <img src="ver/ver.php?codigo=<?php echo $row['Clave_Producto'];  ?>"/> </figure>
@@ -132,12 +135,14 @@ var IE7_PNG_SUFFIX = ".png";
 										<article id="itm_codigo"><?php echo $row['Clave_Producto'];  ?></article>
 										<article id="itm_descripcion"><?php echo $row['Descripcion'];  ?></article>
 									</a>
-										<figure id="itm_ficha"><?php if ($row['cficha']) {?><a href="http://cerrajes.me/fichas/<?php echo  $row['cficha'].'.pdf';?>" target="_blank"><?php }?> <img src="imagenesSitio/productos/adobe.jpg"> </a></figure>
-										<figure id="itm_carrito"><a href="#"> <img src="imagenesSitio/productos/carrito.jpg"> </a></figure>
+										<figure id="itm_ficha"><?php if ($row['cficha']) {?><a href="http://cerrajes.me/fichas/<?php echo  $row['cficha'].'.pdf';?>" target="_blank"> <img src="imagenesSitio/productos/adobe.jpg"> </a><?php } else {?><img src="imagenesSitio/productos/adobeG.jpg"><?php }?></figure>
+										<!-- <figure id="itm_carrito"><a href="#"> <img src="imagenesSitio/productos/carrito.jpg"> </a></figure> -->
 										<article id="itm_precio"> <?php echo '$ '.$precioIVA;?></article>
 									</div>
-							<?php
-						}
+					<?php	} 
+					} else {
+						echo "<article>no se encontraron coincidencias con '" .$txt_criterio. "'</article>";
+					}
 						exit("&nbsp;");
 					?>
 				</article>

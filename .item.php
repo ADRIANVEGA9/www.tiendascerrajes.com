@@ -65,8 +65,8 @@ exit("Error en la consulta SQL");
 <?php
 foreach($query_product as $k => $row_product) 
 {
-  $precio = number_format($row_product["Precio"], 2, '.', ',');
-  $precioIVA=number_format((($precio)*(1.16)), 2, '.', ',');
+  $iva = ($row_product["Precio"])*(1.16);
+  $precioIVA=number_format(($iva), 2, '.', ',');  
 ?>  
   <section id="item">
    <div class="drop-shadow curved curved-hz-1"></div>
@@ -94,7 +94,8 @@ foreach($query_product as $k => $row_product)
               <span class="sbit_caract">Caracteristicas</span><p class="sbit_caract"><?php echo $row_product['Comentario'];  ?></p>
               <span class="sbit_caract">Precio</span><p id="itm_precio" class="sbit_caract"><?php echo '$ '.$precioIVA;?></p> 
             </section>
-            <figure><?php if ($row_product['cficha']) {?><a href="http://cerrajes.me/fichas/<?php echo  $row_product['cficha'].'.pdf';?>" target="_blank"><?php }?> <img src="imagenesSitio/productos/icon_adobe.jpg"></a></figure><figure><img src="Imagenessitio/productos/icon_carrito.jpg"></figure>
+            <figure><?php if ($row_product['cficha']) {?><a href="http://cerrajes.me/fichas/<?php echo  $row_product['cficha'].'.pdf';?>" target="_blank"><img src="imagenesSitio/productos/icon_adobe.jpg"></a><?php } else { ?> <img src="imagenesSitio/productos/icon_adobeG.jpg"><?php } ?> </figure>
+            <!-- <figure><img src="Imagenessitio/productos/icon_carrito.jpg"></figure> -->
           </section>
         </section>
       </section>

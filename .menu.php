@@ -12,7 +12,7 @@ function MM_showHideLayers() { //v9.0
 </script>	
 	<header>		
         <section id="logo"><a href="home.php"><img src="imagenesSitio/logo.jpg"></a>
-			<section id="sesion"><a href="#">Iniciar Sesi&oacute;n</a> / <a href="#">Registrate</a></section>
+			<!-- <section id="sesion"><a href="#">Iniciar Sesi&oacute;n</a> / <a href="#">Registrate</a></section> -->
 			<?php // require_once(".social.html") ?><?php  require_once(".buscar.php") ?>
 		</section>
 	</header>

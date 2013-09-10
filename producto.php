@@ -182,14 +182,14 @@ Shadowbox.init({
 								<article id="item_codigo">C&oacute;digo</article>
 								<article id="item_descripcion">Descripci&oacute;n</article>
 								<article id="item_ficha">Ficha</article>
-								<article id="item_carrito">Comprar</article>
+								<!-- <article id="item_carrito">Comprar</article> -->
 								<article id="item_precio">Precio</article>
 							</div>
  							<?php 
 								foreach($query_product as $k => $row_product) 
 								{ 
-								$precio = number_format($row_product["Precio"], 2, '.', ',');
-							  	$precioIVA=number_format((($precio)*(1.16)), 2, '.', ',');
+								$iva = ($row_product["Precio"])*(1.16);
+						  		$precioIVA=number_format(($iva), 2, '.', ',');	
 									?>
 									<div id="itm">
 									<a href=".item.php?id=<?php echo $row_product['Clave_Producto'];  ?>" rel="shadowbox[item];width=800;height=488">
@@ -198,8 +198,8 @@ Shadowbox.init({
 										<article id="itm_codigo"><?php echo $row_product['Clave_Producto'];  ?></article>
 										<article id="itm_descripcion"><?php echo $row_product['Descripcion'];  ?></article>
 									</a>
-										<figure id="itm_ficha"><?php if ($row_product['cficha']) {?><a href="http://cerrajes.me/fichas/<?php echo  $row_product['cficha'].'.pdf';?>" target="_blank"><?php }?> <img src="imagenesSitio/productos/adobe.jpg"> </a></figure>
-										<figure id="itm_carrito"><a href="#"> <img src="imagenesSitio/productos/carrito.jpg"> </a></figure>
+										<figure id="itm_ficha"><?php if ($row_product['cficha']) {?><a href="http://cerrajes.me/fichas/<?php echo  $row_product['cficha'].'.pdf';?>" target="_blank"> <img src="imagenesSitio/productos/adobe.jpg"><?php } else {?><img src="imagenesSitio/productos/adobeG.jpg"><?php } ?> </a></figure>
+										<!-- <figure id="itm_carrito"><a href="#"> <img src="imagenesSitio/productos/carrito.jpg"> </a></figure> -->
 										<article id="itm_precio"> <?php echo '$ '.$precioIVA;?></article>
 									</div>
 							<?php } 
