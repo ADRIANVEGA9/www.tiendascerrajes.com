@@ -28,6 +28,7 @@ function MM_showHideLayers() { //v9.0
 		    <td><a href="galeria.php" class="<?php if ($m==6) {echo activo;} ?>">galeria</a></td>
 		    <td><a href="contacto.php" class="<?php if ($m==7) {echo activo;} ?>">contacto</a></td>
 		    <td><a href="ubicanos.php" class="<?php if ($m==8) {echo activo;} ?>">ub&iacute;canos</a></td>
+		    <td><a href="aviso_de_privacidad.pdf" target="_blank">aviso de privacidad</a></td>
 		    <td><a href="http://www.facebook.com/pages/Tiendas-Cerrajes/186839721354132?sk=wall" target="_blank" ><img src="imagenesSitio/fb.png"></a></td>
 		  </tr>
 		</table>

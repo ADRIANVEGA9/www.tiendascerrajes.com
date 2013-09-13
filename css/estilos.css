@@ -825,7 +825,7 @@ td
 }
 #menuOpProd {
 	font: 10px "TChevin";
-	left: 195px;
+	left: 163px;
 	position: relative;
 	text-transform: none;
 	vertical-align: top;
@@ -1165,7 +1165,7 @@ td
 	float: right;
 	text-align: right;
 	right: 100%;
-	width:34%;
+	width:33%;
 }
 #sbit_familia span
 {
@@ -1238,7 +1238,7 @@ td
 }
 #sbit_nombre
 {	
-	width: 64%;
+	width: 66%;
 }
 #sbit_nombre span
 {
