@@ -70,7 +70,7 @@ img {
 	border: 0;	/*quita el borde azul de las imagenes con link*/
 	text-decoration: none;
 }
-nav {;/*font-size: 0px;/*dar tamaño de 0 (cero) al font para evitar que el inline-block ponga espacios en blanco entre cada li*/
+nav {font-size: 0px;/*dar tamaño de 0 (cero) al font para evitar que el inline-block ponga espacios en blanco entre cada li*/
 	color: #808284;
 	float: right;
 	font: 14px "TChevin";
@@ -103,7 +103,7 @@ nav a.activo{
 }
 nav table td a img {
 	vertical-align: middle;
-	width: 15px;
+	width: 20px;
 }
 li{
 	list-style-type: none;

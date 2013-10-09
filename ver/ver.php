@@ -1,5 +1,5 @@
-<? 
-include '../connections/conexion.php';
+<?php
+include("../connections/conexion.php"); 
 $codigo = (isset($_GET["codigo"])) ? $_GET["codigo"] : exit();
 $sql = "SELECT imagen
                 FROM t_imagenes 

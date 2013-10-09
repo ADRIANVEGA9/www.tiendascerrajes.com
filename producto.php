@@ -55,7 +55,7 @@ if(!$query_linea){
 exit("Error en la consulta SQL");
 }
 
-$query_txtsublinea= $db->Execute("SELECT t_linea.descripcion, t_sublinea.descripcion AS 'descripcion_sublinea', t_sublinea.frase, t_sublinea.sublinea, t_sublinea.id_linea
+$query_txtsublinea= $db->Execute("SELECT t_linea.descripcion, t_sublinea.descripcion AS 'descripcion_sublinea', t_sublinea.frase, t_sublinea.sublinea, t_sublinea.id_linea, t_linea.texto
 				FROM
 				t_linea
 				INNER JOIN t_sublinea ON t_linea.id = t_sublinea.id_linea
@@ -120,33 +120,31 @@ Shadowbox.init({
 					<article id="menuProdHome">
 						<ul>
 							<?php
-							foreach($query_menul as $k1 => $row_menul) {
-							?>
-								<li><a href="producto.php?id=<?php echo $row_menul['id_linea'];?>&id_sublinea=<?php echo $row_menul['sublinea'];?>" class="<?php if ($id==$row_menul['id_linea']){ echo activoP;} ?>"><?php echo $row_menul['descripcion'];?></a> </li>	
-										<?php
-											if ($row_menul['id_linea']==$id) {
-											foreach($query_menusublinea as $k => $row_menusublinea)
-											{	
-												if (($row_menul['sublinea'] <> 99) AND ($row_menul['id_linea']==$id))
-												{ 
-													if (($row_menusublinea['sublinea'])==($id_sublinea))
-													{
-													?>
-														<a class="sublinea sublineaActivo" >
-													<?	echo $row_menusublinea['descripcion'].'</a>'; 
-													} else
-													{
-													?>
-														<a class="sublinea" href="producto.php?id=<?php echo $row_menul['id_linea']; ?>&id_sublinea=<?php echo $row_menusublinea['sublinea'];?>">
-													<?	echo $row_menusublinea['descripcion'].'</a>'; 														
-													}
-
+							foreach($query_menul as $k1 => $row_menul) 
+							{ ?>
+								<li><a href="producto.php?id=<?php echo $row_menul['id_linea'];?>&id_sublinea=<?php echo $row_menul['sublinea'];?>" class="<?php if ($id==$row_menul['id_linea']){ echo 'activoP'; } ?>"><?php echo $row_menul['descripcion'];?></a> 
+								</li>	
+								<?php
+									if ($row_menul['id_linea']==$id) 
+									{
+										foreach($query_menusublinea as $k => $row_menusublinea)
+										{	
+											if (($row_menul['sublinea'] <> 99) AND ($row_menul['id_linea']==$id))
+											{ 
+												if (($row_menusublinea['sublinea'])==($id_sublinea))
+												{ ?>
+													<a class="sublinea sublineaActivo" >
+													<?php echo $row_menusublinea['descripcion'].'</a>'; 
+												} 
+												else
+												{ ?>
+													<a class="sublinea" href="producto.php?id=<?php echo $row_menul['id_linea']; ?>&id_sublinea=<?php echo $row_menusublinea['sublinea'];?>">
+													<?php	echo $row_menusublinea['descripcion'].'</a>';
 												}
 											}
-											}
-											?>
-							<?php }
-							 ?>
+										}
+									}
+							} ?>
 						</ul>
 					</article>
 				</article>
@@ -170,7 +168,7 @@ Shadowbox.init({
 							</span>
 								<p ><?php echo $row_txtsublinea['frase'];  ?></p>
 								<br>
-								<p><?php echo $row_txtsublinea['texto'];  ?></p>
+								<p><?php //echo $row_txtsublinea['texto'];  ?></p>
 							<?php
 							} ?>
 						</section>
@@ -210,7 +208,12 @@ Shadowbox.init({
 		</div>	
 <?php exit("&nbsp;"); ?>
 	</div>
+<<<<<<< HEAD
 	<!-- Piwik -->
+=======
+
+<!-- Piwik -->
+>>>>>>> piwik, acentos y actualización de php
 <script type="text/javascript"> 
   var _paq = _paq || [];
   _paq.push(['trackPageView']);

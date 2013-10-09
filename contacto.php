@@ -53,7 +53,7 @@ var IE7_PNG_SUFFIX = ".png";
 					<article id="c_izq">
 						<article class="fondoE">
 							<section id="contactoCheck">
-								<span>Permitenos conocer tus sugerencias, dudas e inquietudes sobre nuestros productos y servicios.</span><br>
+								<span>Permítenos conocer tus sugerencias, dudas e inquietudes sobre nuestros productos y servicios.</span><br>
 								<p>l&iacute;nea que m&aacute;s te interese</p>
 								<label><input type="checkbox" name="checkbox" id="checkbox"> Accesorios para gabinete</label>
 								<label><input type="checkbox" name="checkbox2" id="checkbox2"> Correderas</label>
@@ -70,7 +70,7 @@ var IE7_PNG_SUFFIX = ".png";
 						</article>
 					</article>
 					<article id="c_der2">
-							<span class="mayus, gris">CONTACTANOS</span><br><br>
+							<span class="mayus, gris">CONTÁCTANOS</span><br><br>
 						<section id="contactoEtiqueta">
 							<label for="nombre">*Nombre</label>
 							<label for="apellidos">*Apellidos</label>
@@ -88,19 +88,19 @@ var IE7_PNG_SUFFIX = ".png";
 							<input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" required></td>
 							<input type="text" name="municipio" id="municipio" placeholder="Municipio" required></td>
 							<input type="text" name="estado" id="estado" placeholder="Estado" required></td>
-							<input type="tel" name="ladaT" id="ladaT" placeholder="lada" required></td>
-							<input type="tel" name="telefono" id="telefono" placeholder="tel&eacute;fono" required></td>
+							<input type="tel" name="ladaT" id="ladaT" placeholder="Lada" required></td>
+							<input type="tel" name="telefono" id="telefono" placeholder="Tel&eacute;fono" required></td>
 							<input type="mail" name="email" id="email" placeholder="ejemplo@dominio.ext" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required></td>
 							<input type="text" name="empresa" id="empresa" placeholder="Empresa" ></td>
-							<input type="text" name="giro" id="giro" placeholder="giro de la empresa" ></td>
-							<input type="tel" name="ladaTOf" id="ladaTOf" placeholder="lada"></td>
-							<input type="tel" name="telOf" id="telOf" placeholder="tel&eacute;fono oficina"></td>
+							<input type="text" name="giro" id="giro" placeholder="Giro de la empresa" ></td>
+							<input type="tel" name="ladaTOf" id="ladaTOf" placeholder="Lada"></td>
+							<input type="tel" name="telOf" id="telOf" placeholder="Tel&eacute;fono oficina"></td>
 							<input type="url" name="web" id="web" placeholder="http.//www.tusitio.com"></td>
 						</section>
 						<section id="contactoEnvia">
 							<label for="mensaje">Comentarios</label>
-							<textarea name="mensaje" id="mensaje" placeholder="dejanos tu comentario" required></textarea>
-							<span>Tus datos ser&aacute;n de uso confidencial y nos ayudaran a responder de manera adecuada tus comentarios.<input name="Enviar" type="submit" class="botonEnvia" id="button" value="&nbsp;"/> </span>
+							<textarea name="mensaje" id="mensaje" placeholder="déjanos tu comentario" required></textarea>
+							<span>Tus datos ser&aacute;n de uso confidencial y nos ayudarán a responder de manera adecuada tus comentarios.<input name="Enviar" type="submit" class="botonEnvia" id="button" value="&nbsp;"/> </span>
 						</section>
 					</article>
 
