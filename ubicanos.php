@@ -226,6 +226,7 @@ function mostrarOcultar(cual, otro)	{
 				</article>
 			</article>
 		</div>	
+		<?php require (".footer.php") ?>
 	</div>
 	<!-- Piwik -->
 <script type="text/javascript"> 

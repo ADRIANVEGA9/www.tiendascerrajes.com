@@ -206,7 +206,8 @@ Shadowbox.init({
 				</article>
 			</article>
 		</div>	
-<?php exit("&nbsp;"); ?>
+		<?php require (".footer.php") ?>
+<?php exit(""); ?>
 	</div>
 <<<<<<< HEAD
 	<!-- Piwik -->

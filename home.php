@@ -95,17 +95,9 @@ var IE7_PNG_SUFFIX = ".png";
 					</article>
 					<figure> <img src="imagenesSitio/a201.jpg"><img src="imagenesSitio/a202.jpg"> </figure>
 				</section>
-				<section>
-					<span>EL MUNDO ACTUAL</span>
-					<article>
-						El proyecto 'Glass' de Google, gafas de realidad aumentada tienen un display en la lente que se activa al enfocar la vista arriba y a la derecha, y un comando táctil en una de las patillas para controlar algunos contenidos. Estas gafas de realidad aumentada permitirán realizar acciones como videoconferencias, navegar por internet, recibir indicaciones sobre rutas, acceder a mensajes, capturar y compartir fotos y vídeo, consultar el correo electrónico, mostrar información de hora y temperatura, entre otras posibilidades.<br>
-						Para que todo funcione, el equipo incorpora su CPU y la batería a lo largo de la patilla derecha. La posición de la información mostrada en la pantalla en nuestro campo visual dependerá de dónde esté situado el prisma respecto al ojo. Si el dispositivo se encuentra demasiado alto, el usuario verá los datos de la Glass a un lado; si por el contrario el cristal está justo delante de la retina, la imagen estará centrada.<br><br>
-						Fuente: <a>http://www.europapress.es</a> 
-					</article>
-					<figure> <img src="imagenesSitio/a301.jpg"> </figure>
-				</section>
 			</article>
 		</div>	
+		<?php require (".footer.php") ?>
 	</div>
 	<!-- Piwik -->
 <script type="text/javascript"> 

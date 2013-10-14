@@ -46,9 +46,28 @@ a{
 }
 body{
 	background-color: #EEEFEF;
+	font-family: 'TChevin';
+	font-size: 16px;
 }
 fieldset {
 	border:none;
+	width: 100%
+}
+footer{
+	background: #77BF44;
+	box-shadow: 1px 15px 15px -10px rgba(0, 0, 0, .4);
+	color: #EEE;
+	height: 40px;
+	left: -1%;
+	line-height: 40px;
+	position: relative;
+	text-align: center;
+	width: 102%;
+}
+footer span {
+	left: 0%;
+	position: absolute;
+	right: 0%;
 }
 form, fieldset, input, textarea{
    margin:0; 
@@ -103,7 +122,7 @@ nav a.activo{
 }
 nav table td a img {
 	vertical-align: middle;
-	width: 20px;
+	width: 25px;
 }
 li{
 	list-style-type: none;
@@ -355,10 +374,10 @@ td
     text-align: right;
     width: 100%;
 }
-#contenedorE {/*contenedor "externo" contiene imagen de fondo*/
+#contenedorE {/*contenedor "externo" contiene imagen de fondo*//*
 	-moz-box-shadow: 5px -10px 25px rgba(0, 0, 0, 0.4),-5px -10px 25px rgba(0, 0, 0, 0.4);
 	-o-box-shadow: 5px -10px 25px rgba(0, 0, 0, 0.4),-5px -10px 25px rgba(0, 0, 0, 0.4);
-	-webkit-box-shadow: 5px -10px 25px rgba(0, 0, 0, 0.4),-5px -10px 25px rgba(0, 0, 0, 0.4);
+	-webkit-box-shadow: 5px -10px 25px rgba(0, 0, 0, 0.4),-5px -10px 25px rgba(0, 0, 0, 0.4);*/
 	.background-color: none;
 	.background-image: url(../imagenesSitio/fondo.png);
 	.width: 1028px;
@@ -367,6 +386,7 @@ td
 	box-shadow: 5px -10px 25px rgba(0, 0, 0, 0.4),-5px -10px 25px rgba(0, 0, 0, 0.4);
 	height:auto;
 	margin: 0 auto;
+	padding-bottom: 25px;
 	width: 975px;
 }
 #contenedor {/*aqui se ubica todo el contenido*/
@@ -421,12 +441,12 @@ td
 	border-width: 2px;
 	color: #CCC;
 	display: inline-block;
-	height: 680px;
+	height: 730px;
 	margin: 1%;
 	padding: 1%;
 	text-align: justify;
 	vertical-align: text-top;
-	width: 28%;
+	width: 45%;;
 }
 #contenidoHome span
 {
@@ -1377,6 +1397,14 @@ color: #333;
 	vertical-align: text-top;
 	width: 350px;
 }
+#trianguloL,
+#trianguloR {
+	bottom: -60%;
+	color: #71BF44;
+	display: inline-block;
+	position: relative;
+	z-index: -10;
+} 
 #u{
 	background-image: url(../imagenesSitio/ubicanos/mapa_inactivo.jpg);
 	height: 455px;
@@ -1609,6 +1637,20 @@ color: #333;
 }
 .sublineaActivo {
 	cursor: default !important;
+}
+.triangulo_top_left {
+	border-right: 10px solid transparent;
+	border-top: 10px solid #71BF44;
+	height: 0;
+	right: -48.7%;
+	width: 0;
+}
+.triangulo_top_right {
+	border-left: 10px solid transparent;
+	border-top: 10px solid #71BF44;
+	height: 0;
+	left: -48.7%;
+	width: 0;
 }
 .verde
 {

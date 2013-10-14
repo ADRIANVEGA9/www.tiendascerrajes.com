@@ -63,13 +63,14 @@ function mostrarOcultar(cual, otro)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								<li onclick="mostrarOcultar('pr1','p1')"><a class="activoP">&#8226;&nbsp;&nbsp;BUZ&Oacute;N-MAN&Iacute;A</a>
-									<section id="pr1"><br>Descubre los nuevos buzones que tenemos para ti... Est&eacute;ticamente id&oacute;neos para las casas modernas y espacios espectaculares.<br><br>
-										Elaborados en materiales diversos como:<br><br>
-										Acero inoxidable<br>
-										Pl&aacute;stico de alta resistencia<br>
-										Met&aacute;lico esmaltado<br><br>
-										Consulta con tu asesor de ventas los diferentes estilos y medidas.</section>
+								<li onclick="mostrarOcultar('pr1','p1')"><a class="activoP">&#8226;&nbsp;&nbsp;MANIJA KWIKSET</a>
+									<section id="pr1"><br>
+										En Tiendas Cerrajes nos distinguimos por el cuidado en la elección de los materiales y el diseño.<br><br>
+										La calidad, innovación y precios competitivos de nuestros productos constituyen una mejor oportunidad de compra.
+										<br><br>
+										Enamórate de estos productos llenos de pequeños toques de innovación y buen gusto.
+										<br>
+									</section>
 								</li>
 <!-- 								<li onclick="mostrarOcultar('pr2','p2')"><a>&#8226;&nbsp;&nbsp;SUPER VERANO DE 10</a>
 									<section id="pr2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
@@ -114,6 +115,7 @@ function mostrarOcultar(cual, otro)	{
 				</article>
 			</article>
 		</div>	
+		<?php require (".footer.php") ?>
 	</div>
 	<!-- Piwik -->
 <script type="text/javascript"> 

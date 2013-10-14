@@ -148,6 +148,7 @@ var IE7_PNG_SUFFIX = ".png";
 				</article>
 			</article>
 		</div>	
+		<?php require (".footer.php") ?>
 	</div>
 <!-- Piwik -->
 <script type="text/javascript"> 
