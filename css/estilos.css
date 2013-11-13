@@ -57,6 +57,7 @@ footer{
 	background: #77BF44;
 	box-shadow: 1px 15px 15px -10px rgba(0, 0, 0, .4);
 	color: #EEE;
+	font-size: .85em;
 	height: 40px;
 	left: -1%;
 	line-height: 40px;
@@ -232,11 +233,13 @@ td
 }
 #compartir
 {
-	background-color: #222;
-	color: #EEE;
-	border-radius: 0.3em;
+	background-image: url(../imagenesSitio/recomienda.png); 
+	background-repeat: no-repeat;
+	background-size:contain;
+	color: #444;
+	border-radius: 1em;
 	font-family: "TChevin";
-	font-size: 16px;
+	font-size: .7em;
 	height: 150px;
 	margin: 0 auto;
 	padding: 6px;
@@ -244,7 +247,13 @@ td
 }
 #compartir article
 {
-	margin-bottom: 5px;
+	border-bottom: #222;
+	border-bottom-style: groove;
+	border-width: 1px;
+	font-weight: bold;
+	margin: 0 auto 5px;
+	padding: 5px 0px 5px 0px;
+	width: 89%;
 }
 #contactoCheck {
 	display: block;
@@ -706,7 +715,7 @@ td
 }
 #itm 
 {
-	/*background: rgba(250,250,250,.95);*/
+	/*background: rgba(255,255,255,1);*/
 	border-top-color: #FFF;
 	border-top-style: solid;
 	border-top-width: 2px;
@@ -718,7 +727,7 @@ td
 	max-height: 150px;
 	/*min-height: 50px;*/
 	padding: 5px 0px 5px 0px;
-	width: 104%;
+	width: 103.5%;
 }
 #itm a{
 	color: #999;
@@ -899,7 +908,7 @@ td
 }
 #menuProdHome li ,
 #menuNuevoProd li {
-	border-bottom: 1px solid #DDD;
+	border-bottom: 1px solid #FEFEFE;
 	line-height: 41px;
 }
 #menuProdHome .ultimo ,
@@ -920,6 +929,12 @@ td
 }
 #menuProdHome a:hover ,
 #menuNuevoProd a:hover {
+	background: #71BF44;
+	color: #FFFFFF;
+	cursor: pointer;
+}
+#menuProdHome a:active ,
+#menuNuevoProd a:active {
 	background: #71BF44;
 	color: #FFFFFF;
 	cursor: pointer;
@@ -1113,7 +1128,6 @@ td
 #pr1, #pr2, #pr3, #pr4, #pr5 {
 	font-family:"TChevin";
 	font-size: 14px;
-	font-weight: bold;
 	color:#666;
 }
 #social {
@@ -1127,7 +1141,8 @@ td
 }
 #recomienda{
 	height: 100px;
-	width: 100%;
+	margin: 0 8.5px;
+	width: 98.5%;
 }
 #recomiendaCajas {
 	border-color: #7A7A7A;
@@ -1135,7 +1150,7 @@ td
 	font-family: "TChevin";
 	font-size: 14px;
 	height: auto;
-	width: 100%;
+	width: 99%;
 }
 #recomiendaCajas input[type="text"],
 #recomiendaCajas input[type="mail"]
@@ -1144,17 +1159,20 @@ td
 	border-radius: 0.3em;
 	border: 0;
 	color: #333;
-	height: 24px;
+	height: 19px;
 	margin-bottom: 3px;
+	margin-left: 2%;
+	margin-right: 1%;
 	outline: 0;
-	padding-left: 3%;
-	padding-right: 3%;
-	width: 94%;
+	padding-left: 1%;
+	padding-right: 1%;
+	width: 90%;
 	}
 #recomiendaEnvia
 {
-	width: 100%;
+	margin-top: 10px;
 	text-align: right;
+	width: 95%;
 }
 #sbit_caract span {
 	color: #818285 !important;/* !important para quitar el estilo de color #sbit_texto span*/
@@ -1462,17 +1480,19 @@ color: #333;
 /*-------------------CLASES----------------*/
 .botonComparte 
 { 
-	background:url("../imagenesSitio/envia_inactivo.png") no-repeat right;
+	background: #FFF;
+	border-radius: 3px;
 	border-width: 0;
-	cursor:pointer;
-	width: 90px; 
+	color: #A5A3A3;
+	font-weight: bold;
+	letter-spacing: .05em;
+	padding: .2em .5em;
+	width: auto;
 }
 .botonComparte:hover 
 { 
-	background:url("../imagenesSitio/envia_activo.png") no-repeat right;
-	border-width: 0;
-	cursor:pointer;
-	width: 90px; 
+	background: #A5A3A3;
+	color: #FEFEFE;
 }
 .botonEnvia 
 {
@@ -1628,7 +1648,6 @@ color: #333;
 .sublinea {
 	background: #EFE !important;
 	color: #71BF44 !important;
-	float: right;
 	line-height: 40px;
 	/*width: 90% !important;*/
 }

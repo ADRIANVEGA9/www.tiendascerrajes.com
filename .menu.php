@@ -37,11 +37,11 @@ function MM_showHideLayers() { //v9.0
 				<li><a href="producto.php?id=01&id_sublinea=01">Accesorios para gabinete</a></li>
 				<li><a href="producto.php?id=02&id_sublinea=04">Correderas</a></li>
 				<li><a href="producto.php?id=03&id_sublinea=01">Jaladeras y botones</a></li>
-				<li><a href="producto.php?id=04">Tornillos y conectores</a></li>
+				<li><a href="producto.php?id=04&id_sublinea=99">Tornillos y conectores</a></li>
 				<li><a href="producto.php?id=05&id_sublinea=01">Bisagras</a></li>
 				<li><a href="producto.php?id=06&id_sublinea=01">Arquitectura</a></li>
 				<li><a href="producto.php?id=07&id_sublinea=99">Iluminaci&oacute;n</a></li>
-				<li><a href="producto.php?id=08&id_sublinea=01">Chapas y cerraduras</a></li>
+				<li><a href="producto.php?id=08&id_sublinea=00">Chapas y cerraduras</a></li>
 				<li><a href="producto.php?id=09">Accesorios para cl&oacute;set</a></li>
 				<li><a href="producto.php?id=10&id_sublinea=02">Accesorios de cocina y ba&ntilde;o</a></li>
 				<li><a href="producto.php?id=11">Buzones</a></li>

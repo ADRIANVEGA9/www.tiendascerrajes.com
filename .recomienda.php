@@ -8,7 +8,7 @@
 				<input type="mail" name="recomiendaE2" id="recomiendaE2" placeholder="email de tu amigo" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required></td>
 			
 			</section>
-			<section id="recomiendaEnvia"><input name="Enviar" type="submit" class="botonComparte" id="button" value="&nbsp;"/></section>
+			<section id="recomiendaEnvia"><input name="Enviar" type="submit" class="botonComparte" id="button" value="ENVIAR"/></section>
 		</fieldset>
 	</form>
 	<?php }

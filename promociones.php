@@ -63,20 +63,17 @@ function mostrarOcultar(cual, otro)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								<li onclick="mostrarOcultar('pr1','p1')"><a class="activoP">&#8226;&nbsp;&nbsp;MANIJA KWIKSET</a>
+								<li onclick="mostrarOcultar('pr1','p1')"><a class="">&#8226;&nbsp;&nbsp;BALDWIN</a>
 									<section id="pr1"><br>
-										En Tiendas Cerrajes nos distinguimos por el cuidado en la elección de los materiales y el diseño.<br><br>
-										La calidad, innovación y precios competitivos de nuestros productos constituyen una mejor oportunidad de compra.
+										La línea de Baldwin complace los gustos más exigentes, ya que se caracteriza por tener diseños exclusivos, forjados a mano y con una calidad inigualable. <br><br>
+										Baldwin Reserve logra combinar funcionalidad y elegancia que harán de tu hogar un espacio con estilo inspirado.
 										<br><br>
-										Enamórate de estos productos llenos de pequeños toques de innovación y buen gusto.
-										<br>
 									</section>
 								</li>
-<!-- 								<li onclick="mostrarOcultar('pr2','p2')"><a>&#8226;&nbsp;&nbsp;SUPER VERANO DE 10</a>
-									<section id="pr2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </section>
+								<li onclick="mostrarOcultar('pr2','p2')"><a class="">&#8226;&nbsp;&nbsp;TRIOMAX</a>
+									<section id="pr2">TRIOMAX ofrece una línea completa de nuevas posibilidades de diseño, maximizando los espacios en combinación con las diferentes opciones de acomodo para la organización de los artículos de cocina.</section>
 								</li>
-								<li onclick="mostrarOcultar('pr3','p3')"><a>&#8226;&nbsp;&nbsp;TUBO OVAL LED</a>
+<!-- 								<li onclick="mostrarOcultar('pr3','p3')"><a>&#8226;&nbsp;&nbsp;TUBO OVAL LED</a>
 									<section id="pr3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </section>
 								</li>
@@ -100,10 +97,10 @@ function mostrarOcultar(cual, otro)	{
 					<section id="p1">
 						<img src="imagenesSitio/promo/01.jpg">
 					</section>
-<!-- 					<section id="p2">
+ 					<section id="p2">
 						<img src="imagenesSitio/promo/02.jpg">
 					</section>
-					<section id="p3">
+<!--					<section id="p3">
 						<img src="imagenesSitio/promo/03.jpg">
 					</section>
 					<section id="p4">

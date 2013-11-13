@@ -87,6 +87,7 @@ exit("Error en la consulta SQL");
 <link rel="stylesheet" href="css/estilos.css">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/lightbox.css"/>
+<!-- <link rel="stylesheet" href="menu/css/styles.css"> -->
 <script src="js/prefixfree.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="Shadowbox/shadowbox.css">
@@ -110,6 +111,30 @@ Shadowbox.init({
     overlayOpacity: 0.8
 });
 </script>
+
+<!--initiate accordion-->
+<script type="text/javascript">
+	$(function() {
+	
+	    var menu_ul = $('.menu > li > ul'),
+	           menu_a  = $('.menu > li > a');
+	    
+	    menu_ul.show();
+	
+	    menu_a.mouseenter(function(e) { //mouseover cuando mouse se mueva por encima -- mouseenter cuando el mouse entre al objeto
+	        e.preventDefault();
+	        if(!$(this).hasClass('active')) {
+	            menu_a.removeClass('active');
+	            menu_ul.filter(':visible').slideUp('normal');
+	            $(this).addClass('active').next().stop(true,true).slideDown('normal');
+	        } else {
+	            $(this).removeClass('active');
+	            $(this).next().stop(true,true).slideUp('normal');
+	        }
+	    });
+	
+	});
+</script>
 </head>
 <body>
 	<div id="contenedorE">
@@ -118,32 +143,36 @@ Shadowbox.init({
 			<article id="contenidoAuto">
 				<article id="c_izqP">
 					<article id="menuProdHome">
-						<ul>
+						<ul class="menu">
 							<?php
 							foreach($query_menul as $k1 => $row_menul) 
 							{ ?>
-								<li><a href="producto.php?id=<?php echo $row_menul['id_linea'];?>&id_sublinea=<?php echo $row_menul['sublinea'];?>" class="<?php if ($id==$row_menul['id_linea']){ echo 'activoP'; } ?>"><?php echo $row_menul['descripcion'];?></a> 
-								</li>	
+								<li><a href="productoA.php?id=<?php echo $row_menul['id_linea'];?>&id_sublinea=<?php echo $row_menul['sublinea'];?>" class="<?php if ($id==$row_menul['id_linea']){ echo 'activoP'; } ?>"><?php echo $row_menul['descripcion'];?></a> 	
 								<?php
 									if ($row_menul['id_linea']==$id) 
-									{
+									{?>
+									<ul>
+									<?php 	
 										foreach($query_menusublinea as $k => $row_menusublinea)
-										{	
+										{
 											if (($row_menul['sublinea'] <> 99) AND ($row_menul['id_linea']==$id))
 											{ 
-												if (($row_menusublinea['sublinea'])==($id_sublinea))
-												{ ?>
-													<a class="sublinea sublineaActivo" >
-													<?php echo $row_menusublinea['descripcion'].'</a>'; 
-												} 
-												else
-												{ ?>
-													<a class="sublinea" href="producto.php?id=<?php echo $row_menul['id_linea']; ?>&id_sublinea=<?php echo $row_menusublinea['sublinea'];?>">
-													<?php	echo $row_menusublinea['descripcion'].'</a>';
-												}
+													if (($row_menusublinea['sublinea'])==($id_sublinea))
+													{ ?>
+														<li><a class="sublinea sublineaActivo" >
+														<?php echo $row_menusublinea['descripcion'].'</a></li>'; 
+													} 
+													else
+													{ ?>
+														<li><a class="sublinea" href="productoA.php?id=<?php echo $row_menul['id_linea']; ?>&id_sublinea=<?php echo $row_menusublinea['sublinea'];?>">
+														<?php	echo $row_menusublinea['descripcion'].'</a></li>';
+													} 
 											}
-										}
+										}?>
+									</ul>
+									<?php
 									}
+								echo '</li>';//fin <li> linea
 							} ?>
 						</ul>
 					</article>
@@ -237,6 +266,5 @@ Shadowbox.init({
 </script>
 <noscript><p><img src="http://localhost/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
 <!-- End Piwik Code -->
-
 </body>
 </html>
