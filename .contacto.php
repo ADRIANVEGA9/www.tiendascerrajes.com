@@ -334,7 +334,6 @@
 						<article class="fondoVerdeE">
 
 						</article>
-						<?php  require_once(".social.html") ?>
 					</article>
 					<article id="c_der2">
 						<article id="enviado">

@@ -28,14 +28,26 @@ if ($txt_criterio<>"") {
 	$txt_criterio='&nbsp;';
 }
 //Ya no usamos la clásica query de consulta como mysql_query ahora por definición de la función creada por adodb usamos la siguiente:
-$query= $db->Execute("SELECT    tblIC_Producto.Clave_Producto, Descripcion2, Descripcion, Foto, tblIC_ProductoPrecio.Precio,  Peso, Clave_Categoria, Clave_Categoria_Sub_1, cAlto, cAncho, cLargo, cMaterial, cAcabados, cMedida, cDescripcion3, Clave_UM, Comentario, clave_proveedor, cficha, cid_linea
-		FROM         tblIC_Producto  INNER JOIN
-		          tblIC_ProductoPrecio ON tblIC_Producto.Clave_Producto = tblIC_ProductoPrecio.Clave_Producto
+$query= $db->Execute("SELECT    tblIC_Producto.Clave_Producto, Descripcion2, tblIC_Producto.Descripcion, Foto, tblIC_ProductoPrecio.Precio,  Peso, Clave_Categoria, Clave_Categoria_Sub_1, cAlto, cAncho, cLargo, cMaterial, cAcabados, cMedida, cDescripcion3, Clave_UM, Comentario, clave_proveedor, cficha, cid_linea, t_linea.descripcion AS nombre_linea, t_sublinea.descripcion AS nombre_sublinea
+		FROM         tblIC_Producto  
+				INNER JOIN tblIC_ProductoPrecio ON tblIC_Producto.Clave_Producto = tblIC_ProductoPrecio.Clave_Producto
+		        INNER JOIN t_linea ON tblIC_Producto.cid_linea = t_linea.id
+				INNER JOIN t_sublinea ON tblIC_Producto.cid_sublinea = t_sublinea.sublinea
 		WHERE
 		(tblIC_Producto.cid_linea IS NOT NULL) AND
 		(tblIC_ProductoPrecio.Lista_Precio = 1) AND
 		/*(dbo.tblIC_Producto.Peso > 0) AND*/
-		((tblIC_Producto.Descripcion LIKE '%" . $txt_criterio . "%') OR (tblIC_Producto.Clave_Producto LIKE '%" . $txt_criterio . "%'))
+		((tblIC_Producto.Descripcion LIKE '%" . $txt_criterio . "%') 
+			OR (tblIC_Producto.Clave_Producto LIKE '%" . $txt_criterio . "%') 
+			OR (tblIC_Producto.Clave_Categoria LIKE '%" . $txt_criterio . "%') 
+			OR (tblIC_Producto.Clave_Categoria_Sub_1 LIKE '%" . $txt_criterio . "%') 
+			OR (tblIC_Producto.Descripcion2 LIKE '%" . $txt_criterio . "%') 
+			OR (t_linea.descripcion LIKE '%" . $txt_criterio . "%') 
+			OR (t_sublinea.descripcion LIKE '%" . $txt_criterio . "%')
+			) AND
+			(tblIC_Producto.cid_linea = t_linea.id AND
+			tblIC_Producto.cid_sublinea = t_sublinea.sublinea AND
+			tblIC_Producto.cid_linea = t_sublinea.id_linea )
 		ORDER BY
 		tblIC_Producto.Clave_Producto ASC");
 $totalRows = $query->_numOfRows;
