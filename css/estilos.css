@@ -338,7 +338,8 @@ td
 		font-family: "TChevin";
 		font-size: 14px;
 		height: 100px;
-		width: 567px;
+		resize: none;
+		width: 640px;
 	}
 #contactoEtiqueta {
 	font-family: "TChevin";
@@ -378,8 +379,8 @@ td
 #contactoEnvia span {
     display: inline-block;
     height: auto;
-    color:#333;
-    font-size: 9px;
+	color: #B1B1B1;
+	font-size: .7em;
     text-align: right;
     width: 100%;
 }
@@ -519,7 +520,10 @@ td
 	margin-left: 10px;
 	position: relative;
 	vertical-align: top;
-	width: 655px;
+	width: 685px;
+}
+#p1 img, #p2 img, #p3 img, #p4 img, #p5 img{
+	width: 100%;
 }
 #c_der2U {
 	display: inline-block;
@@ -706,7 +710,7 @@ td
 #item_precio
 {
 	text-align: right;
-	width: 10%
+	width: 12%
 }
 #item_img {
 	display: inline-block;
@@ -791,7 +795,7 @@ td
 	line-height: 20px;
 	text-align: right;
 	text-shadow: 1px 1px #DDD;
-	width: 10%;
+	width: 12%;
 }
 #logo
 {
@@ -1176,7 +1180,7 @@ td
 }
 #sbit_caract span {
 	color: #818285 !important;/* !important para quitar el estilo de color #sbit_texto span*/
-	text-transform: capitalize !important;/* !important para quitar el estilo de text-transform #sbit_texto span*/
+	text-transform: none !important;/* !important para quitar el estilo de text-transform #sbit_texto span*/
 }
 #sbit_cuerpo
 {
@@ -1556,6 +1560,9 @@ color: #333;
 .curved2:before {
 	bottom: 1px;
 	box-shadow: 0 0 5px 0px rgba(0,0,0,0.8);
+}
+.derecha {
+	text-align: right;
 }
 .drop-shadow 
 {

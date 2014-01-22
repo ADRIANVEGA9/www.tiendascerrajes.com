@@ -352,7 +352,7 @@
 					* Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
 					*/
 
-					require_once('nusoap/nusoap.php');
+					require_once("nusoap/nusoap.php");
 
 					$proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
 					$proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';

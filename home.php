@@ -3,6 +3,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<meta description="El nuevo concepto que hemos desarrollado “Tiendas Cerrajes”, hace más sencillo, fácil y creativo, para ti, el diseño integral de tus espacios.">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/estilos.css">
 <script src="js/prefixfree.min.js"></script>
@@ -99,22 +100,5 @@ var IE7_PNG_SUFFIX = ".png";
 		</div>	
 		<?php require (".footer.php") ?>
 	</div>
-	<!-- Piwik -->
-<script type="text/javascript"> 
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://localhost/piwik//";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 1]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-
-</script>
-<noscript><p><img src="http://localhost/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
-<!-- End Piwik Code -->
-
 </body>
 </html>

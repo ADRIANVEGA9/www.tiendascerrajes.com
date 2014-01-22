@@ -63,17 +63,17 @@ function mostrarOcultar(cual, otro)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								<li onclick="mostrarOcultar('pr1','p1')"><a class="">&#8226;&nbsp;&nbsp;BALDWIN</a>
+								<li onclick="mostrarOcultar('pr1','p1')"><a class="">&#8226;&nbsp;&nbsp;GRANDES OFERTAS</a>
 									<section id="pr1"><br>
 										La línea de Baldwin complace los gustos más exigentes, ya que se caracteriza por tener diseños exclusivos, forjados a mano y con una calidad inigualable. <br><br>
 										Baldwin Reserve logra combinar funcionalidad y elegancia que harán de tu hogar un espacio con estilo inspirado.
 										<br><br>
 									</section>
 								</li>
-								<li onclick="mostrarOcultar('pr2','p2')"><a class="">&#8226;&nbsp;&nbsp;TRIOMAX</a>
+<!--								<li onclick="mostrarOcultar('pr2','p2')"><a class="">&#8226;&nbsp;&nbsp;TRIOMAX</a>
 									<section id="pr2">TRIOMAX ofrece una línea completa de nuevas posibilidades de diseño, maximizando los espacios en combinación con las diferentes opciones de acomodo para la organización de los artículos de cocina.</section>
 								</li>
-<!-- 								<li onclick="mostrarOcultar('pr3','p3')"><a>&#8226;&nbsp;&nbsp;TUBO OVAL LED</a>
+ 								<li onclick="mostrarOcultar('pr3','p3')"><a>&#8226;&nbsp;&nbsp;TUBO OVAL LED</a>
 									<section id="pr3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </section>
 								</li>
@@ -97,10 +97,10 @@ function mostrarOcultar(cual, otro)	{
 					<section id="p1">
 						<img src="imagenesSitio/promo/01.jpg">
 					</section>
- 					<section id="p2">
+<!-- 					<section id="p2">
 						<img src="imagenesSitio/promo/02.jpg">
 					</section>
-<!--					<section id="p3">
+					<section id="p3">
 						<img src="imagenesSitio/promo/03.jpg">
 					</section>
 					<section id="p4">
@@ -114,22 +114,7 @@ function mostrarOcultar(cual, otro)	{
 		</div>	
 		<?php require (".footer.php") ?>
 	</div>
-	<!-- Piwik -->
-<script type="text/javascript"> 
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://localhost/piwik//";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 1]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
 
-</script>
-<noscript><p><img src="http://localhost/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
-<!-- End Piwik Code -->
 
 </body>
 </html>

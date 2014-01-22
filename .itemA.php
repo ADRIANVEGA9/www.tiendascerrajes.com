@@ -77,8 +77,8 @@ foreach($query_product as $k => $row_product)
       <section id="sbit_cuerpo">
         <section id="sbit_imagen">
           <section id="sbit_imgcentrar">
-            <!-- <img src="http://cerrajes.me/images/<?php echo $row_product['Clave_Producto'];  ?>.jpg"> -->
-            <img src="ver/ver.php?codigo=<?php echo $row_product['Clave_Producto'];  ?>">
+            <img src="http://cerrajes.me/images/<?php echo $row_product['Clave_Producto'];  ?>.jpg">
+            <!-- <img src="ver/ver.php?codigo=<?php echo $row_product['Clave_Producto'];  ?>"> -->
           </section>
         </section>
         <section id="sbit_info">
@@ -104,6 +104,5 @@ foreach($query_product as $k => $row_product)
             <section id="sbit_linea"><span><?php echo $row_product['linea']; ?></span></section>
             <div class="drop-shadow2 curved2 curved-hz-2"></div>
   </section>
-<?php } ?>
 </body>
 </html>

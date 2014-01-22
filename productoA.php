@@ -55,7 +55,7 @@ if(!$query_linea){
 exit("Error en la consulta SQL");
 }
 
-$query_txtsublinea= $db->Execute("SELECT t_linea.descripcion, t_sublinea.descripcion AS 'descripcion_sublinea', t_sublinea.frase, t_sublinea.sublinea, t_sublinea.id_linea, t_linea.texto
+$query_txtsublinea= $db->Execute("SELECT t_linea.descripcion, t_sublinea.descripcion AS 'descripcion_sublinea', t_sublinea.sublinea, t_sublinea.id_linea
 				FROM
 				t_linea
 				INNER JOIN t_sublinea ON t_linea.id = t_sublinea.id_linea
@@ -195,9 +195,7 @@ Shadowbox.init({
 									}
 							?>
 							</span>
-								<p ><?php echo $row_txtsublinea['frase'];  ?></p>
 								<br>
-								<p><?php //echo $row_txtsublinea['texto'];  ?></p>
 							<?php
 							} ?>
 						</section>
@@ -219,8 +217,9 @@ Shadowbox.init({
 						  		$precioIVA=number_format(($iva), 2, '.', ',');	
 									?>
 									<div id="itm">
-									<a href=".item.php?id=<?php echo $row_product['Clave_Producto'];  ?>" rel="shadowbox[item];width=800;height=488">
-										<figure id="itm_imagen">  <img src="ver/ver.php?codigo=<?php echo $row_product['Clave_Producto'];  ?>"/> </figure>
+									<a href=".itemA.php?id=<?php echo $row_product['Clave_Producto'];  ?>" rel="shadowbox[item];width=800;height=488">
+									<!-- 	<figure id="itm_imagen">  <img src="ver/ver.php?codigo=<?php echo $row_product['Clave_Producto'];  ?>"/> </figure> -->									
+										<figure id="itm_imagen">  <img src="http://cerrajes.me/images/<?php echo $row_product['Clave_Producto'];  ?>.jpg"/> </figure>
 										<article id="itm_nombre"><?php echo $row_product['Descripcion2'];  ?></article>
 										<article id="itm_codigo"><?php echo $row_product['Clave_Producto'];  ?></article>
 										<article id="itm_descripcion"><?php echo $row_product['Descripcion'];  ?></article>
@@ -245,26 +244,6 @@ Shadowbox.init({
 		<?php require (".footer.php") ?>
 <?php exit(""); ?>
 	</div>
-<<<<<<< HEAD
-	<!-- Piwik -->
-=======
 
-<!-- Piwik -->
->>>>>>> piwik, acentos y actualización de php
-<script type="text/javascript"> 
-  var _paq = _paq || [];
-  _paq.push(['trackPageView']);
-  _paq.push(['enableLinkTracking']);
-  (function() {
-    var u=(("https:" == document.location.protocol) ? "https" : "http") + "://localhost/piwik//";
-    _paq.push(['setTrackerUrl', u+'piwik.php']);
-    _paq.push(['setSiteId', 1]);
-    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0]; g.type='text/javascript';
-    g.defer=true; g.async=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-  })();
-
-</script>
-<noscript><p><img src="http://localhost/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
-<!-- End Piwik Code -->
 </body>
 </html>
