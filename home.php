@@ -3,7 +3,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta description="El nuevo concepto que hemos desarrollado “Tiendas Cerrajes”, hace más sencillo, fácil y creativo, para ti, el diseño integral de tus espacios.">
+<meta name="description" content="El nuevo concepto que hemos desarrollado “Tiendas Cerrajes”, hace más sencillo, fácil y creativo, para ti, el diseño integral de tus espacios.">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/estilos.css">
 <script src="js/prefixfree.min.js"></script>
