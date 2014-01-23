@@ -11,28 +11,29 @@
 <link rel="stylesheet" type="text/css" href="Shadowbox/shadowbox.css">
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="Shadowbox/shadowbox.js"></script>
-<script type='text/javascript'>
-Shadowbox.init({
-    displayCounter:false,
-    handleOversize: "resize",
-    modal: true, //evita que se cierre con click fuera del recuadro principal
-    overlayColor: "#000",//color de fondo
-    overlayOpacity: 0.3,//transparencia
-	language: "es",
-	 players:  ['img', 'html', 'iframe', 'qt', 'wmp', 'swf', 'flv']
-});
-</script>
 <script type="text/javascript">
-// $(document).ready(function(){
-// 	setTimeout(function() {
-// 	    Shadowbox.open({
-//     	    content:    '<article><img src="imagenesSitio/inicio_02.png"></article>',
-//     	    player:     "html",
-//     	    width:      "800",
-//     	    height:     "546"
-//     	});
-// 	}, 500);
-// });
+	window.onload = function() {
+
+	    // open a welcome message as soon as the window loads
+	    Shadowbox.open({
+	        content:    'carrusel/carrusel.PHP',
+	        player:     "iframe",
+	        height:     620,
+	        width:      750
+	    });
+
+	};
+</script>
+<script type='text/javascript'>
+	Shadowbox.init({
+	    displayCounter:false,
+	    handleOversize: "resize",
+	    //modal: true, //evita que se cierre con click fuera del recuadro principal
+	    overlayColor: "#000",//color de fondo
+	    overlayOpacity: 0.3,//transparencia
+		language: "es",
+		 players:  ['img', 'html', 'iframe', 'qt', 'wmp', 'swf', 'flv']
+	});
 </script>
 <title>Tiendas Cerrajes&reg; Un espacio creativo e innovador dise&ntilde;ado para ti...</title>
 <script>

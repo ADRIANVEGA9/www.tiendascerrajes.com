@@ -88,13 +88,19 @@ foreach($query_product as $k => $row_product)
             <span>caracter&iacute;sticas</span><br>
             <section id="sbit_caract">
               <span class="sbit_caract">C&oacute;digo</span><p class="sbit_caract"><?php echo $row_product['Clave_Producto'];  ?></p>
-              <span class="sbit_caract">UM</span><p class="sbit_caract"><?php echo $row_product['Clave_UM'];  ?></p>
-              <span class="sbit_caract">Material</span><p class="sbit_caract"><?php echo $row_product['cMaterial'];  ?></p>
-              <span class="sbit_caract">Acabados</span><p class="sbit_caract"><?php echo $row_product['cAcabados'];  ?></p>
+              <span class="sbit_caract">UM</span><p class="sbit_caract"><?php echo strtolower($row_product['Clave_UM']);  ?></p>
+              <span class="sbit_caract">Material</span><p class="sbit_caract"><?php echo ucfirst($row_product['cMaterial']);  ?></p>
+              <span class="sbit_caract">Acabados</span><p class="sbit_caract"><?php echo ucfirst($row_product['cAcabados']);  ?></p>
               <span class="sbit_caract">Medida</span><p class="sbit_caract"><?php echo $row_product['cMedida'];  ?></p>
-              <span class="sbit_caract">Caracteristicas</span><p class="sbit_caract"><?php echo $row_product['Comentario'];  ?></p>
+              <span class="sbit_caract">Caracteristicas</span><p class="sbit_caract"><?php echo ucfirst($row_product['Comentario']);  ?></p>
               <span class="sbit_caract">Precio con IVA</span><p id="itm_precio" class="sbit_caract"><?php echo '$ '.$precioIVA;?></p> 
+              <?php
+                $umed=strtolower($row_product['Clave_UM']);//convertir a minusculas la unidad de medida
+                if (($umed=='jgo') OR ($umed=='jg')) {  ?>
+              <p class="derecha">precio por juego</p>
+              <?php } else { ?>
               <p class="derecha">precio unitario</p>
+              <?php } ?>
             </section>
             <figure><?php if ($row_product['cficha']) {?><a href="http://cerrajes.me/fichas/<?php echo  $row_product['cficha'].'.pdf';?>" target="_blank"><img src="imagenesSitio/productos/icon_adobe.jpg"></a><?php } else { ?> <img src="imagenesSitio/productos/icon_adobeG.jpg"><?php } ?> </figure>
             <!-- <figure><img src="Imagenessitio/productos/icon_carrito.jpg"></figure> -->

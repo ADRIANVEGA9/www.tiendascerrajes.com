@@ -522,6 +522,10 @@ td
 	vertical-align: top;
 	width: 685px;
 }
+#c_der2 section img 
+{
+	width: 100%;
+}
 #p1 img, #p2 img, #p3 img, #p4 img, #p5 img{
 	width: 100%;
 }
@@ -856,6 +860,10 @@ td
 	height: 350px;
 	width: 260px;
 }
+#menuNuevoProd ul li section img
+{
+	width: 50%;
+}
 #menuOpProd {
 	font: 10px "TChevin";
 	left: 163px;
@@ -933,8 +941,8 @@ td
 }
 #menuProdHome a:hover ,
 #menuNuevoProd a:hover {
-	background: #71BF44;
-	color: #FFFFFF;
+	background: #71BF44 !important;
+	color: #FFFFFF !important;
 	cursor: pointer;
 }
 #menuProdHome a:active ,
@@ -1056,12 +1064,12 @@ td
 	color: #7AC143;
 	text-decoration: none;
 }
-#n3, #n4, #n5, #n6, #n7, #n8, #n9 {
+#n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9 {
 	display: none;
 }
 #n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9 {
 	height: auto;
-	border-bottom: 1px solid #D1D1D1;
+	border-bottom: 0px solid #D1D1D1;
 	margin-bottom: 15px;
 }
 #n9 {
@@ -1112,27 +1120,8 @@ td
 #p2, #p3, #p4, #p5, #pr2, #pr3, #pr4, #pr5 {
 	display: none;
 }
-#pr1 {
-	display: block;
-	width: 85%;
-	text-align: justify;
-	margin: 0 auto;
-	line-height: 16px;
-	padding-bottom: 10px;
-}
-#pr2, #pr3, #pr4, #pr5 {
-	display: none;
-	line-height: 16px;
-	margin: 0 auto;
-	padding-bottom: 10px;
-	padding-top: 10px;
-	text-align: justify;
-	width: 85%;
-}
 #pr1, #pr2, #pr3, #pr4, #pr5 {
-	font-family:"TChevin";
-	font-size: 14px;
-	color:#666;
+	text-align: center;
 }
 #social {
 	height: 65px;

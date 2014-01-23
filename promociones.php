@@ -64,10 +64,8 @@ function mostrarOcultar(cual, otro)	{
 						<article id="menuNuevoProd">
 							<ul>
 								<li onclick="mostrarOcultar('pr1','p1')"><a class="">&#8226;&nbsp;&nbsp;GRANDES OFERTAS</a>
-									<section id="pr1"><br>
-										La línea de Baldwin complace los gustos más exigentes, ya que se caracteriza por tener diseños exclusivos, forjados a mano y con una calidad inigualable. <br><br>
-										Baldwin Reserve logra combinar funcionalidad y elegancia que harán de tu hogar un espacio con estilo inspirado.
-										<br><br>
+									<section id="pr1">
+										<img src="imagenesSitio/2014.png" alt="código QR">
 									</section>
 								</li>
 <!--								<li onclick="mostrarOcultar('pr2','p2')"><a class="">&#8226;&nbsp;&nbsp;TRIOMAX</a>
