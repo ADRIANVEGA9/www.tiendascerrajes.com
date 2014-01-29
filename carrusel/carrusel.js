@@ -3,7 +3,7 @@ var DP = {
   dA: 0,
   sD: 0,
   tD: 0,
-  t: 8000,
+  t: 6000,
   idD: 'diapos',
   nID: 'diapos-on',
   idC: 'contador',

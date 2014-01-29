@@ -22,11 +22,11 @@ $url = !empty($query) ? "http://$host$self?$query" : "http://$host$self";
 	$headers = "MIME-Version: 1.0\r\n";  
 	$headers .= "Content-type: text/html; charset= utf-8\r\n"; 
 	//Las siguientes 2 cabeceras, permitirán que el destinatario sepa a quién responder y quién le ha enviado el mensaje
-	$micorreo = "avega@cerrajes.com";/*contacto@tiendascerrajes.com*/
+	$micorreo = "contacto@tiendascerrajes.com";/*contacto@tiendascerrajes.com*/
 	$correoAmigo = "$_POST[recomiendaE2]";
 	$headers .= "Reply-To:". "$_POST[recomiendaE1]"."\r\n"; /*contacto@tiendascerrajes.com*/ 
 	$headers .= "From:". "<".$_POST[recomiendaN1].">\r\n";/*contacto@tiendascerrajes.com*/
-	$headers .= 'Bcc: sistemas@cerrajes.com' . "\r\n";
+	$headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
 	//En este ejemplo suponemos que el mail del destinatario lo hemos enviado desde un formulario con el método post, pero es indistinto desde donde se lo obtenga (consulta a la base de datos, almacenado en una variable de sesi&oacute;n, enviado por get,etc.)
 	ini_set("SMTP","mail.cerrajes.com");/*mail.tiendascerrajes.com*/
 	ini_set("smtp_port","587");/*25*/

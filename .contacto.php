@@ -92,21 +92,21 @@ background-position: center center;
 	z-index:1;
 }
 .estilo1 {
-	font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;
-	font-size:9px;
-	color:#9999999;
+	font-family: Calibri, \"Trebuchet MS\";
+	font-size:11px;
+	color:#80817C;
 	text-align:left;
 }
 .estilo2 {
-	font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;
+	font-family: Calibri, \"Trebuchet MS\";
 	font-size:8px;
-	color:#9999999;
+	color:#80817C;
 	text-align:left;
 }
 .estilo3 {
-	font-family:\"Trebuchet MS\", Arial, Helvetica, sans-serif;
-	font-size:10px;
-	color:#9999999;
+	font-family: Calibri, \"Trebuchet MS\";
+	font-size:11px;
+	color:#80817C;
 	text-align:left;
 	}
 </style>
@@ -253,7 +253,7 @@ if($_POST['checkbox9']=="on" )
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <td class=\"estilo1\">Correo electr&oacute;nico</td>
-        <td class=\"estilo1\" colspan=\"2\">".$_POST['email']."</td>
+        <td class=\"estilo1\" colspan=\"2\">".$_POST['correo']."</td>
         </tr>
       <tr>
         <td><input type=\"checkbox\" name=\"checkbox10\" id=\"checkbox10\" tabindex=\"10\""; 
@@ -316,19 +316,18 @@ if($_POST['checkbox11']=="on" )
 $headers = "MIME-Version: 1.0\r\n";  
 $headers .= "Content-type: text/html; charset= iso-8859-1\r\n"; 
 //Las siguientes 2 cabeceras, permitirán que el destinatario sepa a quién responder y quién le ha enviado el mensaje
-$micorreo = "avega@cerrajes.com";/*contacto@tiendascerrajes.com*/
-$correoCli = "$_POST[email]";
-$headers .= "Reply-To: avega@cerrajes.com\r\n"; /*contacto@tiendascerrajes.com*/ 
-$headers .= "From: Contacto Tiendas Cerrajes<avega@cerrajes.com>\r\n";/*contacto@tiendascerrajes.com*/
+$micorreo = "contacto@tiendascerrajes.com";/*contacto@tiendascerrajes.com*/
+$correoCli = "$_POST[correo]";
+$headers .= "Reply-To: contacto@tiendascerrajes.com\r\n"; /*contacto@tiendascerrajes.com*/ 
+$headers .= "From: Contacto Tiendas Cerrajes<contacto@tiendascerrajes.com>\r\n";/*contacto@tiendascerrajes.com*/
 $headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
 //En este ejemplo suponemos que el mail del destinatario lo hemos enviado desde un formulario con el método post, pero es indistinto desde donde se lo obtenga (consulta a la base de datos, almacenado en una variable de sesi&oacute;n, enviado por get,etc.)
-ini_set("SMTP","mail.cerrajes.com");/*mail.tiendascerrajes.com*/
+ini_set("SMTP","mail.tiendascerrajes.com");/*mail.tiendascerrajes.com*/
 ini_set("smtp_port","587");/*25*/
-ini_set("sendmail_from","mail.cerrajes.com");	/*mail.tiendascerrajes.com*/
+ini_set("sendmail_from","mail.tiendascerrajes.com");	/*mail.tiendascerrajes.com*/
 mail($micorreo, " (correo recibido de www.tiendascerrajes.com )\r\n", utf8_decode($html),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde.");  
-$html .=
-"<div align=\"center\"><span class=\"estilo3\">Este es el comentario que recibimos en nuetrso sitio web<br/>Muy pronto nos pondremos en contacto contigo</span></div>";
-mail($correoCli, " (correo recibido de www.tiendascerrajes.com - Comentario)\r\n", utf8_decode($html),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
+$htmlCliente .="<div align=\"center\"><span class=\"estilo3\">Gracias por contactar a Tiendas Cerrajes, recibimos sus comentarios, en breve nos pondremos en contacto con usted.</span></div>";
+mail($correoCli, " (correo recibido de www.tiendascerrajes.com - Comentario)\r\n", utf8_decode($htmlCliente),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
 ?>					
 <article id="c_izq">
 	<article class="fondoVerdeE">
@@ -362,11 +361,17 @@ if ($err) {
 	echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
 }
 
+// $empresa = array('Customfieldid' => '22097','Value' => $_POST['empresa']);
+// $telefono = array('Customfieldid' => '22099','Value' => $_POST['telefono']);
+// $lada = array('Customfieldid' => '22120','Value' => $_POST['ladaT']);
+// $municipio = array('Customfieldid' => '22122','Value' => $_POST['municipio']);
+// $estado = array('Customfieldid' => '22121','Value' => $_POST['estado']);
+
 $param = array('APIKey' => '84F4BBEFA9C397B061E491EEE978AEA5',
 		'SubscribersListID' => '506493',
 		'FirstName' => utf8_decode($_POST['nombre']),
 		'LastName' => utf8_decode($_POST['apellidos']),
-		'EMail' => utf8_decode($_POST['email'])
+		'EMail' => utf8_decode($_POST['correo'])
 		);	
 $result = $client->call('AddSubscriberwithNameandCustoms', $param);
 

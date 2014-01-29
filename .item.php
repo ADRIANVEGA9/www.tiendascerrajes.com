@@ -92,7 +92,7 @@ foreach($query_product as $k => $row_product)
               <span class="sbit_caract">Material</span><p class="sbit_caract"><?php echo ucfirst($row_product['cMaterial']);  ?></p>
               <span class="sbit_caract">Acabados</span><p class="sbit_caract"><?php echo ucfirst($row_product['cAcabados']);  ?></p>
               <span class="sbit_caract">Medida</span><p class="sbit_caract"><?php echo $row_product['cMedida'];  ?></p>
-              <span class="sbit_caract">Caracteristicas</span><p class="sbit_caract"><?php echo ucfirst($row_product['Comentario']);  ?></p>
+              <span class="sbit_caract">Caracter&iacute;sticas</span><p class="sbit_caract"><?php echo ucfirst($row_product['Comentario']);  ?></p>
               <span class="sbit_caract">Precio con IVA</span><p id="itm_precio" class="sbit_caract"><?php echo '$ '.$precioIVA;?></p> 
               <?php
                 $umed=strtolower($row_product['Clave_UM']);//convertir a minusculas la unidad de medida

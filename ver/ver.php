@@ -1,5 +1,5 @@
 <?php
-include("../connections/conexion.php"); 
+include ("../Connections/conexion.php");
 $codigo = (isset($_GET["codigo"])) ? $_GET["codigo"] : exit();
 $sql = "SELECT imagen
                 FROM t_imagenes 
@@ -10,7 +10,7 @@ $datos = mysql_fetch_array($conn);
 // La imagen
 $imagen = $datos[0];
 // que acabamos de recuperar del campo blob
-header("Content-Type: image/png");
+header("Content-Type: image/jpeg");
 // Muestra la imagen
 echo $imagen; 
 ?> 

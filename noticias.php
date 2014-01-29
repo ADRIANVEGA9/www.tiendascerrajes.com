@@ -54,11 +54,7 @@ var IE7_PNG_SUFFIX = ".png";
 			<?php  require_once(".menu.php") ?>
 
 			<article id="contenido715">
-				<article id="c_izqP">
-				</article>
-				<article id="c_derP">
-
-				</article>
+				<figure id="noticias"><img src="imagenesSitio/noticias/noticias.jpg" alt=""></figure>
 			</article>
 		</div>	
 		<?php require (".footer.php") ?>

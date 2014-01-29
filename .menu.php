@@ -13,8 +13,16 @@ function MM_showHideLayers() { //v9.0
 	<header>		
         <section id="logo"><a href="home.php"><img src="imagenesSitio/logo.jpg"></a>
 			<!-- <section id="sesion"><a href="#">Iniciar Sesi&oacute;n</a> / <a href="#">Registrate</a></section> -->
+				<article id="s3">
+					<a href="http://www.youtube.com/user/cerrajesmexico" target="_blank" >
+						<img src="imagenesSitio/yt.png">
+					</a>
+				 	<a href="noticias.php">
+				 		<img id="parpadea" src="imagenesSitio/periodico.png"> 
+				 	</a>
+				</article>
+			</section>
 			<?php // require_once(".social.html") ?><?php  require_once(".buscar.php") ?>
-		</section>
 	</header>
 	<nav>
 	    <table >

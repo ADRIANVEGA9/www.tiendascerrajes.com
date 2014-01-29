@@ -155,12 +155,12 @@ var IE7_PNG_SUFFIX = ".png";
 					} else {
 						echo "<article>no se encontraron coincidencias con '" .$txt_criterio. "'</article>";
 					}
-						exit("&nbsp;");
 					?>
 				</article>
 			</article>
 		</div>	
 		<?php require (".footer.php") ?>
+		<?php exit(""); ?>
 	</div>
 </body>
 </html>

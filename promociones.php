@@ -63,9 +63,10 @@ function mostrarOcultar(cual, otro)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								<li onclick="mostrarOcultar('pr1','p1')"><a class="">&#8226;&nbsp;&nbsp;GRANDES OFERTAS</a>
+								<li onclick="mostrarOcultar('pr1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;GRANDES OFERTAS</a>
 									<section id="pr1">
 										<img src="imagenesSitio/2014.png" alt="código QR">
+										<span>Descarga el código QR en tu smart phone o tableta y comparte las promociones con tus amigos.</span>
 									</section>
 								</li>
 <!--								<li onclick="mostrarOcultar('pr2','p2')"><a class="">&#8226;&nbsp;&nbsp;TRIOMAX</a>
