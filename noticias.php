@@ -47,14 +47,49 @@ var IE7_PNG_SUFFIX = ".png";
 <!--[if lt IE 8]>
 <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
 <![endif]-->
+<script type="text/javascript" >
+var opcionNT = "n1";
+var op = "op1";
+// var opcionNO = "n2";
+function mostrarOcultar(cual, op_menu)	{
+	document.getElementById(opcionNT).style.display = "none";	
+	// document.getElementById(opcionNO).style.display = "none";
+	document.getElementById(op).style.background = "#DDD";
+	document.getElementById(op).style.color = "#333";
+	opcionNT = cual;
+	// opcionNO = otro;
+	op = op_menu;
+	document.getElementById(opcionNT).style.display = "block";
+	// document.getElementById(opcionNO).style.display = "block";
+	document.getElementById(op).style.background = "#71BF44";
+	document.getElementById(op).style.color = "#FEFEFE";
+}
+</script>
 </head>
 <body>
 	<div id="contenedorE">
 		<div id="contenedor">
 			<?php  require_once(".menu.php") ?>
-
-			<article id="contenido715">
-				<figure id="noticias"><img src="imagenesSitio/noticias/noticias.jpg" alt=""></figure>
+			<article id="carruselHome"></article>
+			<article id="contenido">
+				<article id="c_izq">
+					<article class="fondoE">
+						<article id="menuNuevoProd">
+							<ul>
+								<li onclick="mostrarOcultar('n1','op1')" class="mayus"><a id="op1" >&#8226;&nbsp;&nbsp;Hábitat Expo 2014</a></li>
+								<li onclick="mostrarOcultar('n2','op2')" class="mayus"><a id="op2" >&#8226;&nbsp;&nbsp;apertura Guatemala</a></li>
+							</ul>
+						</article>
+					</article>
+				</article>
+				<article id="c_der2">
+					<section id="n1">
+						<img src="imagenesSitio/noticias/noticias.jpg">
+					</section>
+					<section id="n2">
+						<img src="imagenesSitio/noticias/noticias2.jpg">
+					</section>
+				</article>
 			</article>
 		</div>	
 		<?php require (".footer.php") ?>

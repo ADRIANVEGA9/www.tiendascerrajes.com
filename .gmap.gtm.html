@@ -1,6 +1,8 @@
 <html>
 <head>
   <title></title>
+</head>
+
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>       
 <script src="http://maps.googleapis.com/maps/api/js?sensor=false" type="text/javascript"></script>
 <script type="text/javascript" src="gmap/gmap3.js"></script>
@@ -9,14 +11,14 @@
 
 <link rel="stylesheet" href="css/normalize.css">
     
- <script type="text/javascript">    
+    <script type="text/javascript">    
       $(function(){
       
         $("#googleMap").gmap3({
           map:{
             options: {
-              center:[19.400405,-99.172040],
-              zoom: 16
+              center:[14.608626,-90.519662],
+              zoom: 15
             }
           },
           marker: {
@@ -76,12 +78,10 @@
       });
     </script>      
   </head>
-</head>
 <body>
 
 <div id="container">
   <div id="googleMap"></div>
 </div>
-
 </body>
 </html>

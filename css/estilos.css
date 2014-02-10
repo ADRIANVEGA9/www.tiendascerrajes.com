@@ -402,9 +402,6 @@ td
 	-moz-box-shadow: 5px -10px 25px rgba(0, 0, 0, 0.4),-5px -10px 25px rgba(0, 0, 0, 0.4);
 	-o-box-shadow: 5px -10px 25px rgba(0, 0, 0, 0.4),-5px -10px 25px rgba(0, 0, 0, 0.4);
 	-webkit-box-shadow: 5px -10px 25px rgba(0, 0, 0, 0.4),-5px -10px 25px rgba(0, 0, 0, 0.4);*/
-	.background-color: none;
-	.background-image: url(../imagenesSitio/fondo.png);
-	.width: 1028px;
 	background-color: #FFFFFF;
 	background-repeat: no-repeat;
 	box-shadow: 5px -10px 25px rgba(0, 0, 0, 0.4),-5px -10px 25px rgba(0, 0, 0, 0.4);
@@ -864,6 +861,17 @@ td
 	position: absolute;
 	top: 210px;
 }
+#mapaGtm {
+	filter:alpha(opacity=85);
+	-moz-opacity:.85;opacity:.85;
+	background-image: url(../imagenesSitio/ubicanos/gtm.png);
+	background-repeat: no-repeat;
+	left: 273px;
+	min-height: 250px;
+	min-width: 350px;
+	position: absolute;
+	top: 210px;
+}
 #menuLineas a:hover{
 	color: #71BF44 !important;
 	text-decoration: underline;
@@ -988,7 +996,7 @@ td
 }
 #menuProdUbica {
 	font: 14px "TChevin";
-	height: 165px;
+	height: 170px;/*210px*/
 	width: 260px;
 }
 #menuProdUbica ul, li {
@@ -1000,7 +1008,7 @@ td
 	position: absolute;
 }
 #menuProdUbica li {
-	border-bottom: 1px solid #D1D1D1;
+	border-bottom: 1px solid #FEFEFE;
 	line-height: 41px;
 }
 #menuProdUbica .ultimo {
@@ -1452,7 +1460,7 @@ color: #333;
 	height: 455px;
 	margin-top: 80px;
 	}
-#u1, #u2, #u3, #u4, #u5, #u6, #u7, #u8 {
+#u1, #u2, #u3, #u4, #u5, #u6, #u7, #u8, #u9 {
 	background-image: url(../imagenesSitio/ubicanos/mapa_activo.jpg);
 	height: 455px;
 	margin-top: 80px;
@@ -1471,21 +1479,20 @@ color: #333;
 	text-transform: uppercase;
 	top: 0px;
 	}
-#ub1, #ub2, #ub3, #ub4, #ub5, #ub6, #ub7, #ub8 {
+#ub1, #ub2, #ub3, #ub4, #ub5, #ub6, #ub7, #ub8, #ub9 {
 	display: none;
 	vertical-align: bottom;
 	text-align: left;
 }
-#u1, #u2, #u3, #u4, #u5, #u6, #u7, #u8 {
+#u1, #u2, #u3, #u4, #u5, #u6, #u7, #u8, #u9 {
 	display: none;
 }
 #ubicaS {
 	display: block;
-	height: 350px;
+	height: 100%;
 	margin: 0 auto;
-	padding-bottom: 10px;
 	text-align: justify;
-	width: 96%;
+	width: 100%;
 }
 #Utxt {
 	color: #333;

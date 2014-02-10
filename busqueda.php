@@ -142,7 +142,7 @@ var IE7_PNG_SUFFIX = ".png";
 						  	$precioIVA=number_format(($iva), 2, '.', ',');			     	?>
 									<div id="itm">
 									<a href=".item.php?id=<?php echo $row['Clave_Producto'];  ?>" rel="shadowbox[item];width=800;height=488">
-										<figure id="itm_imagen">  <img src="ver/ver.php?codigo=<?php echo $row['Clave_Producto'];  ?>"/> </figure>
+										<figure id="itm_imagen">  <img src="http://cerrajes.me/images/<?php echo $row['Clave_Producto'];  ?>.jpg"/> </figure>
 										<article id="itm_nombre"><?php echo $row['Descripcion2'];  ?></article>
 										<article id="itm_codigo"><?php echo $row['Clave_Producto'];  ?></article>
 										<article id="itm_descripcion"><?php echo $row['Descripcion'];  ?></article>

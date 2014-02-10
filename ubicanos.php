@@ -67,34 +67,38 @@ function mostrarOcultar(cual, otro)	{
 								<li onclick="mostrarOcultar('ub2','u2')"><a>&#8226;&nbsp;&nbsp;SAN JUAN DEL RIO</a></li> -->
 								<li onclick="mostrarOcultar('ub3','u3')"><a>&#8226;&nbsp;&nbsp;M&Eacute;XICO D.F.</a></li>
 								<li onclick="mostrarOcultar('ub8','u8')"><a>&#8226;&nbsp;&nbsp;LEÓN</a></li>
-								<li onclick="mostrarOcultar('ub4','u4')" class="ultimo" ><a>&#8226;&nbsp;&nbsp;GUADALAJARA</a></li>
+								<li onclick="mostrarOcultar('ub4','u4')"><a>&#8226;&nbsp;&nbsp;GUADALAJARA</a></li>
+<!-- 								<li onclick="mostrarOcultar('ub9','u9')" class="ultimo" ><a>&#8226;&nbsp;&nbsp;GUATEMALA</a></li> -->
 							</ul>
 						</article>
 						<article id="ubicaS">
 							<section id="ub" ></section>
 							<section id="ub1">
-								<iframe src=".gmap.qro.html" name="iview" width="250" height="340"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
+								<iframe src=".gmap.qro.html" name="iview" width="100%" height="400"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
 							</section>
 							<section id="ub2">
-								<iframe src=".gmap.sjr.html" name="iview" width="250" height="340"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
+								<iframe src=".gmap.sjr.html" name="iview" width="100%" height="400"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
 							</section>
 							<section id="ub3">
-								<iframe src=".gmap.mex.html" name="iview" width="250" height="340"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
+								<iframe src=".gmap.mex.html" name="iview" width="100%" height="400"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
 							</section>
 							<section id="ub4">
-								<iframe src=".gmap.gdl.html" name="iview" width="250" height="340"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
+								<iframe src=".gmap.gdl.html" name="iview" width="100%" height="400"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
 							</section>
 							<section id="ub5">
-								<iframe src=".gmap.pnv.html" name="iview" width="250" height="340"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
+								<iframe src=".gmap.pnv.html" name="iview" width="100%" height="400"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
 							</section>
 							<section id="ub6">
-								<iframe src=".gmap.erp.html" name="iview" width="250" height="340"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
+								<iframe src=".gmap.erp.html" name="iview" width="100%" height="400"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
 							</section>
 							<section id="ub7">
-								<iframe src=".gmap.vll.html" name="iview" width="250" height="340"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
+								<iframe src=".gmap.vll.html" name="iview" width="100%" height="400"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
 							</section>
 							<section id="ub8">
-								<iframe src=".gmap.leo.html" name="iview" width="250" height="340"  scrolling="No" frameborder="0" id="iview" border="0"></iframe> 
+								<iframe src=".gmap.leo.html" name="iview" width="100%" height="400"  scrolling="No" frameborder="0" id="iview" border="0"></iframe>
+							</section>							
+							<section id="ub9">
+								<iframe src=".gmap.gtm.html" name="iview" width="100%" height="400"  scrolling="No" frameborder="0" id="iview" border="0"></iframe>  
 							</section>
 						</article>
 					</article>
@@ -134,7 +138,7 @@ function mostrarOcultar(cual, otro)	{
 							Colonia Centro, C.P. 768000 <br>
 							San Juan del Río, Querétaro <br>
 							e-mail: sanjuandelrio@tiendascerrajes.com<br>
-							<span>Tel.: (427) 27 21 357</span>
+							<span>Tel.: (427) 272 1357</span>
 						</section>  
 					</section>
 					<section id="u3">
@@ -177,7 +181,7 @@ function mostrarOcultar(cual, otro)	{
 						Av. Constituyentes No. 1470, local 7B Pueblo Nuevo<br>
 						C.P. 76094. Corregidora, Qro.<br>
 						e-mail: pueblonuevo@tiendascerrajes.com<br>
-						<span>Tel.: 01(442) 225 371</span>
+						<span>Tel.: 01(442) 225 3714</span>
 						</section>  
 					</section>
 					<section id="u6">
@@ -194,7 +198,7 @@ function mostrarOcultar(cual, otro)	{
 							Ejército Republicano No. 127<br>
 							Colonia Carretas C.P. 76050, Santiago de Querétaro, Qro.<br>
 							e-mail: ejercitorepublicano@tiendascerrajes.com<br>
-							<span>Tel.: 01(442) 213 673</span>
+							<span>Tel.: 01(442) 213 6730</span>
 						</section>  
 					</section>
 					<section id="u7">
@@ -221,6 +225,16 @@ function mostrarOcultar(cual, otro)	{
 							León, Guanajuato.<br>
 							e-mail: leon@tiendascerrajes.com<br>
 							<span>Tel.: 01 (477) 717 7523</span>
+						</section>  
+					</section>
+					<section id="u9">
+						<section id="mapaGtm"></section>
+						<section id="Utxt">
+							4 avenida No. 12-12<br> 
+							Zona 9 , C.P.  <br>
+							Guatemala, Guatemala.<br>
+							e-mail: guatemala@tiendascerrajes.com<br>
+							<span>Tel.: 00502 23310051  </span>
 						</section>  
 					</section>
 				</article>
