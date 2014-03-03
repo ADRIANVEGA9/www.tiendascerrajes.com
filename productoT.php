@@ -1,6 +1,6 @@
 <!doctype html>
 <?php //Mandamos llamar este archivo donde contiene la cadena de conexión a SQL Server
-include("connections/sqlserver.inc.php");  
+include("connections/sql_server/sqlserver.inc.php");  
 
 /***VARIABLES POR GET ***/
 $numero1 = count($_GET);
@@ -122,7 +122,7 @@ Shadowbox.init({
 							<?php
 							foreach($query_menul as $k1 => $row_menul) 
 							{ ?>
-								<li><a href="producto.php?id=<?php echo $row_menul['id_linea'];?>&id_sublinea=<?php echo $row_menul['sublinea'];?>" class="<?php if ($id==$row_menul['id_linea']){ echo 'activoP'; } ?>"><?php echo $row_menul['descripcion'];?></a> 
+								<li><a href="productoT.php?id=<?php echo $row_menul['id_linea'];?>&id_sublinea=<?php echo $row_menul['sublinea'];?>" class="<?php if ($id==$row_menul['id_linea']){ echo 'activoP'; } ?>"><?php echo $row_menul['descripcion'];?></a> 
 								</li>	
 								<?php
 									if ($row_menul['id_linea']==$id) 
@@ -138,7 +138,7 @@ Shadowbox.init({
 												} 
 												else
 												{ ?>
-													<a class="sublinea" href="producto.php?id=<?php echo $row_menul['id_linea']; ?>&id_sublinea=<?php echo $row_menusublinea['sublinea'];?>">
+													<a class="sublinea" href="productoT.php?id=<?php echo $row_menul['id_linea']; ?>&id_sublinea=<?php echo $row_menusublinea['sublinea'];?>">
 													<?php	echo $row_menusublinea['descripcion'].'</a>';
 												}
 											}

@@ -42,15 +42,17 @@ var IE7_PNG_SUFFIX = ".png";
 <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
 <![endif]-->
 <script type="text/javascript" >
-var opcionPR = "pr1";
+var op = "op1";
 var opcionP = "p1";
 function mostrarOcultar(cual, otro)	{
-	document.getElementById(opcionPR).style.display = "none";
 	document.getElementById(opcionP).style.display = "none";
-	opcionPR = cual;
+	document.getElementById(op).style.background = "#DDD";
+	document.getElementById(op).style.color = "#333";
+	op = cual;
 	opcionP = otro;
-	document.getElementById(opcionPR).style.display = "block";
 	document.getElementById(opcionP).style.display = "block";
+	document.getElementById(op).style.background = "#71BF44";
+	document.getElementById(op).style.color = "#FEFEFE";
 }
 </script>
 </head>
@@ -63,20 +65,15 @@ function mostrarOcultar(cual, otro)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								<li onclick="mostrarOcultar('pr1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;GRANDES OFERTAS</a>
-									<section id="pr1">
-										<img src="imagenesSitio/2014.png" alt="código QR">
-										<span>Descarga el código QR en tu smart phone o tableta y comparte las promociones con tus amigos.</span>
-									</section>
+								<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;NUEVOS PRODUCTOS</a>
 								</li>
-<!--								<li onclick="mostrarOcultar('pr2','p2')"><a class="">&#8226;&nbsp;&nbsp;TRIOMAX</a>
-									<section id="pr2">TRIOMAX ofrece una línea completa de nuevas posibilidades de diseño, maximizando los espacios en combinación con las diferentes opciones de acomodo para la organización de los artículos de cocina.</section>
+								<li onclick="mostrarOcultar('op2','p2')"><a id="op2">&#8226;&nbsp;&nbsp;KWIKSET</a>
 								</li>
- 								<li onclick="mostrarOcultar('pr3','p3')"><a>&#8226;&nbsp;&nbsp;TUBO OVAL LED</a>
-									<section id="pr3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </section>
+ 								<li onclick="mostrarOcultar('op3','p3')"><a id="op3" class="ultimo">&#8226;&nbsp;&nbsp;GRANDES OFERTAS</a>
+									<!-- <section id="pr3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </section> -->
 								</li>
-								<li onclick="mostrarOcultar('pr4','p4')" ><a>&#8226;&nbsp;&nbsp;ACCESORIOS PARA BA&Ntilde;O</a>
+<!--								<li onclick="mostrarOcultar('pr4','p4')" ><a>&#8226;&nbsp;&nbsp;ACCESORIOS PARA BA&Ntilde;O</a>
 									<section id="pr4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </section>
 								</li>
@@ -85,6 +82,10 @@ function mostrarOcultar(cual, otro)	{
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </section>
 								</li> -->
 							</ul>
+									<section id="QR">
+										<img src="imagenesSitio/2014.png" alt="código QR">
+										<span>Descarga el código QR en tu smart phone o tableta y comparte las promociones con tus amigos.</span>
+									</section>
 						</article>
 						<article id="compartir">
 							<article>RECOMIENDA ESTA PROMOCI&Oacute;N</article>
@@ -96,13 +97,13 @@ function mostrarOcultar(cual, otro)	{
 					<section id="p1">
 						<img src="imagenesSitio/promo/01.jpg">
 					</section>
-<!-- 					<section id="p2">
+					<section id="p2">
 						<img src="imagenesSitio/promo/02.jpg">
 					</section>
 					<section id="p3">
 						<img src="imagenesSitio/promo/03.jpg">
 					</section>
-					<section id="p4">
+<!-- 					<section id="p4">
 						<img src="imagenesSitio/promo/04.jpg">
 					</section>
 					<section id="p5">

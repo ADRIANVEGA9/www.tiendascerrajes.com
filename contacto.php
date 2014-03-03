@@ -110,12 +110,10 @@ var IE7_PNG_SUFFIX = ".png";
 					</fieldset>
 				</form>
 				<?php }
-					else { 
-						require_once(".contacto.php");
-						?>
-					
-					<?php }//fin else
-		?>
+					else 
+						{ 
+							require_once(".contacto.php");
+					 	}//fin else?>
 			</article>
 		</div>	
 		<?php require (".footer.php") ?>
