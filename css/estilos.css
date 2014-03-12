@@ -881,7 +881,7 @@ td
 	height: 350px;
 	width: 260px;
 }
-#menuNuevoProd #op1
+#menuNuevoProd #op
 {
 	background: #71BF44;
 	color: #FFFFFF;
@@ -1107,7 +1107,7 @@ td
 #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9 {
 	display: none;
 }
-#n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9 {
+#n, #n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9 {
 	height: auto;
 	border-bottom: 0px solid #D1D1D1;
 	margin-bottom: 15px;
@@ -1115,19 +1115,19 @@ td
 #n9 {
 	visibility: hidden;
 }
-#nt1, #nt2, #nt3, #nt4, #nt5, #nt6, #nt7, #nt8, #nt9, #n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9 {
+#nt1, #nt2, #nt3, #nt4, #nt5, #nt6, #nt7, #nt8, #nt9, #n, #n1, #n2, #n3, #n4, #n5, #n6, #n7, #n8, #n9 {
 	font-family: "TChevin";
 	font-size: 14px;
 	color:#333;
 }
-#n1 span, #n2 span, #n3 span, #n4 span, #n5 span, #n6 span, #n7 span, #n8 span, #n9 span{
+/*#n span, #n1 span, #n2 span, #n3 span, #n4 span, #n5 span, #n6 span, #n7 span, #n8 span, #n9 span{
 	color: #71BF44;
 	font-family: "TChevin";
 	font-size: 16px;
 	font-weight: bold;
 	text-align: justify;
 }
-#n1 article, #n2 article, #n3 article, #n4 article, #n5 article, #n6 article, #n7 article, #n8 article, #n9 article{
+#n article, #n1 article, #n2 article, #n3 article, #n4 article, #n5 article, #n6 article, #n7 article, #n8 article, #n9 article{
 	color: #71BF44;
 	font-family: "TChevin";
 	font-size: 14px;
@@ -1135,9 +1135,9 @@ td
 	text-align: right;
 	width: 350px;
 	font-style: italic;
-}
-#n1 article a, #n2 article a, #n3 article a, #n4 article a, #n5 article a, #n6 article a, #n7 article a, #n8 article a, #n9 article a{
-	color: #71BF44;
+}*/
+#n article a, #n1 article a, #n2 article a, #n3 article a, #n4 article a, #n5 article a, #n6 article a, #n7 article a, #n8 article a, #n9 article a{
+	color: #333;
 	text-decoration: none;
 }
 #nt1 {
@@ -1157,10 +1157,10 @@ td
 	text-align: justify;
 	width: 85%;
 }
-#p2, #p3, #p4, #p5, #pr2, #pr3, #pr4, #pr5 {
+#p1, #p2, #p3, #p4, #p5, #pr1, #pr2, #pr3, #pr4, #pr5 {
 	display: none;
 }
-#pr1, #pr2, #pr3, #pr4, #pr5 {
+#pr, #pr1, #pr2, #pr3, #pr4, #pr5 {
 	text-align: center;
 }
 #qs3 {
@@ -1378,7 +1378,7 @@ td
 }
 #s3 {
 	display: inline-block;
-	left: 75%;
+	left: 68%;
 	position: relative;
 	top: .8em;
 }
@@ -1721,6 +1721,13 @@ color: #333;
 {
 	color: #71BF44;
 	text-decoration: underline;
+}
+.videos figure {
+	display: inline-block;
+	font-size: .8em;
+	padding: 0 4em 2em 0;
+	vertical-align: top;
+	width: 25%;
 }
 section .valores{	
 	border-color: #FFFFFF; 

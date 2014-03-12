@@ -52,8 +52,8 @@ var IE7_PNG_SUFFIX = ".png";
 <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
 <![endif]-->
 <script type="text/javascript" >
-var opcionNT = "n1";
-var op = "op1";
+var opcionNT = "n";
+var op = "op";
 // var opcionNO = "n2";
 function mostrarOcultar(cual, op_menu)	{
 	document.getElementById(opcionNT).style.display = "none";	
@@ -80,7 +80,7 @@ function mostrarOcultar(cual, op_menu)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								<li onclick="mostrarOcultar('n1','op1')" class="mayus"><a id="op1" >&#8226;&nbsp;&nbsp;Burro de planchar</a></li>
+								<li onclick="mostrarOcultar('n','op')" class="mayus"><a id="op" >&#8226;&nbsp;&nbsp;Burro de planchar</a></li>
 								<li onclick="mostrarOcultar('n2','op2')" class="mayus"><a id="op2" >&#8226;&nbsp;&nbsp;Organizador de platos</a></li>
 								<li onclick="mostrarOcultar('n3','op3')" class="mayus" class="ultimo" ><a id="op3" >&#8226;&nbsp;&nbsp;Soporte magnético </a></li>
 							</ul>
@@ -92,7 +92,7 @@ function mostrarOcultar(cual, op_menu)	{
 					</article>
 				</article>
 				<article id="c_der2">
-					<section id="n1">
+					<section id="n">
 						<img src="imagenesSitio/nuevos/i01.jpg">
 					</section>
 					<section id="n2">

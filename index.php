@@ -18,7 +18,7 @@
 	    Shadowbox.open({
 	        content:    'carrusel/carrusel.PHP',
 	        player:     "iframe",
-	        height:     620,
+	        height:     820,//620
 	        width:      750
 	    });
 

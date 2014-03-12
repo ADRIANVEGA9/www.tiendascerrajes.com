@@ -42,8 +42,8 @@ var IE7_PNG_SUFFIX = ".png";
 <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
 <![endif]-->
 <script type="text/javascript" >
-var op = "op1";
-var opcionP = "p1";
+var op = "op";
+var opcionP = "p";
 function mostrarOcultar(cual, otro)	{
 	document.getElementById(opcionP).style.display = "none";
 	document.getElementById(op).style.background = "#DDD";
@@ -65,19 +65,11 @@ function mostrarOcultar(cual, otro)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;NUEVOS PRODUCTOS</a>
-								</li>
-								<li onclick="mostrarOcultar('op2','p2')"><a id="op2">&#8226;&nbsp;&nbsp;KWIKSET</a>
-								</li>
- 								<li onclick="mostrarOcultar('op3','p3')"><a id="op3" class="ultimo">&#8226;&nbsp;&nbsp;GRANDES OFERTAS</a>
-									<!-- <section id="pr3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </section> -->
-								</li>
-<!--								<li onclick="mostrarOcultar('pr4','p4')" ><a>&#8226;&nbsp;&nbsp;ACCESORIOS PARA BA&Ntilde;O</a>
-									<section id="pr4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </section>
-								</li>
-								<li onclick="mostrarOcultar('pr5','p5')" class="ultimo"><a>&#8226;&nbsp;&nbsp;N&Uacute;MEROS MET&Aacute;LICOS</a>
+								<li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;FACEBOOK</a></li>
+								<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;NUEVOS PRODUCTOS</a></li>
+								<li onclick="mostrarOcultar('op2','p2')"><a id="op2">&#8226;&nbsp;&nbsp;KWIKSET</a></li>
+ 								<li onclick="mostrarOcultar('op3','p3')"><a id="op3" class="ultimo">&#8226;&nbsp;&nbsp;GRANDES OFERTAS</a></li>
+<!--							<li onclick="mostrarOcultar('pr5','p5')" class="ultimo"><a>&#8226;&nbsp;&nbsp;N&Uacute;MEROS MET&Aacute;LICOS</a>
 									<section id="pr5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </section>
 								</li> -->
@@ -94,6 +86,9 @@ function mostrarOcultar(cual, otro)	{
 					</article>
 				</article>
 				<article id="c_der2">
+					<section id="p">
+						<img src="imagenesSitio/promo/00.jpg">
+					</section>
 					<section id="p1">
 						<img src="imagenesSitio/promo/01.jpg">
 					</section>

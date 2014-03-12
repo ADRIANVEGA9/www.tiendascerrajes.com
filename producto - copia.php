@@ -55,7 +55,7 @@ if(!$query_linea){
 exit("Error en la consulta SQL");
 }
 
-$query_txtsublinea= $db->Execute("SELECT t_linea.descripcion, t_sublinea.descripcion AS 'descripcion_sublinea', t_sublinea.sublinea, t_sublinea.id_linea
+$query_txtsublinea= $db->Execute("SELECT t_linea.descripcion, t_sublinea.descripcion AS 'descripcion_sublinea',  t_sublinea.sublinea, t_sublinea.id_linea
 				FROM
 				t_linea
 				INNER JOIN t_sublinea ON t_linea.id = t_sublinea.id_linea
@@ -87,7 +87,6 @@ exit("Error en la consulta SQL");
 <link rel="stylesheet" href="css/estilos.css">
 <link rel="stylesheet" href="css/normalize.css">
 <link rel="stylesheet" href="css/lightbox.css"/>
-<!-- <link rel="stylesheet" href="menu/css/styles.css"> -->
 <script src="js/prefixfree.min.js"></script>
 
 <link rel="stylesheet" type="text/css" href="Shadowbox/shadowbox.css">
@@ -122,6 +121,7 @@ Shadowbox.init({
 	    menu_ul.show();
 	
 	    menu_a.mouseenter(function(e) { //mouseover cuando mouse se mueva por encima -- mouseenter cuando el mouse entre al objeto
+	        e.preventDefault();
 	        if(!$(this).hasClass('active')) {
 	            menu_a.removeClass('active');
 	            menu_ul.filter(':visible').slideUp('normal');
@@ -146,26 +146,26 @@ Shadowbox.init({
 							<?php
 							foreach($query_menul as $k1 => $row_menul) 
 							{ ?>
-								<li><a href="productoA.php?id=<?php echo $row_menul['id_linea'];?>&id_sublinea=<?php echo $row_menul['sublinea'];?>" class="<?php if ($id==$row_menul['id_linea']){ echo 'activoP'; } ?>"><?php echo $row_menul['descripcion'];?></a> 	
+								<li><a href="producto.php?id=<?php echo $row_menul['id_linea'];?>&id_sublinea=<?php echo $row_menul['sublinea'];?>" class="<?php if ($id==$row_menul['id_linea']){ echo 'activoP'; } ?>"><?php echo $row_menul['descripcion'];?></a> 	
 								<?php
 									if ($row_menul['id_linea']==$id) 
 									{?>
 									<ul>
-									<?php 	
+									<?php 
 										foreach($query_menusublinea as $k => $row_menusublinea)
-										{
+										{	
 											if (($row_menul['sublinea'] <> 99) AND ($row_menul['id_linea']==$id))
 											{ 
-													if (($row_menusublinea['sublinea'])==($id_sublinea))
-													{ ?>
-														<li><a class="sublinea sublineaActivo" >
-														<?php echo $row_menusublinea['descripcion'].'</a></li>'; 
-													} 
-													else
-													{ ?>
-														<li><a class="sublinea" href="productoA.php?id=<?php echo $row_menul['id_linea']; ?>&id_sublinea=<?php echo $row_menusublinea['sublinea'];?>">
-														<?php	echo $row_menusublinea['descripcion'].'</a></li>';
-													} 
+												if (($row_menusublinea['sublinea'])==($id_sublinea))
+												{ ?>
+													<li><a class="sublinea sublineaActivo" >
+													<?php echo $row_menusublinea['descripcion'].'</a></li>'; 
+												} 
+												else
+												{ ?>
+													<li><a class="sublinea" href="producto.php?id=<?php echo $row_menul['id_linea']; ?>&id_sublinea=<?php echo $row_menusublinea['sublinea'];?>">
+													<?php	echo $row_menusublinea['descripcion'].'</a></li>';
+												}
 											}
 										}?>
 									</ul>
@@ -207,7 +207,7 @@ Shadowbox.init({
 								<article id="item_descripcion">Descripci&oacute;n</article>
 								<article id="item_ficha">Ficha</article>
 								<!-- <article id="item_carrito">Comprar</article> -->
-								<article id="item_precio">Precio</article>
+								<article id="item_precio">Precio con IVA</article>
 							</div>
  							<?php 
 								foreach($query_product as $k => $row_product) 
@@ -216,9 +216,9 @@ Shadowbox.init({
 						  		$precioIVA=number_format(($iva), 2, '.', ',');	
 									?>
 									<div id="itm">
-									<a href=".itemA.php?id=<?php echo $row_product['Clave_Producto'];  ?>" rel="shadowbox[item];width=800;height=488">
-									<!-- 	<figure id="itm_imagen">  <img src="ver/ver.php?codigo=<?php echo $row_product['Clave_Producto'];  ?>"/> </figure> -->									
-										<figure id="itm_imagen">  <img src="http://cerrajes.me/images/<?php echo $row_product['Clave_Producto'];  ?>.jpg"/> </figure>
+									<a href=".item.php?id=<?php echo $row_product['Clave_Producto'];  ?>" rel="shadowbox[item];width=800;height=488">
+										<figure id="itm_imagen">  <img src="http://cerrajes.me/images/<?php echo $row_product['Clave_Producto'];  ?>.jpg"/> </figure> 
+										<!-- <figure id="itm_imagen">  <img src="http://cerrajes.me/images/<?php echo $row_product['Clave_Producto'];  ?>.jpg"/> </figure>-->
 										<article id="itm_nombre"><?php echo $row_product['Descripcion2'];  ?></article>
 										<article id="itm_codigo"><?php echo $row_product['Clave_Producto'];  ?></article>
 										<article id="itm_descripcion"><?php echo $row_product['Descripcion'];  ?></article>

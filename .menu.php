@@ -14,12 +14,12 @@ function MM_showHideLayers() { //v9.0
         <section id="logo"><a href="home.php"><img src="imagenesSitio/logo.jpg"></a>
 			<!-- <section id="sesion"><a href="#">Iniciar Sesi&oacute;n</a> / <a href="#">Registrate</a></section> -->
 				<article id="s3">
-					<a href="http://www.youtube.com/user/cerrajesmexico" target="_blank" >
-						<img src="imagenesSitio/yt.png">
-					</a>
 				 	<a href="noticias.php">
 				 		<img id="parpadea" src="imagenesSitio/periodico.png"> 
 				 	</a>
+					<a href="aviso_de_privacidad.pdf" target="_blank" >
+						<img src="imagenesSitio/aviso.jpg" title="Aviso de privacidad">
+					</a>
 				</article>
 			</section>
 			<?php // require_once(".social.html") ?><?php  require_once(".buscar.php") ?>
@@ -31,12 +31,11 @@ function MM_showHideLayers() { //v9.0
 		    <td><a href="empresa.php" class="<?php if ($m==1) {echo 'activo';} ?>">quienes somos</a></td>
 		    <td><a href="producto.php?id=01&id_sublinea=01" class="<?php if ($m==2) {echo 'activo';} ?>" onmousemove="MM_showHideLayers('menuOpProd','','show')" onmouseout="MM_showHideLayers('menuOpProd','','hide')">productos</a></td>
 		    <td><a href="promociones.php" class="<?php if ($m==3) {echo 'activo';} ?>">promociones</a></td>
-		    <!-- <td><a href="noticias.php" class="<?php if ($m==4) {echo 'activo';} ?>">noticias</a></td> -->
 		    <td><a href="nuevosProductos.php" class="<?php if ($m==5) {echo 'activo';} ?>">nuevos productos</a></td>
-		    <td><a href="galeria.php" class="<?php if ($m==6) {echo 'activo';} ?>">galer&iacute;a</a></td>
+		    <td><a href="videos.php" class="<?php if ($m==6) {echo 'activo';} ?>">videos</a></td>
 		    <td><a href="contacto.php" class="<?php if ($m==7) {echo 'activo';} ?>">contacto</a></td>
 		    <td><a href="ubicanos.php" class="<?php if ($m==8) {echo 'activo';} ?>">ub&iacute;canos</a></td>
-		    <td><a href="aviso_de_privacidad.pdf" target="_blank">aviso de privacidad</a></td>
+		    <td><a href="equipo.php" class="<?php if ($m==4) {echo 'activo';} ?>">forma parte del equipo</a></td>
 		    <td><a href="http://www.facebook.com/pages/Tiendas-Cerrajes/186839721354132?sk=wall" target="_blank" ><img src="imagenesSitio/fb.png"></a></td>
 		  </tr>
 		</table>
