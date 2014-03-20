@@ -80,9 +80,14 @@ function mostrarOcultar(cual, op_menu)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								<li onclick="mostrarOcultar('n','op')" class="mayus"><a id="op" >&#8226;&nbsp;&nbsp;Burro de planchar</a></li>
-								<li onclick="mostrarOcultar('n2','op2')" class="mayus"><a id="op2" >&#8226;&nbsp;&nbsp;Organizador de platos</a></li>
-								<li onclick="mostrarOcultar('n3','op3')" class="mayus" class="ultimo" ><a id="op3" >&#8226;&nbsp;&nbsp;Soporte magnético </a></li>
+								<li onclick="mostrarOcultar('n','op')" class="mayus"><a id="op" >&#8226;&nbsp;&nbsp;Jaladera hueca</a></li>
+								<li onclick="mostrarOcultar('n2','op2')" class="mayus"><a id="op2" >&#8226;&nbsp;&nbsp;Panel lateral</a></li>
+								<li onclick="mostrarOcultar('n3','op3')" class="mayus"><a id="op3" >&#8226;&nbsp;&nbsp;Perno pad</a></li>
+								<li onclick="mostrarOcultar('n4','op4')" class="mayus"><a id="op4" >&#8226;&nbsp;&nbsp;Bisagra silentia</a></li>
+								<li onclick="mostrarOcultar('n5','op5')" class="mayus"><a id="op5" >&#8226;&nbsp;&nbsp;Soportes</a></li>
+								<li onclick="mostrarOcultar('n6','op6')" class="mayus"><a id="op6" >&#8226;&nbsp;&nbsp;Burro de planchar</a></li>
+								<li onclick="mostrarOcultar('n7','op7')" class="mayus"><a id="op7" >&#8226;&nbsp;&nbsp;Organizador de platos</a></li>
+								<li onclick="mostrarOcultar('n8','op8')" class="mayus" class="ultimo" ><a id="op8" >&#8226;&nbsp;&nbsp;Soporte magnético </a></li>
 							</ul>
 						</article>
 						<article id="compartir">
@@ -93,23 +98,30 @@ function mostrarOcultar(cual, op_menu)	{
 				</article>
 				<article id="c_der2">
 					<section id="n">
-						<img src="imagenesSitio/nuevos/i01.jpg">
+						<img src="imagenesSitio/nuevos/i04.jpg">
 					</section>
 					<section id="n2">
-						<img src="imagenesSitio/nuevos/i02.jpg">
+						<img src="imagenesSitio/nuevos/i05.jpg">
 					</section>
 					<section id="n3">
+						<img src="imagenesSitio/nuevos/i06.jpg">
+					</section>
+					<section id="n4">
+						<img src="imagenesSitio/nuevos/i07.jpg">
+					</section>
+					<section id="n5">
+						<img src="imagenesSitio/nuevos/i08.jpg">
+					</section>
+					<section id="n6">
+						<img src="imagenesSitio/nuevos/i01.jpg">
+					</section>
+					<section id="n7">
+						<img src="imagenesSitio/nuevos/i02.jpg">
+					</section>
+					<section id="n8">
 						<img src="imagenesSitio/nuevos/i03.jpg">
 					</section>
-<!-- 					<section id="n4">
-						<img src="imagenesSitio/nuevos/T04.jpg">
-						<section id="textoNP">Innovación es lo que da vida a un espacio con clase. El Luminario LED ofrece iluminación 
-							a gabinetes de cocina, baño, recamara, repisas, libreros, etc.; gracias a su pequeño tamaño y libertad de 
-							instalación por su ﬁjación al ras en la parte superior del mueble.
-						</section>
-						<section id="imagenNP"><img src="imagenesSitio/nuevos/i04.jpg"></section>
-						<article><a href="imagenesSitio/nuevos/4.pdf" rel="shadowbox" title="Tubo oval y luminario">+ info...</a></article>
-					</section> -->
+
 				</article>
 			</article>
 		</div>	

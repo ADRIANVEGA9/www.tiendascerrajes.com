@@ -18,7 +18,7 @@ function MM_showHideLayers() { //v9.0
 				 		<img id="parpadea" src="imagenesSitio/periodico.png"> 
 				 	</a>
 					<a href="aviso_de_privacidad.pdf" target="_blank" >
-						<img src="imagenesSitio/aviso.jpg" title="Aviso de privacidad">
+						<img id="imgAviso" src="imagenesSitio/aviso.jpg" title="Aviso de privacidad">
 					</a>
 				</article>
 			</section>
