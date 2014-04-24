@@ -12,17 +12,17 @@
 <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
 <script type="text/javascript" src="Shadowbox/shadowbox.js"></script>
 <script type="text/javascript">
-	window.onload = function() {
+	// window.onload = function() {
 
-	    // open a welcome message as soon as the window loads
-	    Shadowbox.open({
-	        content:    'carrusel/carrusel.PHP',
-	        player:     "iframe",
-	        height:     820,//620
-	        width:      750
-	    });
+	//     // open a welcome message as soon as the window loads
+	//     Shadowbox.open({
+	//         content:    'carrusel/carrusel.PHP',
+	//         player:     "iframe",
+	//         height:     820,//620
+	//         width:      750
+	//     });
 
-	};
+	// };
 </script>
 <script type='text/javascript'>
 	Shadowbox.init({

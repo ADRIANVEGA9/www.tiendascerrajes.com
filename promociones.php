@@ -65,10 +65,10 @@ function mostrarOcultar(cual, otro)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								<li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;FACEBOOK</a></li>
-								<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;NUEVOS PRODUCTOS</a></li>
-								<li onclick="mostrarOcultar('op2','p2')"><a id="op2">&#8226;&nbsp;&nbsp;KWIKSET</a></li>
- 								<li onclick="mostrarOcultar('op3','p3')"><a id="op3" class="ultimo">&#8226;&nbsp;&nbsp;GRANDES OFERTAS</a></li>
+								<!-- <li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;FACEBOOK</a></li> -->
+								<li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;NUEVOS PRODUCTOS</a></li>
+								<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;KWIKSET</a></li>
+ 								<li onclick="mostrarOcultar('op2','p2')"><a id="op2" class="ultimo">&#8226;&nbsp;&nbsp;GRANDES OFERTAS</a></li>
 <!--							<li onclick="mostrarOcultar('pr5','p5')" class="ultimo"><a>&#8226;&nbsp;&nbsp;N&Uacute;MEROS MET&Aacute;LICOS</a>
 									<section id="pr5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </section>
@@ -86,19 +86,19 @@ function mostrarOcultar(cual, otro)	{
 					</article>
 				</article>
 				<article id="c_der2">
+<!-- 					<section id="p">
+						<img src="imagenesSitio/promo/01.jpg">
+					</section> -->
 					<section id="p">
-						<img src="imagenesSitio/promo/00.jpg">
-					</section>
-					<section id="p1">
 						<img src="imagenesSitio/promo/01.jpg">
 					</section>
-					<section id="p2">
+					<section id="p1">
 						<img src="imagenesSitio/promo/02.jpg">
 					</section>
-					<section id="p3">
+ 					<section id="p2">
 						<img src="imagenesSitio/promo/03.jpg">
 					</section>
-<!-- 					<section id="p4">
+<!--					<section id="p4">
 						<img src="imagenesSitio/promo/04.jpg">
 					</section>
 					<section id="p5">

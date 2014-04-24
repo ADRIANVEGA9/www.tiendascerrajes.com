@@ -47,14 +47,14 @@ var IE7_PNG_SUFFIX = ".png";
 		<div id="contenedor">
 			<?php  require_once(".menu.php") ?>
 		<article id="carruselHome">
-			<iframe src=".empresa.html" name="iview" width="962" height="452"  scrolling="No" frameborder="0" id="iview" border="0"></iframe>
+			<figure><img src="imagenesSitio/equipo/equipo.jpg" alt=""></figure>
 		</article>
 			<article id="contenido">
 				<article id="c_centro">
 					<section id="equipo">
 					<?php if (!$_POST){ ?>
 						<span>
-							La empresa te invita a integrarte con nosotros. <br> Si deseas pertenecer a esta gran familia, ingresa los siguientes datos:
+							Tiendas Cerrajes te invita a integrarte con nosotros. <br> Si deseas pertenecer a esta gran familia, ingresa los siguientes datos:
 						</span>
 							<form id="equipoForm" method="POST" enctype="multipart/form-data" onsubmit="return validate1(this)" >
 							<fieldset>

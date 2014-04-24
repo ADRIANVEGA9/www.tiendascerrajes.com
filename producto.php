@@ -23,13 +23,13 @@ $$tags[$i]=$valores[$i];
 if (isset($id)) {
   $id = $id;
 } else {
-	$id='01';
+	$id='00';
 }
 
 if (isset($id_sublinea)) {
   $id_sublinea = $id_sublinea;
 } else {
-	$id_sublinea='01';
+	$id_sublinea='00';
 }
 
 //Ya no usamos la clásica query de consulta como mysql_query ahora por definición de la función creada por adodb usamos la siguiente:

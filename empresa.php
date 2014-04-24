@@ -58,8 +58,8 @@ var IE7_PNG_SUFFIX = ".png";
 								<br><br>
 								<span>ESTIMADOS CLIENTES Y AMIGOS:</span>
 								<br><br><br>
-								<p>Tiendas Cerrajes nace con la fusión de Chapas y Herrajes del Centro y la visión de Grupo Cerrajes debido a las nuevas necesidades de diseño que hoy por hoy rigen en el mundo.</p>
-								<br><br><p>El nuevo concepto que hemos desarrollado “Tiendas Cerrajes”, hace más sencillo, fácil y creativo, para ti como nuestro cliente y amigo, el diseño integral de tus espacios, acercándote un nuevo mercado de menudeo con nuevos y más innovadores productos y servicios que le darán ese gran toque especial a tus proyectos</p>
+								<p>Debido a las nuevas necesidades de diseño que rigen en el mundo, Grupo Cerrajes vio la necesidad de incursionar en nuevos mercados de menudeo y medio mayoreo, creando así Tiendas Cerrajes, un espacio creativo e innovador diseñado para ti...</p>
+								<br><br><p>El nuevo concepto que hemos desarrollado “Tiendas Cerrajes”, hace más sencillo, fácil y creativo, para ti como nuestro cliente y amigo, el diseño integral de tus espacios, acercándote un nuevo mercado de menudeo con nuevos y más innovadores productos y servicios que le darán ese gran toque especial a tus proyectos.</p>
 								<br><br><p>Tiendas Cerrajes, ha desarrollado su propio sitio web: www.tiendascerrajes.com donde podrás obtener información sobre nuestros productos, promociones exclusivas, tendencias y diseño, noticias, tips, manuales  y fichas técnicas del producto, así como enlaces en redes sociales como Facebook donde podrás interactuar, comentar y compartir experiencias con otros de nuestros amigos.</p>
 							</section>
 							<section id="qs2" >
