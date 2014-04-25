@@ -29,7 +29,7 @@ if (isset($id)) {
 if (isset($id_sublinea)) {
   $id_sublinea = $id_sublinea;
 } else {
-	$id_sublinea='00';
+	$id_sublinea='01';
 }
 
 //Ya no usamos la clásica query de consulta como mysql_query ahora por definición de la función creada por adodb usamos la siguiente:

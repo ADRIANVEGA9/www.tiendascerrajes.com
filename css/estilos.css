@@ -1321,6 +1321,12 @@ input[type="file"] {
 	color: #818285 !important;/* !important para quitar el estilo de color #sbit_texto span*/
 	text-transform: none !important;/* !important para quitar el estilo de text-transform #sbit_texto span*/
 }
+
+#sbit_caract .sbit_caract100 {
+	font-size: .9em;
+	padding: 1em 0;
+	width: 100% !important;
+}
 #sbit_cuerpo
 {
 	background: #FFF;
@@ -1705,6 +1711,7 @@ color: #333;
 	box-shadow: 0 0 5px 0px rgba(0,0,0,0.8);
 }
 .derecha {
+	font-size: 0.8em;
 	text-align: right;
 }
 .drop-shadow 
