@@ -706,6 +706,15 @@ input[type="file"] {
 	height: 27px;
 	width: 200px;
 }
+#horario {
+	color: #333;
+	font-family: "TChevin";
+	font-size: 12px;
+	position: relative;
+	text-align: right;
+	text-transform: uppercase;
+	width: 100%;
+}
 #imagenNP {
 	display: inline-block;
 	text-align: right;
@@ -922,15 +931,17 @@ input[type="file"] {
 	vertical-align: top;
 }
 #mapaEdo1 {
-	filter:alpha(opacity=85);
-	-moz-opacity:.85;opacity:.85;
-	background-image: url(../imagenesSitio/ubicanos/qro.png);
+	-moz-opacity: .85;
+	background-image: url("http://localhost/www.tiendascerrajes.com/css/../imagenesSitio/ubicanos/qro.png");
 	background-repeat: no-repeat;
-	left: 319px;
+	filter: alpha(opacity=85);
+	left: 269px;
 	min-height: 250px;
 	min-width: 350px;
+	opacity: .85;
 	position: absolute;
-	top: 207px;
+	top: 147px;
+	transform: rotate(-27deg);
 }
 #mapaEdo2 {
 	filter:alpha(opacity=85);
@@ -944,26 +955,27 @@ input[type="file"] {
 	top: 252px;
 }
 #mapaEdo3 {
-	filter:alpha(opacity=85);
-	-moz-opacity:.85;opacity:.85;
-	background-image: url(../imagenesSitio/ubicanos/gdl.png);
+	-moz-opacity: .85;
+	background-image: url("http://localhost/www.tiendascerrajes.com/css/../imagenesSitio/ubicanos/gdl.png");
 	background-repeat: no-repeat;
-	left: 235px;
+	filter: alpha(opacity=85);
+	left: 218px;
 	min-height: 250px;
 	min-width: 350px;
+	opacity: .85;
 	position: absolute;
-	top: 185px;
+	top: 179px;
 }
 #mapaEdo4 {
 	filter:alpha(opacity=85);
 	-moz-opacity:.85;opacity:.85;
 	background-image: url(../imagenesSitio/ubicanos/gto.png);
 	background-repeat: no-repeat;
-	left: 273px;
+	left: 245px;
 	min-height: 250px;
 	min-width: 350px;
 	position: absolute;
-	top: 210px;
+	top: 178px;
 }
 #mapaGtm {
 	filter:alpha(opacity=85);
@@ -1135,7 +1147,6 @@ input[type="file"] {
 }
 #menuProdUbica2 {
 	font: 14px "TChevin";
-	height: 165px;
 	width: 660px;
 	top: 0px;
 	position: absolute;
@@ -1146,7 +1157,6 @@ input[type="file"] {
 #menuProdUbica2 ul {
 	margin: 0;
 	padding: 0;
-	position: absolute;
 }
 #menuProdUbica2 li {
 	border-bottom: 1px solid #D1D1D1;
@@ -1581,7 +1591,7 @@ color: #333;
 	background-image: url(../imagenesSitio/ubicanos/mapa_inactivo.jpg);
 	height: 455px;
 	margin-top: 80px;
-	}
+	}	
 #u1, #u2, #u3, #u4, #u5, #u6, #u7, #u8, #u9 {
 	background-image: url(../imagenesSitio/ubicanos/mapa_activo.jpg);
 	height: 455px;
@@ -1600,6 +1610,7 @@ color: #333;
 	text-align: left;
 	text-transform: uppercase;
 	top: 0px;
+	width: 100%;
 	}
 #ub1, #ub2, #ub3, #ub4, #ub5, #ub6, #ub7, #ub8, #ub9 {
 	display: none;

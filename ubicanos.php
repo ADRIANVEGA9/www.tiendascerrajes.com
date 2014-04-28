@@ -104,7 +104,12 @@ function mostrarOcultar(cual, otro)	{
 					</article>
 				</article>
 				<article id="c_der2U">
-					<section id="u" ><span>ubica tu tienda cerrajes más cercana</span></section>
+					<section id="u" >
+						<span><!-- <section id="horario">Horario de Lunes a Viernes de 9 am a 7 pm y Sábados de 9 am a 2 pm</section> -->
+							ubica tu tienda cerrajes más cercana
+						</span>
+						<section id="horario">Horario de Lunes a Viernes de 9 am a 7 pm y Sábados de 9 am a 2 pm</section>
+					</section>
 					<section id="u1">
 						<article id="menuProdUbica2">
 							<ul>
@@ -122,6 +127,7 @@ function mostrarOcultar(cual, otro)	{
 							e-mail: penuelas@tiendascerrajes.com<br>
 							<span>Tel.: 01 (442) 246 1106 y 442 246 262</span>
 						</section>  
+						<section id="horario">Horario de Lunes a Viernes de 9 am a 7 pm y Sábados de 9 am a 2 pm</section>
 					</section>
 					<section id="u2">
 						<article id="menuProdUbica2">
@@ -140,8 +146,11 @@ function mostrarOcultar(cual, otro)	{
 							e-mail: sanjuandelrio@tiendascerrajes.com<br>
 							<span>Tel.: (427) 272 1357</span>
 						</section>  
+						<section id="horario">Horario de Lunes a Viernes de 9 am a 7 pm y Sábados de 9 am a 2 pm</section>
 					</section>
 					<section id="u3">
+						<article id="menuProdUbica2">
+						</article>
 						<section id="mapaEdo2"></section>
 						<section id="Utxt">
 							Divisi&oacute;n del Norte No. 207-A<br> 
@@ -149,7 +158,8 @@ function mostrarOcultar(cual, otro)	{
 							Delegaci&oacute;n Benito Ju&aacute;rez, M&eacute;xico D.F. <br>
 							e-mail: divisiondelnorte@tiendascerrajes.com<br>
 							<span>Tel.: 01(55) 5523 9373</span>
-						</section>  
+						</section>
+						<section id="horario">Horario de Lunes a Viernes de 9 am a 7 pm y Sábados de 9 am a 2 pm</section>  
 					</section>
 					<section id="u4">
 						<article id="menuProdUbica2">
@@ -165,7 +175,8 @@ function mostrarOcultar(cual, otro)	{
 							Guadalajara, Jalisco <br>
 							e-mail: ninosheroes@tiendascerrajes.com<br>
 							<span>Tel.: 01 (33) 3826 5207</span>
-						</section>  
+						</section>
+						<section id="horario">Horario de Lunes a Viernes de 9 am a 7 pm y Sábados de 9 am a 2 pm</section>  
 					</section>
 					<section id="u5">
 						<article id="menuProdUbica2">
@@ -182,7 +193,8 @@ function mostrarOcultar(cual, otro)	{
 						C.P. 76094. Corregidora, Qro.<br>
 						e-mail: pueblonuevo@tiendascerrajes.com<br>
 						<span>Tel.: 01(442) 225 3714</span>
-						</section>  
+						</section>
+						<section id="horario">Horario de Lunes a Viernes de 9 am a 7 pm y Sábados de 9 am a 2 pm</section>  
 					</section>
 					<section id="u6">
 						<article id="menuProdUbica2">
@@ -199,7 +211,8 @@ function mostrarOcultar(cual, otro)	{
 							Colonia Carretas C.P. 76050, Santiago de Querétaro, Qro.<br>
 							e-mail: ejercitorepublicano@tiendascerrajes.com<br>
 							<span>Tel.: 01(442) 213 6730</span>
-						</section>  
+						</section>
+						<section id="horario">Horario de Lunes a Viernes de 9 am a 7 pm y Sábados de 9 am a 2 pm</section>  
 					</section>
 					<section id="u7">
 						<article id="menuProdUbica2">
@@ -215,9 +228,12 @@ function mostrarOcultar(cual, otro)	{
 							Zapopan, Jalisco <br>
 							e-mail: vallarta@tiendascerrajes.com<br>
 							<span>Tel.: 01 (33) 3627 5806</span>
-						</section>  
+						</section>
+						<section id="horario">Horario de Lunes a Viernes de 9 am a 7 pm y Sábados de 9 am a 2 pm</section>  
 					</section>
 					<section id="u8">
+						<article id="menuProdUbica2">
+						</article>
 						<section id="mapaEdo4"></section>
 						<section id="Utxt">
 							Boulevard Campestre No. 110<br> 
@@ -226,8 +242,12 @@ function mostrarOcultar(cual, otro)	{
 							e-mail: leon@tiendascerrajes.com<br>
 							<span>Tel.: 01 (477) 717 7523</span>
 						</section>  
+						<section id="horario">Horario de Lunes a Viernes de 9 am a 7 pm y Sábados de 9 am a 2 pm</section>
 					</section>
 					<section id="u9">
+						<article id="menuProdUbica2">
+							<section id="horario">Horario de Lunes a Viernes de 9 am a 7 pm y Sábados de 9 am a 2 pm</section>
+						</article>
 						<section id="mapaGtm"></section>
 						<section id="Utxt">
 							4 avenida No. 12-12<br> 
