@@ -66,9 +66,9 @@ function mostrarOcultar(cual, otro)	{
 						<article id="menuNuevoProd">
 							<ul>
 								<!-- <li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;FACEBOOK</a></li> -->
-								<li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;NUEVOS PRODUCTOS</a></li>
-								<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;KWIKSET</a></li>
- 								<li onclick="mostrarOcultar('op2','p2')"><a id="op2" class="ultimo">&#8226;&nbsp;&nbsp;GRANDES OFERTAS</a></li>
+								<li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;KIT DE RELAJACIÓN</a></li>
+								<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;ACCESORIOS ELITE</a></li>
+ 								<li onclick="mostrarOcultar('op2','p2')"><a id="op2" class="ultimo">&#8226;&nbsp;&nbsp;VAUTH-SAGEL</a></li>
 <!--							<li onclick="mostrarOcultar('pr5','p5')" class="ultimo"><a>&#8226;&nbsp;&nbsp;N&Uacute;MEROS MET&Aacute;LICOS</a>
 									<section id="pr5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </section>
