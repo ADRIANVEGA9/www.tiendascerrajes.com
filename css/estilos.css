@@ -442,6 +442,9 @@ td
 	color: #333;
 	font-weight: bold;
 }
+#contenidoHome .ancho {
+	width: 104%;
+}
 #contenidoHome figure 
 {
 	margin: 0 auto;
@@ -452,7 +455,7 @@ td
 {
 	border-radius: 3px;
 	box-shadow: 3px 3px 3px #CCC;
-	margin: 2%;
+	margin: .2% 2%;
 	width: 60%;
 }
 #contenidoHome section 
@@ -462,7 +465,7 @@ td
 	border-width: 2px;
 	color: #CCC;
 	display: inline-block;
-	height: 730px;
+	height: 735px;
 	margin: 1%;
 	padding: 1%;
 	text-align: justify;

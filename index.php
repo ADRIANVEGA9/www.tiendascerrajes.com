@@ -79,23 +79,23 @@ var IE7_PNG_SUFFIX = ".png";
 				<section>
 					<span>CASAS ESPECTACULARES</span>
 					<article>
-						En la actualidad el diseño de una casa, va más allá de lo necesario y funcional ya que existen posibilidades infinitas para crear casas que parecen obras de arte. <br>
-						Tal es el caso de Pedralbes de FOA, esta casa está situada en uno de los lugares más exclusivos de Barcelona sobre 350 m2 en una colina, la construcción se adaptó 100% al terreno. <br>
-						Está dividida en tres plantas y todas las habitaciones tienen ventanas que a su vez se conectan con las terrazas, todos los niveles están conectados con el jardín. La fachada recubierta de madera armoniza con el paisaje natural.<br>
-						La casa es un diseño de FOA y fue terminada en el año 2008.<br><br>
-						Fuente: <a>www.disenoyarquitectura.net</a> 
+						<p>El diseño moderno de una casa, no solo busca combinaciones de diferentes materiales; también propuestas nuevas que permitan la entrada de aire, luz y contacto cercano con la naturaleza.</p><br> 
+						<p>El diseño de Rooftecture M, Shuhei  Endo, una casa en Osaka, Japón; terminada en 2010, brinda una propuesta innovadora que integra recubrimientos de acero y voladizos con volúmenes curvos y formas rectas; dando un contraste poco habitual y arriesgado con  la combinación de formas, y materiales como acero con madera de pino.</p><br> 
+						 <p>Los espacios comunes quedan "abiertos al exterior"; como la sala, que es totalmente de cristal, sin embargo; esta casa garantiza por completo habitabilidad y privacidad para sus habitantes.</p><br><br>
+						 
 					</article>
-					<figure> <img src="imagenesSitio/a101.jpg"><img src="imagenesSitio/a102.jpg"> </figure>
+					<figure class="ancho"> <img src="imagenesSitio/a101.jpg"> </figure>
 				</section>
 				<section>
 					<span>DECORANDO ESPACIOS</span>
 					<article>
-						Decorar los techos puede transformar los espacios de una manera drástica y original. <br>
-						Con el uso de placas de yeso laminado es posible colocar todo tipo de estructuras a la medida, para así dejar de lado los techos planos y aburridos.<br>
-						Cada placa mide entre 2 y 3 m de largo con un espesor entre los 6.5 y 19 mm, formadas por un núcleo de yeso de origen natural recubierto por dos capas de celulosa especial multihoja y se presenta en forma de tablero, en el interior tiene perfiles hechos de acero galvanizado que dan solidez y consistencia proporcionando aislamiento acústico y térmico.<br>
-						Es un material no inflamable que se puede taladrar, cortar, curvear; se puede utilizar para muebles, objetos de decoración, dividir espacios dentro de la casa y hasta empotrar puertas corredizas.
+						<p>Es común que con el paso del  tiempo nuestro hogar reciba más y más artículos y ropa que vamos acumulando. Así que es imprescindible contar con un espacio especial para poder almacenar todo, y que además sea decorativo y funcional. </p><br>
+
+						<p>Si cuentas con el espacio en tu habitación; una buena opción es integrar a tu vestidor o clóset accesorios que faciliten la organización de prendas y accesorios; tales como zapateras extraíbles, corbateros, porta pantalones, etc.</p><br>
+
+						<p>Aprovecha la parte interna de la puerta de tus closets (si no son corredizos); para colgar bolsas, o un espejo; o bien,  colocar abrigos o cosas que estén actualmente en uso.</p><br><br>
 					</article>
-					<figure> <img src="imagenesSitio/a201.jpg"><img src="imagenesSitio/a202.jpg"> </figure>
+					<figure> <img src="imagenesSitio/a201.jpg"><img src="imagenesSitio/a202.jpg"></figure>
 				</section>
 			</article>
 		</div>	
