@@ -82,7 +82,8 @@ function mostrarOcultar(cual, op_menu)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								<li onclick="mostrarOcultar('n','op')" class="mayus"><a id="op" >&#8226;&nbsp;&nbsp;Accesorios para gabinete</a></li>
+								<li onclick="mostrarOcultar('n','op')" class="mayus"><a id="op" >&#8226;&nbsp;&nbsp;Video Corporativo</a></li>
+								<li onclick="mostrarOcultar('n1','op1')" class="mayus"><a id="op1" >&#8226;&nbsp;&nbsp;Accesorios para gabinete</a></li>
 								<li onclick="mostrarOcultar('n2','op2')" class="mayus"><a id="op2" >&#8226;&nbsp;&nbsp;Correderas</a></li>
 								<li onclick="mostrarOcultar('n3','op3')" class="mayus"><a id="op3" >&#8226;&nbsp;&nbsp;Accesorios para clóset</a></li>
 							</ul>
@@ -90,7 +91,19 @@ function mostrarOcultar(cual, op_menu)	{
 					</article>
 				</article>
 				<article id="c_der2">
+
 					<section id="n">
+						<article class="videos">
+							<figure>
+								<a href="http://www.youtube.com/v/BmhGd3fKDE4?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Tiendas Cerrajes">
+									<img src="http://img.youtube.com/vi/BmhGd3fKDE4/0.jpg" alt="Tiendas Cerrajes"/>
+								<figcaption>Tiendas Cerrajes</figcaption>
+								</a>
+							</figure>
+						</article>
+					</section>
+
+					<section id="n1">
 						<article class="videos">
 							<figure>
 								<a href="http://www.youtube.com/v/5IDW8suNBAs?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Pistón gradual y automático kraby">
