@@ -456,7 +456,7 @@ td
 	border-radius: 3px;
 	box-shadow: 3px 3px 3px #CCC;
 	margin: .2% 2%;
-	width: 60%;
+	width: 90%;
 }
 #contenidoHome section 
 {
@@ -1501,7 +1501,7 @@ input[type="file"] {
 }
 #s3 {
 	display: inline-block;
-	left: 69%;
+	left: 46%;
 	position: relative;
 	top: .8em;
 }
@@ -1701,6 +1701,9 @@ color: #333;
 	background-color: #7AC143;
 	border-color: #68A33A;
 	color: #fff;
+}
+.catalogo {
+	width: 40% !important;
 }
 .curved-hz-1:before 
 {

@@ -79,23 +79,23 @@ var IE7_PNG_SUFFIX = ".png";
 				<section>
 					<span>CASAS ESPECTACULARES</span>
 					<article>
-						<p>El diseño moderno de una casa, no solo busca combinaciones de diferentes materiales; también propuestas nuevas que permitan la entrada de aire, luz y contacto cercano con la naturaleza.</p><br> 
-						<p>El diseño de Rooftecture M, Shuhei  Endo, una casa en Osaka, Japón; terminada en 2010, brinda una propuesta innovadora que integra recubrimientos de acero y voladizos con volúmenes curvos y formas rectas; dando un contraste poco habitual y arriesgado con  la combinación de formas, y materiales como acero con madera de pino.</p><br> 
-						 <p>Los espacios comunes quedan "abiertos al exterior"; como la sala, que es totalmente de cristal, sin embargo; esta casa garantiza por completo habitabilidad y privacidad para sus habitantes.</p><br><br>
+						<p>Actualmente en el diseño moderno de una casa, se toma en cuenta además de la funcionalidad de sus espacios, el cuidado y preservación del medio ambiente. Es por eso que en Zeigler Build se dieron a la tarea de restaurar 31 contenedores marítimos para diseñar una casa de tres niveles en Queensland, Australia.</p><br>
+						<p> Esta casa está rodeada de un frondoso bosque y un río; cuenta con cuatro habitaciones distribuidas en los dos niveles superiores, en los que se encuentran como parte de la decoración, desde grafittis hasta mosaicos.</p><br>
+						<p> En su interior cuenta también con áreas como sala de lectura, estudio de arte, gimnasio y una piscina; todo este lujo contrasta con la primera impresión que puede causar la casa desde el exterior, siendo una auténtica casa de lujo realizada con materiales reciclados.</p><br><br>
 						 
 					</article>
-					<figure class="ancho"> <img src="imagenesSitio/a101.jpg"> </figure>
+					<figure> <img src="imagenesSitio/a101.jpg"> </figure>
 				</section>
 				<section>
 					<span>DECORANDO ESPACIOS</span>
 					<article>
-						<p>Es común que con el paso del  tiempo nuestro hogar reciba más y más artículos y ropa que vamos acumulando. Así que es imprescindible contar con un espacio especial para poder almacenar todo, y que además sea decorativo y funcional. </p><br>
-
-						<p>Si cuentas con el espacio en tu habitación; una buena opción es integrar a tu vestidor o clóset accesorios que faciliten la organización de prendas y accesorios; tales como zapateras extraíbles, corbateros, porta pantalones, etc.</p><br>
-
-						<p>Aprovecha la parte interna de la puerta de tus closets (si no son corredizos); para colgar bolsas, o un espejo; o bien,  colocar abrigos o cosas que estén actualmente en uso.</p><br><br>
+						<p>El estilo vintage es una manera casual para decorar mezclando elementos antiguos y nuevos; dando como resultado una decoración muy personal.</p><br>
+						<p> 
+Para lograrlo puedes combinar telas antiguas, de colección y de bajo costo para decorar cualquier habitación de tu casa; por ejemplo la cocina.</p><br>
+						<p>
+Lograr una cocina de inspiración vintage es posible cambiando solo unos pocos detalles; actualmente en el mercado, puedes conseguir estufas de cocina prácticas, muebles, jaladeras y botones con estilo antiguo; además de muchos objetos de cocina en materiales como cerámica, barro y vidrio que te ayudarán a lograr el “look” de una cocina de campo antigua.</p><br><br><br><br>
 					</article>
-					<figure> <img src="imagenesSitio/a201.jpg"><img src="imagenesSitio/a202.jpg"></figure>
+					<figure> <img src="imagenesSitio/a201.jpg"></figure>
 				</section>
 			</article>
 		</div>	

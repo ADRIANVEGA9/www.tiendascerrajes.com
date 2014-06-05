@@ -96,7 +96,7 @@ function mostrarOcultar(cual, op_menu)	{
 						<article class="videos">
 							<figure>
 								<a href="http://www.youtube.com/v/BmhGd3fKDE4?autoplay=1&amp;rel=0" rel="shadowbox;width=640;height=385;" title="Tiendas Cerrajes">
-									<img src="http://img.youtube.com/vi/BmhGd3fKDE4/0.jpg" alt="Tiendas Cerrajes"/>
+									<img src="imagenesSitio/videos/00.jpg" alt="Tiendas Cerrajes"/>
 								<figcaption>Tiendas Cerrajes</figcaption>
 								</a>
 							</figure>
