@@ -76,7 +76,7 @@ function mostrarOcultar(cual, op_menu)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								 <li onclick="mostrarOcultar('n','op')" class="mayus"><a id="op" >&#8226;&nbsp;&nbsp; Cátalogo Vauth-Sagel</a></li>
+								 <li onclick="mostrarOcultar('n','op')" class="mayus"><a id="op">&#8226;&nbsp;&nbsp; Cátalogo Vauth-Sagel</a></li>
 							<!--	<li onclick="mostrarOcultar('n2','op2')" class="mayus"><a id="op2" >&#8226;&nbsp;&nbsp;apertura Guatemala</a></li> -->
 							</ul>
 						</article>
@@ -87,6 +87,7 @@ function mostrarOcultar(cual, op_menu)	{
 						<a href="http://www.cerrajes.me/catalogos/virtual/vauth-sagel/index.html" target="_blank" title="Ver cátalogo virtual Vauth-Sagel">
 							<img class="catalogo" src="imagenesSitio/catalogos/Vauth-Sagel.png" alt="Cátalogo Vauth-Sagel">
 						</a>
+						<a class="icon-file-pdf" href="http://www.cerrajes.me/catalogos/pdf/vauth-sagel.pdf" target="_blank" title="Descargar pdf"></a>
 					</section>
 <!-- 					<section id="n2">
 						<img src="imagenesSitio/noticias/noticias2.jpg">
