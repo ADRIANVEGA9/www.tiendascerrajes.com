@@ -74,10 +74,10 @@ function mostrarOcultar(cual, otro)	{
 									tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam </section>
 								</li> -->
 							</ul>
-									<section id="QR">
+									<!-- <section id="QR">
 										<img src="imagenesSitio/2014.png" alt="código QR">
 										<span>Descarga el código QR en tu smart phone o tableta y comparte las promociones con tus amigos.</span>
-									</section>
+									</section> -->
 						</article>
 						<article id="compartir">
 							<article>RECOMIENDA ESTA PROMOCI&Oacute;N</article>

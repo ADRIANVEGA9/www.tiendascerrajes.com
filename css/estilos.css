@@ -951,7 +951,7 @@ input[type="file"] {
 }
 #mapaEdo1 {
 	-moz-opacity: .85;
-	background-image: url("http://localhost/www.tiendascerrajes.com/css/../imagenesSitio/ubicanos/qro.png");
+	background-image: url(../imagenesSitio/ubicanos/qro.png);
 	background-repeat: no-repeat;
 	filter: alpha(opacity=85);
 	left: 269px;
@@ -975,7 +975,7 @@ input[type="file"] {
 }
 #mapaEdo3 {
 	-moz-opacity: .85;
-	background-image: url("http://localhost/www.tiendascerrajes.com/css/../imagenesSitio/ubicanos/gdl.png");
+	background-image: url(../imagenesSitio/ubicanos/gdl.png);
 	background-repeat: no-repeat;
 	filter: alpha(opacity=85);
 	left: 218px;
@@ -1852,12 +1852,12 @@ color: #333;
 }
 .sublinea {
 	background: #EFE !important;
-	color: #71BF44 !important;
+	color: #2E3B4D !important;
 	line-height: 40px;
 	/*width: 90% !important;*/
 }
 .sublinea:hover, .sublineaActivo {
-	color: #2E3B4D !important;
+	color: #71BF44 !important;
 }
 .sublineaActivo {
 	cursor: default !important;
