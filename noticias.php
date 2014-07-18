@@ -76,7 +76,7 @@ function mostrarOcultar(cual, op_menu)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								 <li onclick="mostrarOcultar('n','op')" class="mayus"><a id="op" >&#8226;&nbsp;&nbsp;Hábitat Expo 2014</a></li>
+								 <li onclick="mostrarOcultar('n','op')" class="mayus"><a id="op" >&#8226;&nbsp;&nbsp;ganador de promoción junio</a></li>
 							<!--	<li onclick="mostrarOcultar('n2','op2')" class="mayus"><a id="op2" >&#8226;&nbsp;&nbsp;apertura Guatemala</a></li> -->
 							</ul>
 						</article>

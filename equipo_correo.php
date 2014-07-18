@@ -37,7 +37,7 @@ $html = "
 </style>
 </head>
 <body>
-  <img src='http://208.106.249.229/directorio/imagenesSitio/logo.jpg' alt='Tiendas Cerrajes'>
+  <img src='http://tiendascerrajes.com/imagenesSitio/logo.jpg' alt='Tiendas Cerrajes'>
   <h1>currículo de ".$_POST['nombre']."</h1>
   <div>
     <strong>Nombre: </strong>".$_POST['nombre']." <br>
