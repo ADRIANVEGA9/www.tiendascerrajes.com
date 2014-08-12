@@ -348,51 +348,47 @@ mail($correoCli, " (correo recibido de www.tiendascerrajes.com - Comentario)\r\n
 * Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
 */
 
-require_once("nusoap/nusoap.php");
+require("nusoap/nusoap.php");
 
 $proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
 $proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';
 $proxyusername = isset($_POST['proxyusername']) ? $_POST['proxyusername'] : '';
 $proxypassword = isset($_POST['proxypassword']) ? $_POST['proxypassword'] : '';
 $client = new nusoap_client('http://api.fromdoppler.com/Default.asmx?wsdl', 'wsdl',
-						$proxyhost, $proxyport, $proxyusername, $proxypassword);
+            $proxyhost, $proxyport, $proxyusername, $proxypassword);
 $err = $client->getError();
 if ($err) {
-	echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
+  echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
 }
 
-// $empresa = array('Customfieldid' => '22097','Value' => $_POST['empresa']);
-// $telefono = array('Customfieldid' => '22099','Value' => $_POST['telefono']);
-// $lada = array('Customfieldid' => '22120','Value' => $_POST['ladaT']);
-// $municipio = array('Customfieldid' => '22122','Value' => $_POST['municipio']);
-// $estado = array('Customfieldid' => '22121','Value' => $_POST['estado']);
 
-$param = array('APIKey' => '84F4BBEFA9C397B061E491EEE978AEA5',
-		'SubscribersListID' => '506493',
-		'FirstName' => utf8_decode($_POST['nombre']),
-		'LastName' => utf8_decode($_POST['apellidos']),
-		'EMail' => utf8_decode($_POST['correo'])
-		);	
-$result = $client->call('AddSubscriberwithNameandCustoms', $param);
+$nacimientoA = array('Customfieldid' => $nacimientoID,'Value' => $nacimiento);
+$sexoA = array('Customfieldid' => $sexoID,'Value' => $sexo);
+$param = array('APIKey' => 'D70B127D876B4339C7B896A7E28E336D',
+    'SubscribersListID' => '568524',
+    'FirstName' => $_POST['nombre'],
+    'LastName' => $_POST['apellidos'],
+    'EMail' => $_POST['correo']
+    );  
+$result = $client->call('AddSubscriberwithName', $param);
 
 // Check for a fault
+
 if ($client->fault) {
-	echo '<h2>Fault</h2><pre>';
-	print_r($result);
-	echo '</pre>';
+  echo '<h2>Fault</h2><pre>';
+  print_r($result);
+  echo '</pre>';
 } else {
-	// Check for errors
-	$err = $client->getError();
-	if ($err) {
-		// Display the error
-		echo '<h2>Error</h2><pre>' . $err . '</pre>';
-	} else {
-		// Display the result
-		//echo '<h2>Suscripci&oacute;n Exitosa</h2><pre>';
-		//print_r($result);
-		echo '</pre>';
-	}
+  // Check for errors
+  $err = $client->getError();
+  if ($err) {
+    // Display the error
+    echo '<h2>Error</h2><pre>' . $err . '</pre>';
+  } 
 }
+
 /***********************************************/
-/*termina código doppler -->*/
+/***********************************************/
+?>
+<!-- termina código doppler -->
 ?>

@@ -80,12 +80,12 @@ function mostrarOcultar(cual, op_menu)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								<li onclick="mostrarOcultar('n','op')" class="mayus"><a id="op" >&#8226;&nbsp;&nbsp;bisagra de click Cerrajes</a></li>
-								<li onclick="mostrarOcultar('n2','op2')" class="mayus"><a id="op2" >&#8226;&nbsp;&nbsp;bisagra de click Cerrajes</a></li>
-								<li onclick="mostrarOcultar('n3','op3')" class="mayus"><a id="op3" >&#8226;&nbsp;&nbsp;Perchero embutido</a></li>
-								<li onclick="mostrarOcultar('n4','op4')" class="mayus"><a id="op4" >&#8226;&nbsp;&nbsp;perno cross dowel</a></li>
-								<li onclick="mostrarOcultar('n5','op5')" class="mayus"><a id="op5" >&#8226;&nbsp;&nbsp;accesorio flexible</a></li><!-- 
-								<li onclick="mostrarOcultar('n6','op6')" class="mayus"><a id="op6" >&#8226;&nbsp;&nbsp;Burro de planchar</a></li>
+								<li onclick="mostrarOcultar('n','op')" class="mayus"><a id="op" >&#8226;&nbsp;&nbsp;BIOMÉTRICA</a></li>
+								<li onclick="mostrarOcultar('n2','op2')" class="mayus"><a id="op2" >&#8226;&nbsp;&nbsp;GATEMAN</a></li>
+								<li onclick="mostrarOcultar('n3','op3')" class="mayus"><a id="op3" >&#8226;&nbsp;&nbsp;GATEMAN PARA VIDRIO</a></li>
+								<li onclick="mostrarOcultar('n4','op4')" class="mayus"><a id="op4" >&#8226;&nbsp;&nbsp;IN TOUCH</a></li>
+								<li onclick="mostrarOcultar('n5','op5')" class="mayus"><a id="op5" >&#8226;&nbsp;&nbsp;MIRILLA PRO</a></li> 
+								<li onclick="mostrarOcultar('n6','op6')" class="mayus"><a id="op6" >&#8226;&nbsp;&nbsp;REAL LIVING</a></li><!--
 								<li onclick="mostrarOcultar('n7','op7')" class="mayus"><a id="op7" >&#8226;&nbsp;&nbsp;Organizador de platos</a></li>
 								<li onclick="mostrarOcultar('n8','op8')" class="mayus" class="ultimo" ><a id="op8" >&#8226;&nbsp;&nbsp;Soporte magnético </a></li> -->
 							</ul>
@@ -111,10 +111,10 @@ function mostrarOcultar(cual, op_menu)	{
 					</section>
 					<section id="n5">
 						<img src="imagenesSitio/nuevos/i05.jpg">
-					</section><!-- 
-					<section id="n6">
-						<img src="imagenesSitio/nuevos/i01.jpg">
 					</section>
+					<section id="n6">
+						<img src="imagenesSitio/nuevos/i06.jpg">
+					</section><!-- 
 					<section id="n7">
 						<img src="imagenesSitio/nuevos/i02.jpg">
 					</section>
