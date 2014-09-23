@@ -327,7 +327,7 @@ ini_set("smtp_port","587");/*25*/
 ini_set("sendmail_from","mail.tiendascerrajes.com");	/*mail.tiendascerrajes.com*/
 mail($micorreo, " (correo recibido de www.tiendascerrajes.com )\r\n", utf8_decode($html),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde.");  
 $htmlCliente .="<div align=\"center\"><span class=\"estilo3\">Gracias por contactar a Tiendas Cerrajes, recibimos sus comentarios, en breve nos pondremos en contacto con usted.</span></div>";
-mail($correoCli, " (correo recibido de www.tiendascerrajes.com - Comentario)\r\n", utf8_decode($htmlCliente),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
+mail($correoCli, " Un espacio creativo e innovador diseñado para ti...", utf8_decode($htmlCliente),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
 ?>					
 <article id="c_izq">
 	<article class="fondoVerdeE">
@@ -362,15 +362,16 @@ if ($err) {
 }
 
 
-$nacimientoA = array('Customfieldid' => $nacimientoID,'Value' => $nacimiento);
-$sexoA = array('Customfieldid' => $sexoID,'Value' => $sexo);
+$estado = array('Customfieldid' => '37328','Value' => utf8_decode($_POST['estado']));
+$ciudad = array('Customfieldid' => '37327','Value' => utf8_decode($_POST['municipio']);
 $param = array('APIKey' => 'D70B127D876B4339C7B896A7E28E336D',
     'SubscribersListID' => '568524',
     'FirstName' => $_POST['nombre'],
     'LastName' => $_POST['apellidos'],
-    'EMail' => $_POST['correo']
+    'EMail' => $_POST['correo'],
+    'CustomsFields' => array('customField' => array($estado,$ciudad))
     );  
-$result = $client->call('AddSubscriberwithName', $param);
+$result = $client->call('AddSubscriberwithNameandCustoms', $param);
 
 // Check for a fault
 
