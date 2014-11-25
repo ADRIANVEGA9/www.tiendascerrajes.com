@@ -347,13 +347,13 @@ td
 	#telefono, #telOf {
 		height: 25px;
 		margin-bottom: 8px;
-		width: 302px;
+		width: 73%;
 		color: #333;
 	}
 	#ladaT, #ladaTOf {
 		height: 25px;
 		margin-bottom: 8px;
-		width: 90px;
+		width: 24%;
 		text-align: left;
 		color: #333;
 	}

@@ -69,6 +69,15 @@ function mostrarOcultar(cual, op_menu)	{
 	document.getElementById(op).style.color = "#FEFEFE";
 }
 </script>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_LA/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 </head>
 <body>
 	<div id="contenedorE">
@@ -80,12 +89,12 @@ function mostrarOcultar(cual, op_menu)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								<li onclick="mostrarOcultar('n','op')" class="mayus"><a id="op" >&#8226;&nbsp;&nbsp;BIOMÉTRICA</a></li>
-								<li onclick="mostrarOcultar('n2','op2')" class="mayus"><a id="op2" >&#8226;&nbsp;&nbsp;GATEMAN</a></li>
-								<li onclick="mostrarOcultar('n3','op3')" class="mayus"><a id="op3" >&#8226;&nbsp;&nbsp;GATEMAN PARA VIDRIO</a></li>
-								<li onclick="mostrarOcultar('n4','op4')" class="mayus"><a id="op4" >&#8226;&nbsp;&nbsp;IN TOUCH</a></li>
-								<li onclick="mostrarOcultar('n5','op5')" class="mayus"><a id="op5" >&#8226;&nbsp;&nbsp;MIRILLA PRO</a></li> 
-								<li onclick="mostrarOcultar('n6','op6')" class="mayus"><a id="op6" >&#8226;&nbsp;&nbsp;REAL LIVING</a></li><!--
+								<li onclick="mostrarOcultar('n','op')" class="mayus"><a id="op" >&#8226;&nbsp;&nbsp;JALADERAS & BOTONES SHINE</a></li>
+								<!--<li onclick="mostrarOcultar('n2','op2')" class="mayus"><a id="op2" >&#8226;&nbsp;&nbsp;KINVARO L80</a></li>
+								<li onclick="mostrarOcultar('n3','op3')" class="mayus"><a id="op3" >&#8226;&nbsp;&nbsp;KINVARO S35</a></li>
+								<li onclick="mostrarOcultar('n4','op4')" class="mayus"><a id="op4" >&#8226;&nbsp;&nbsp;KINVARO T65</a></li>
+								<li onclick="mostrarOcultar('n5','op5')" class="mayus"><a id="op5" >&#8226;&nbsp;&nbsp;KINVARO T71</a></li> 
+								<li onclick="mostrarOcultar('n6','op6')" class="mayus"><a id="op6" >&#8226;&nbsp;&nbsp;REAL LIVING</a></li>
 								<li onclick="mostrarOcultar('n7','op7')" class="mayus"><a id="op7" >&#8226;&nbsp;&nbsp;Organizador de platos</a></li>
 								<li onclick="mostrarOcultar('n8','op8')" class="mayus" class="ultimo" ><a id="op8" >&#8226;&nbsp;&nbsp;Soporte magnético </a></li> -->
 							</ul>
@@ -98,28 +107,36 @@ function mostrarOcultar(cual, op_menu)	{
 				</article>
 				<article id="c_der2">
 					<section id="n">
-						<img src="imagenesSitio/nuevos/i01.jpg">
+						<img src="imagenesSitio/nuevos/shine.jpg">
+						<!-- <div class="fb-share-button"></div> -->
 					</section>
-					<section id="n2">
-						<img src="imagenesSitio/nuevos/i02.jpg">
+					<!--<section id="n2">
+						<img src="imagenesSitio/nuevos/kinvaro-2.jpg">
+						<div class="fb-share-button"></div>
 					</section>
 					<section id="n3">
-						<img src="imagenesSitio/nuevos/i03.jpg">
+						<img src="imagenesSitio/nuevos/kinvaro-3.jpg">
+						<div class="fb-share-button"></div>
 					</section>
 					<section id="n4">
-						<img src="imagenesSitio/nuevos/i04.jpg">
+						<img src="imagenesSitio/nuevos/kinvaro-4.jpg">
+						<div class="fb-share-button"></div>
 					</section>
 					<section id="n5">
-						<img src="imagenesSitio/nuevos/i05.jpg">
+						<img src="imagenesSitio/nuevos/kinvaro-5.jpg">
+						<div class="fb-share-button"></div>
 					</section>
-					<section id="n6">
-						<img src="imagenesSitio/nuevos/i06.jpg">
-					</section><!-- 
+					 <section id="n6">
+						<img src="imagenesSitio/nuevos/kinvaro-6.jpg">
+						<div class="fb-like"></div>
+					</section>
 					<section id="n7">
 						<img src="imagenesSitio/nuevos/i02.jpg">
+						<div class="fb-like"></div>
 					</section>
 					<section id="n8">
 						<img src="imagenesSitio/nuevos/i03.jpg">
+						<div class="fb-like"></div>
 					</section> -->
 
 				</article>

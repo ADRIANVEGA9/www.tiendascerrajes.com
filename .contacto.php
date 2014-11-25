@@ -343,12 +343,10 @@ mail($correoCli, " Un espacio creativo e innovador diseñado para ti...", utf8_d
 	
 <!-- Código para doppler -->
 <?php
-
 /* This Doppler API Example use an existing library known as NUSOAP V0.7.1
 * Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
 */
-
-require("nusoap/nusoap.php");
+require'nusoap/nusoap.php';
 
 $proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
 $proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';
@@ -361,18 +359,20 @@ if ($err) {
   echo '<h2>Constructor error</h2><pre>' . $err . '</pre>';
 }
 
+// $estado = array('Customfieldid' => 22121,'Value' => $_POST['estado']);
+// $empresa = array('Customfieldid' => '22097','Value' => $_POST['empresa']);
+// $telefono = array('Customfieldid' => '22099','Value' => $_POST['telefono']);
 
 $estado = array('Customfieldid' => '37328','Value' => utf8_decode($_POST['estado']));
-$ciudad = array('Customfieldid' => '37327','Value' => utf8_decode($_POST['municipio']);
+$ciudad = array('Customfieldid' => '37327','Value' => utf8_decode($_POST['municipio']));
 $param = array('APIKey' => 'D70B127D876B4339C7B896A7E28E336D',
     'SubscribersListID' => '568524',
-    'FirstName' => $_POST['nombre'],
-    'LastName' => $_POST['apellidos'],
+    'FirstName' => utf8_decode($_POST['nombre']),
+    'LastName' => utf8_decode($_POST['apellidos']),
     'EMail' => $_POST['correo'],
     'CustomsFields' => array('customField' => array($estado,$ciudad))
     );  
 $result = $client->call('AddSubscriberwithNameandCustoms', $param);
-
 // Check for a fault
 
 if ($client->fault) {
@@ -392,4 +392,3 @@ if ($client->fault) {
 /***********************************************/
 ?>
 <!-- termina código doppler -->
-?>

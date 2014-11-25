@@ -66,10 +66,10 @@ function mostrarOcultar(cual, otro)	{
 						<article id="menuNuevoProd">
 							<ul>
 								<!-- <li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;FACEBOOK</a></li> -->
-								<li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;BUZONES</a></li>
-							 	<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;ACCESORIOS ELITE</a></li>
+								<li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;JALADERAS & BOTONES SHINE</a></li>
+							 <!-- 	<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;ACCESORIOS ELITE</a></li>
  								<li onclick="mostrarOcultar('op2','p2')"><a id="op2">&#8226;&nbsp;&nbsp;PRODUCTOS EN LIQUIDACIÓN</a></li> 
-								<li onclick="mostrarOcultar('op3','p3')" class="ultimo"><a id="op3">&#8226;&nbsp;&nbsp;VAUTH-SAGEL</a></li>
+								<li onclick="mostrarOcultar('op3','p3')" class="ultimo"><a id="op3">&#8226;&nbsp;&nbsp;VAUTH-SAGEL</a></li> -->
 							</ul>
 									<!-- <section id="QR">
 										<img src="imagenesSitio/2014.png" alt="código QR">
@@ -84,9 +84,9 @@ function mostrarOcultar(cual, otro)	{
 				</article>
 				<article id="c_der2">
 					<section id="p">
-						<img src="imagenesSitio/promo/01.jpg">
+						<img src="imagenesSitio/promo/noviembre.jpg">
 					</section>
-					<section id="p1">
+<!--					<section id="p1">
 						<img src="imagenesSitio/promo/02.jpg">
 					</section>
 					<section id="p2">
@@ -94,7 +94,7 @@ function mostrarOcultar(cual, otro)	{
 					</section>
  					<section id="p3">
 						<img src="imagenesSitio/promo/04.jpg">
-					</section> <!-- -->
+					</section>  -->
 <!--					<section id="p4">
 						<img src="imagenesSitio/promo/04.jpg">
 					</section>
