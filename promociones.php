@@ -66,10 +66,12 @@ function mostrarOcultar(cual, otro)	{
 						<article id="menuNuevoProd">
 							<ul>
 								<!-- <li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;FACEBOOK</a></li> -->
-								<li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;JALADERAS & BOTONES SHINE</a></li>
-							 <!-- 	<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;ACCESORIOS ELITE</a></li>
- 								<li onclick="mostrarOcultar('op2','p2')"><a id="op2">&#8226;&nbsp;&nbsp;PRODUCTOS EN LIQUIDACIÓN</a></li> 
-								<li onclick="mostrarOcultar('op3','p3')" class="ultimo"><a id="op3">&#8226;&nbsp;&nbsp;VAUTH-SAGEL</a></li> -->
+								<li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;CERRADURAS</a></li>
+							 <!-- 	<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;BOTE PARA BASURA + COLUMNA</a></li>
+ 								<li onclick="mostrarOcultar('op2','p2')"><a id="op2">&#8226;&nbsp;&nbsp;ACCESORIOS PARA BAÑO</a></li> 
+								<li onclick="mostrarOcultar('op3','p3')" ><a id="op3">&#8226;&nbsp;&nbsp;KIT DE RELAJACIÓN</a></li> 
+								<li onclick="mostrarOcultar('op4','p4')" ><a id="op4">&#8226;&nbsp;&nbsp;CERRADURAS</a></li> 
+								<li onclick="mostrarOcultar('op5','p5')" class="ultimo"><a id="op5">&#8226;&nbsp;&nbsp;JALADERAS</a></li>  -->
 							</ul>
 									<!-- <section id="QR">
 										<img src="imagenesSitio/2014.png" alt="código QR">
@@ -84,22 +86,22 @@ function mostrarOcultar(cual, otro)	{
 				</article>
 				<article id="c_der2">
 					<section id="p">
-						<img src="imagenesSitio/promo/noviembre.jpg">
+						<img src="imagenesSitio/promo/web_cerraduras.jpg">
 					</section>
-<!--					<section id="p1">
-						<img src="imagenesSitio/promo/02.jpg">
+				<!--	<section id="p1">
+						<img src="imagenesSitio/promo/pag_paquete_dos.jpg">
 					</section>
-					<section id="p2">
-						<img src="imagenesSitio/promo/03.jpg">
+				<section id="p2">
+						<img src="imagenesSitio/promo/pag_bano.jpg">
 					</section>
- 					<section id="p3">
-						<img src="imagenesSitio/promo/04.jpg">
-					</section>  -->
-<!--					<section id="p4">
-						<img src="imagenesSitio/promo/04.jpg">
+	 					<section id="p3">
+						<img src="imagenesSitio/promo/pag_bisagras.jpg">
+					</section> 
+					<section id="p4">
+						<img src="imagenesSitio/promo/pag_cerradura.jpg">
 					</section>
 					<section id="p5">
-						<img src="imagenesSitio/promo/05.jpg">
+						<img src="imagenesSitio/promo/pag_jaladeras.jpg">
 					</section> -->
 				</article>
 			</article>
