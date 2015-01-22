@@ -134,7 +134,7 @@ nav {font-size: 0px;/*dar tamaño de 0 (cero) al font para evitar que el inline-
 	z-index: 1;
 	}
 nav a{
-	background: #DDD;
+	background: rgb(241, 242, 242);
 	color: #444;
 	display: block;
 	font: 14px "TChevin";
@@ -170,7 +170,7 @@ table
 }
 td 
 {
-	border-right: 1px solid #DDD;
+	border-right: 1px solid rgb(241, 242, 242);
 	padding: 0;
 }
 
@@ -221,7 +221,7 @@ td
 	top: -3px;
 }
 #buscadorT input[type="text"]{
-	background: #DDD;
+	background: rgb(241, 242, 242);
 	border: none;
 	color: #2E3B4D;
 	display: inline-block;
@@ -514,6 +514,12 @@ td
 	width: 960px;
 	height: auto;
 }
+
+#contenido #c_centro #cajasTitulo {
+	text-align: center;
+	text-transform: uppercase;
+	width: 100%;
+}
 #contenido #c_centro #equipo {
 	margin: 0 auto;
 	padding-top: 1em;
@@ -563,29 +569,39 @@ td
 	width: auto; 
 }
 #contenido #c_centro #equipoCajas {
-	font-family: "TChevin";
-	font-size: 14px;
-	height: auto;
-	width: 68%;
 	border-color: #7A7A7A;
 	border-style: dotted;
 	border-width: 0px;
 	display: inline-block;
+	font-family: "TChevin";
+	font-size: 14px;
+	height: auto;
 	position: relative;
+	text-align: left;
 	vertical-align: text-top;
+	width: 100%;
 }
 #contenido #c_centro #equipoCajas input[type="text"],
 #contenido #c_centro #equipoCajas select
 {
+	background: rgb(241, 242, 242);
+	border-radius: .2em;
+	border: none;
+	color: #333;
 	height: 25px;
 	margin-bottom: 8px;
-	width: 100%;
-	color: #333;
+	width: 80%;
+}
+#contenido #c_centro #equipoCajas select#interes{
+	width: 72% !important;
+}
+#contenido #c_centro #equipoCajas select#nombre{
+	
 }
 input[type="file"] {
-	background: rgba(113, 191, 68, 0.22);
+	background: rgb(241, 242, 242);
+	border: none;
 	color: #333;
-	width: 100%;
 }
 #contenido #c_centro #equipoEnvia {
 	color: #B1B1B1;
@@ -607,35 +623,53 @@ input[type="file"] {
 	width: 31%;
 }
 #contenido #c_centro #equipoEtiqueta label {
-    display: block;
-    height: 37px;
-    color:#333;
-    font-size: 14px;
+	background: rgba(231, 227, 227, 0.68);
+	border-radius: .2em;
+	border: none;
+	color: #333;
+	display: block;
+	height: 25px;
+	line-height: 1.8em;
+	margin-bottom: 8px;
+	overflow: visible;
+	padding-left: 1em;
+	width: 103%;
 }
 #contenido #c_centro #equipoForm {
 	margin-top: 1em;
 }
 #c_centro {
-	color: #333;
+	color: #4F4D4D;
 	display: inline-block;
 	font-family: "TChevin";
 	font-size: 14px;
 	height: auto;
 	margin-bottom: 5%;
-	margin-left: 10%;
-	margin-right: 10%;
+	margin-left: 15%;
+	margin-right: 15%;
 	position: relative;
 	text-align: justify;
 	vertical-align: top;
-	width: 80%;
+	width: 70%;
 	}
 #c_centro span{
-	color: #71BF44;
 	display: inline-block;
-	font-family:   "TChevin";
-	font-size: 12px;
+	font-family: "TChevin";
 	font-weight: bold;
-	text-transform: uppercase;
+}
+#c_centro .cajasEtiquetas {
+	border-right: solid rgb(210, 206, 206);
+	border-width: 2px;
+	line-height: 2.5em;
+	margin: 0 .5em;
+	padding: 0 1em;
+}
+#c_centro .cajasFondo {
+	background: rgb(241, 242, 242);
+	border-radius: .3em;
+	margin: 0 0 1em;
+	text-transform: initial;
+	width: 100%;
 }
 #c_der {
 	display: inline-block;
@@ -941,7 +975,7 @@ input[type="file"] {
 	font-size: 12px;
 	line-height: 20px;
 	text-align: right;
-	text-shadow: 1px 1px #DDD;
+	text-shadow: 1px 1px rgb(241, 242, 242);
 	width: 12%;
 }
 #logo
@@ -1069,7 +1103,7 @@ input[type="file"] {
 	position: relative;
 }
 #menuOpProd li {
-	border-bottom: 1px solid #DDD;
+	border-bottom: 1px solid rgb(241, 242, 242);
 	line-height: 20px;
 }
 #menuProdHome {
@@ -1102,7 +1136,7 @@ input[type="file"] {
 #menuProdHome a ,
 #menuNuevoProd a {
 	/*background: rgba(0,0,0,0.2);*/
-	background: #DDD;
+	background: rgb(241, 242, 242);
 	color: #333;
 	display: block;
 	height: 40px;
@@ -1327,7 +1361,7 @@ input[type="file"] {
 #recomiendaCajas input[type="text"],
 #recomiendaCajas input[type="mail"]
 	{
-	background-color: #DDD;
+	background-color: rgb(241, 242, 242);
 	border-radius: 0.3em;
 	border: 0;
 	color: #333;
@@ -1785,7 +1819,7 @@ color: #333;
 	height: 630px;
 }
 .fondoE {
-	background-color: #DDD;
+	background-color: rgb(241, 242, 242);
 	height: auto;
 	display: block;
 	padding-bottom: 10px;

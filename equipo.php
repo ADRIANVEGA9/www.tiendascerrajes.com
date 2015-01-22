@@ -53,41 +53,41 @@ var IE7_PNG_SUFFIX = ".png";
 				<article id="c_centro">
 					<section id="equipo">
 					<?php if (!$_POST){ ?>
-						<span>
-							Tiendas Cerrajes te invita a integrarte con nosotros. <br> Si deseas pertenecer a esta gran familia, ingresa los siguientes datos:
-						</span>
+						<span id="cajasTitulo">Si deseas formar parte de esta gran familia, ingresa los siguientes datos aquí</span>
 							<form id="equipoForm" method="POST" enctype="multipart/form-data" onsubmit="return validate1(this)" >
 							<fieldset>
-								<section id="equipoEtiqueta">
-									<label for="nombre">*Nombre</label>
-									<label for="estado">*Estado</label>
-									<label for="interes">*Área de interés</label>
-									<label for="archivo">*Subir curriculo en formato PDF</label>
-								</section>
 								<section id="equipoCajas">
-									<input type="text" name="nombre" id="nombre" placeholder="Nombre" required onkeypress="return validar(event)">
-									<select name="estado" id="estado" placeholder="elige una opción" required onkeypress="return validar(event)">
-										<script language="javascript">
-										var states = new Array("Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua", "Coahuila de Zaragoza", "Colima", "Distrito Federal", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "México", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas");
-										for(var hi=0; hi<states.length; hi++) 
-										document.write("<option value=\""+states[hi]+"\">"+states[hi]+"</option>");
-										</script>
-									</select>
-									<select name="interes" id="interes" placeholder="elige una opción" onkeypress="return validar(event)">
-										<option value="Ventas">Ventas</option>
-										<option value="Atencion_Cliente">Atención a Cliente</option>
-										<option value="RRHH">Recursos Humanos</option>
-										<option value="Finanzas">Finanzas</option>
-										<option value="Contraloría">Contraloría</option>
-										<option value="TI">Tecnología de Información</option>
-										<option value="Compras_Logistica">Compras y Logística</option>
-										<option value="Legal">Legal</option>
-										<option value="Mkt">Mercadotecnia</option>
-									</select>
-									<input type="file" name="archivo" id="archivo" value="seleccionar" class='validaFile' data-type='pdf' data-max-size='2mb' required onkeypress="return validar(event)">
+									<span class="cajasFondo"><span class="cajasEtiquetas">Nombre</span>
+										<input type="text" name="nombre" id="nombre" required onkeypress="return validar(event)" tabindex="1">
+									</span>
+									<span class="cajasFondo"><span class="cajasEtiquetas">Estado</span>
+										<select name="estado" id="estado" placeholder="elige una opción" required onkeypress="return validar(event)" tabindex="2">
+											<script language="javascript">
+											var states = new Array("Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Chiapas", "Chihuahua", "Coahuila de Zaragoza", "Colima", "Distrito Federal", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "México", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas");
+											for(var hi=0; hi<states.length; hi++) 
+											document.write("<option value=\""+states[hi]+"\">"+states[hi]+"</option>");
+											</script>
+										</select>
+									</span>
+									<span class="cajasFondo"><span class="cajasEtiquetas">Área de interés</span>
+										<select name="interes" id="interes" placeholder="elige una opción" onkeypress="return validar(event)" tabindex="3">
+											<option value="Ventas">Ventas</option>
+											<option value="Atencion_Cliente">Atención a Cliente</option>
+											<option value="RRHH">Recursos Humanos</option>
+											<option value="Finanzas">Finanzas</option>
+											<option value="Contraloría">Contraloría</option>
+											<option value="TI">Tecnología de Información</option>
+											<option value="Compras_Logistica">Compras y Logística</option>
+											<option value="Legal">Legal</option>
+											<option value="Mkt">Mercadotecnia</option>
+										</select>
+									</span>
+									<span class="cajasFondo"><span class="cajasEtiquetas">Subir CV formato PDF</span>
+										<input type="file" name="archivo" id="archivo" value="seleccionar" class='validaFile' data-type='pdf' data-max-size='2mb' required onkeypress="return validar(event)" tabindex="5">
+									</span>
 								</section>
 								<section id="equipoEnvia">
-									<input name="Enviar" type="submit" class="botonEnvia" id="button" value="ENVIAR"/>
+									<input name="Enviar" type="submit" class="botonEnvia" id="button" value="ENVIAR" tabindex="6"/>
 								</section>
 							</fieldset>
 							</form>

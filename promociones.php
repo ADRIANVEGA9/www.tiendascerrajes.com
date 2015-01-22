@@ -67,10 +67,10 @@ function mostrarOcultar(cual, otro)	{
 							<ul>
 								<!-- <li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;FACEBOOK</a></li> -->
 								<li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;CERRADURAS</a></li>
-							 <!-- 	<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;BOTE PARA BASURA + COLUMNA</a></li>
- 								<li onclick="mostrarOcultar('op2','p2')"><a id="op2">&#8226;&nbsp;&nbsp;ACCESORIOS PARA BAÑO</a></li> 
-								<li onclick="mostrarOcultar('op3','p3')" ><a id="op3">&#8226;&nbsp;&nbsp;KIT DE RELAJACIÓN</a></li> 
-								<li onclick="mostrarOcultar('op4','p4')" ><a id="op4">&#8226;&nbsp;&nbsp;CERRADURAS</a></li> 
+							  	<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;ACCESORIOS PARA BAÑO</a></li>
+ 								<li onclick="mostrarOcultar('op2','p2')"><a id="op2">&#8226;&nbsp;&nbsp;ACCESORIOS PARA CLÓSET ELITE</a></li> 
+								<li onclick="mostrarOcultar('op3','p3')" ><a id="op3">&#8226;&nbsp;&nbsp;ACCESORIOS PARA COCINA</a></li> 
+								<!--<li onclick="mostrarOcultar('op4','p4')" ><a id="op4">&#8226;&nbsp;&nbsp;CERRADURAS</a></li> 
 								<li onclick="mostrarOcultar('op5','p5')" class="ultimo"><a id="op5">&#8226;&nbsp;&nbsp;JALADERAS</a></li>  -->
 							</ul>
 									<!-- <section id="QR">
@@ -88,16 +88,16 @@ function mostrarOcultar(cual, otro)	{
 					<section id="p">
 						<img src="imagenesSitio/promo/web_cerraduras.jpg">
 					</section>
-				<!--	<section id="p1">
-						<img src="imagenesSitio/promo/pag_paquete_dos.jpg">
+					<section id="p1">
+						<img src="imagenesSitio/promo/bano_web.jpg">
 					</section>
 				<section id="p2">
-						<img src="imagenesSitio/promo/pag_bano.jpg">
+						<img src="imagenesSitio/promo/elite_web2015.jpg">
 					</section>
-	 					<section id="p3">
-						<img src="imagenesSitio/promo/pag_bisagras.jpg">
+	 				<section id="p3">
+						<img src="imagenesSitio/promo/cocina_web2015.jpg">
 					</section> 
-					<section id="p4">
+						<!--<section id="p4">
 						<img src="imagenesSitio/promo/pag_cerradura.jpg">
 					</section>
 					<section id="p5">
