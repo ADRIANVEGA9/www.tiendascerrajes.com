@@ -11,6 +11,7 @@
 		    <td><a href="ubicanos.php" class="<?php if ($m==8) {echo 'activo';} ?>">ub&iacute;canos</a></td>
 		    <td><a href="equipo.php" class="<?php if ($m==4) {echo 'activo';} ?>">forma parte del equipo</a></td>
 		    <td><a href="http://www.facebook.com/pages/Tiendas-Cerrajes/186839721354132?sk=wall" target="_blank" ><img src="imagenesSitio/fb.png"></a></td>
+		    <td><a href="http://es.pinterest.com/tiendascerrajes/" target="_blank" ><img src="imagenesSitio/Pinterest.png"></a></td>
 		  </tr>
 		</table>
 		<article id="menuOpProd" onmousemove="MM_showHideLayers('menuOpProd','','show')" onmouseout="MM_showHideLayers('menuOpProd','','hide')">

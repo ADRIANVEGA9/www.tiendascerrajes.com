@@ -32,28 +32,28 @@ if (isset($id_sublinea)) {
 	$id_sublinea='01';
 }
 
-//Ya no usamos la clásica query de consulta como mysql_query ahora por definición de la función creada por adodb usamos la siguiente:
-$query_menul= $db->Execute("SELECT t_sublinea.id_linea, t_sublinea.id, t_linea.descripcion, t_sublinea.sublinea, t_sublinea.descripcion as 'descripcion_sublinea' 
-							FROM t_sublinea	INNER JOIN t_linea ON t_sublinea.id_linea = t_linea.id
-							WHERE
-							t_sublinea.id = 1
-							ORDER BY t_sublinea.id_linea ASC");
-// Verificamos si hemos realizado bien nuestro Query
-if(!$query_menul){
-exit("Error en la consulta");
-}
+// //Ya no usamos la clásica query de consulta como mysql_query ahora por definición de la función creada por adodb usamos la siguiente:
+// $query_menul= $db->Execute("SELECT t_sublinea.id_linea, t_sublinea.id, t_linea.descripcion, t_sublinea.sublinea, t_sublinea.descripcion as 'descripcion_sublinea' 
+// 							FROM t_sublinea	INNER JOIN t_linea ON t_sublinea.id_linea = t_linea.id
+// 							WHERE
+// 							t_sublinea.id = 1
+// 							ORDER BY t_sublinea.id_linea ASC");
+// // Verificamos si hemos realizado bien nuestro Query
+// if(!$query_menul){
+// exit("Error en la consulta");
+// }
 
-$query_menusublinea= $db->Execute("SELECT id, sublinea, descripcion FROM t_sublinea WHERE id_linea = '$id' ORDER BY sublinea");
-// Verificamos si hemos realizado bien nuestro Query
-if(!$query_menusublinea){
-exit("Error en la consulta SQL");
-}
+// $query_menusublinea= $db->Execute("SELECT id, sublinea, descripcion FROM t_sublinea WHERE id_linea = '$id' ORDER BY sublinea");
+// // Verificamos si hemos realizado bien nuestro Query
+// if(!$query_menusublinea){
+// exit("Error en la consulta SQL");
+// }
 
-$query_linea= $db->Execute("SELECT * FROM t_linea WHERE id = '$id'");
-// Verificamos si hemos realizado bien nuestro Query
-if(!$query_linea){
-exit("Error en la consulta SQL");
-}
+// $query_linea= $db->Execute("SELECT * FROM t_linea WHERE id = '$id'");
+// // Verificamos si hemos realizado bien nuestro Query
+// if(!$query_linea){
+// exit("Error en la consulta SQL");
+// }
 
 $query_txtsublinea= $db->Execute("SELECT t_linea.descripcion, t_sublinea.descripcion AS 'descripcion_sublinea',  t_sublinea.sublinea, t_sublinea.id_linea
 				FROM
@@ -82,7 +82,7 @@ exit("Error en la consulta SQL");
 <?php $m=2; ?>
 <html lang="es">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta charset="utf-8">
 <title>Productos - Tiendas Cerrajes&reg; Un espacio creativo e innovador dise&ntilde;ado para ti...</title>
 <link rel="stylesheet" href="css/estilos.css">
 <link rel="stylesheet" href="css/normalize.css">
@@ -116,37 +116,8 @@ Shadowbox.init({
 		<div id="contenedor">
 			<?php  require_once(".menu.php") ?>
 			<article id="contenidoAuto">
-				<article id="c_izqP">
-					<article id="menuProdHome">
-						<ul>
-							<?php
-							foreach($query_menul as $k1 => $row_menul) 
-							{ ?>
-								<li><a href="producto.php?id=<?php echo $row_menul['id_linea'];?>&id_sublinea=<?php echo $row_menul['sublinea'];?>" class="<?php if ($id==$row_menul['id_linea']){ echo 'activoP'; } ?>"><?php echo $row_menul['descripcion'];?></a> 
-								</li>	
-								<?php
-									if ($row_menul['id_linea']==$id) 
-									{
-										foreach($query_menusublinea as $k => $row_menusublinea)
-										{	
-											if (($row_menul['sublinea'] <> 99) AND ($row_menul['id_linea']==$id))
-											{ 
-												if (($row_menusublinea['sublinea'])==($id_sublinea))
-												{ ?>
-													<a class="sublinea sublineaActivo" >
-													<?php echo $row_menusublinea['descripcion'].'</a>'; 
-												} 
-												else
-												{ ?>
-													<a class="sublinea" href="producto.php?id=<?php echo $row_menul['id_linea']; ?>&id_sublinea=<?php echo $row_menusublinea['sublinea'];?>">
-													<?php	echo $row_menusublinea['descripcion'].'</a>';
-												}
-											}
-										}
-									}
-							} ?>
-						</ul>
-					</article>
+				<article id="c_izqP">	
+					<?php require 'menu/.menu.php'; ?>
 				</article>
 				<article id="c_derP">
  <!-- cuando ya se ha seleccionado alguna sublinea entonces esta con valor <> 99 / si la linea no tiene sublineas entra directo a productos y el total de sublineas entonces es =1 por lo cual sublinea =99-->

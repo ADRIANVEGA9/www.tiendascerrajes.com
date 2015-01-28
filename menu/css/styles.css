@@ -8,7 +8,7 @@ ul, ul ul
 {
 	font-size: 0.7em;
 	height: auto;
-	margin: 1em auto 0;
+	margin: auto 0;
 	width: auto;
 }
 .menu > li > a 
@@ -58,7 +58,6 @@ ul, ul ul
 }
 .menu > li > a span 
 {
-	background: #FFF;
 	color: #71BF44;
 	display: inline-block;
 	font-size: 0.857em; 
@@ -71,7 +70,7 @@ ul, ul ul
 }
 .menu > li a.active span 
 {
-	background: #FFF;
+	/*background: #FFF;*/
 }
 .menu > li > a:hover span 
 {
