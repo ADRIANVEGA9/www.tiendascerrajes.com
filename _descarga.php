@@ -118,7 +118,7 @@ background-position: center center;
 <div id=\"comenta\">
     <table width=\"858\" border=\"0\" cellspacing=\"0\" cellpadding=\"0\">
       <tr>
-        <td colspan=\"1\"width=\"182\" class=\"estilo3\">registro en www.cerrajes.com</td>
+        <td colspan=\"1\"width=\"182\" class=\"estilo3\">descarga de catálogo en www.tiendascerrajes.com</td>
         <td colspan=\"2\">&nbsp;</td>
         </tr>
       <tr>
@@ -165,16 +165,16 @@ background-position: center center;
 $headers = "MIME-Version: 1.0\r\n";  
 $headers .= "Content-type: text/html; charset= iso-8859-1\r\n"; 
 //Las siguientes 2 cabeceras, permitirán que el destinatario sepa a quién responder y quién le ha enviado el mensaje
-$micorreo = "avega@cerrajes.com";/*contacto@cerrajes.com*/
+$micorreo = "contacto@cerrajes.com";/*contacto@tiendascerrajes.com*/
 $correoCli = "$_POST[correoD]";
-$headers .= "Reply-To: contacto@tiendascerrajes.com\r\n"; /*contacto@tiendascerrajes.com*/ 
+$headers .= "Reply-To: avega@cerrajes.com\r\n"; /*contacto@tiendascerrajes.com*/ 
 $headers .= "From: Contacto Tiendas Cerrajes<contacto@tiendascerrajes.com>\r\n";/*contacto@cerrajes.com*/
 $headers .= 'Bcc: avega@cerrajes.com' . "\r\n";
 //En este ejemplo suponemos que el mail del destinatario lo hemos enviado desde un formulario con el método post, pero es indistinto desde donde se lo obtenga (consulta a la base de datos, almacenado en una variable de sesi&oacute;n, enviado por get,etc.)
 ini_set("SMTP","mail.cerrajes.com");/*mail.cerrajes.com*/
 ini_set("smtp_port","587");/*25*/
 ini_set("sendmail_from","mail.cerrajes.com");	/*mail.cerrajes.com*/
-mail($micorreo, utf8_decode("Tiendas Cerrajes, Un espacio creativo e innovador diseñado para ti...\r\n"), utf8_decode($html),$headers)or die ("<article id='enviado'>Su mensaje no pudo ser enviado, intente mas tarde.</article>");  
+mail($micorreo, utf8_decode("Tiendas Cerrajes, Un espacio creativo e innovador diseñado para ti... - descarga de catálogos\r\n"), utf8_decode($html),$headers)or die ("<article id='enviado'>Su mensaje no pudo ser enviado, intente mas tarde.</article>");  
 $htmlCliente ="<html lang=\"es\">
 		<head>
 		<meta charset=\"utf-8\">
@@ -210,11 +210,10 @@ $htmlCliente ="<html lang=\"es\">
 mail($correoCli, utf8_decode("Tiendas Cerrajes, Un espacio creativo e innovador diseñado para ti...\r\n"), utf8_decode($htmlCliente),$headers)or die ("Su mensaje no pudo ser enviado, intente mas tarde."); 
 ?>				
 	<article id="enviado">
-		GRACIAS <br> POR REGISTRARTE<br />
 		<?php 
-			require '_comprimir.php'; 
-			require '_deleteFile.php'
+			require ("_comprimir.php");
 		?>
+		<br />GRACIAS POR REGISTRARTE
 		<figure class="enviado"><img src="imagenesSitio/catalogos/bisagra_web.png" alt=""></figure>
  	</article>
 <!-- Código para doppler -->
@@ -222,7 +221,7 @@ mail($correoCli, utf8_decode("Tiendas Cerrajes, Un espacio creativo e innovador 
 /* This Doppler API Example use an existing library known as NUSOAP V0.7.1
 * Information about this lib can be found at http://sourceforge.net/projects/nusoap/ 
 */
-/*require'nusoap/nusoap.php';
+require'nusoap/nusoap.php';
 
 $proxyhost = isset($_POST['proxyhost']) ? $_POST['proxyhost'] : '';
 $proxyport = isset($_POST['proxyport']) ? $_POST['proxyport'] : '';
@@ -244,7 +243,7 @@ $ciudad = array('Customfieldid' => '37327','Value' => utf8_decode($_POST['ciudad
 $dirigido = array('Customfieldid' => '37329','Value' => utf8_decode($_POST['dirigidoD']));
 $catalogo = array('Customfieldid' => '37330','Value' => utf8_decode($a_descargaCatalogo));
 $param = array('APIKey' => 'D70B127D876B4339C7B896A7E28E336D',
-		'SubscribersListID' => '591461',
+		'SubscribersListID' => '650860',
 		'FirstName' => utf8_decode($_POST['nombreD']),
 		'EMail' => $_POST['correoD'],
 		'CustomsFields' => array('customField' => array($estado,$ciudad,$dirigido,$catalogo))

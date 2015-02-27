@@ -73,30 +73,61 @@ var IE7_PNG_SUFFIX = ".png";
 		<div id="contenedor">
 			<?php  require_once(".menu.php") ?>
 			<article id="carruselHome">
-				<iframe src=".home.html" name="iview" width="962" height="452"  scrolling="No" frameborder="0" id="iview" border="0"></iframe>
+				<iframe src=".home.html" name="iview" width="962" height="358"  scrolling="No" frameborder="0" id="iview" border="0"></iframe>
 			</article>
-			<article id="contenidoHome">
-				<section>
-					<span>CASAS ESPECTACULARES</span>
-					<article>
-						<p>Actualmente en el diseño moderno de una casa, se toma en cuenta además de la funcionalidad de sus espacios, el cuidado y preservación del medio ambiente. Es por eso que en Zeigler Build se dieron a la tarea de restaurar 31 contenedores marítimos para diseñar una casa de tres niveles en Queensland, Australia.</p><br>
-						<p> Esta casa está rodeada de un frondoso bosque y un río; cuenta con cuatro habitaciones distribuidas en los dos niveles superiores, en los que se encuentran como parte de la decoración, desde grafittis hasta mosaicos.</p><br>
-						<p> En su interior cuenta también con áreas como sala de lectura, estudio de arte, gimnasio y una piscina; todo este lujo contrasta con la primera impresión que puede causar la casa desde el exterior, siendo una auténtica casa de lujo realizada con materiales reciclados.</p><br><br>
-						 
-					</article>
-					<figure> <img src="imagenesSitio/a101.jpg"> </figure>
-				</section>
-				<section>
-					<span>DECORANDO ESPACIOS</span>
-					<article>
-						<p>El estilo vintage es una manera casual para decorar mezclando elementos antiguos y nuevos; dando como resultado una decoración muy personal.</p><br>
-						<p> 
-Para lograrlo puedes combinar telas antiguas, de colección y de bajo costo para decorar cualquier habitación de tu casa; por ejemplo la cocina.</p><br>
-						<p>
-Lograr una cocina de inspiración vintage es posible cambiando solo unos pocos detalles; actualmente en el mercado, puedes conseguir estufas de cocina prácticas, muebles, jaladeras y botones con estilo antiguo; además de muchos objetos de cocina en materiales como cerámica, barro y vidrio que te ayudarán a lograr el “look” de una cocina de campo antigua.</p><br><br><br><br>
-					</article>
-					<figure> <img src="imagenesSitio/a201.jpg"></figure>
-				</section>
+			<article id="contenido">
+				<article id="c_izq">
+					<div id="tituloProductos" ><span>nuestros productos</span></div>	
+					<?php require 'menu/.menu.php'; ?>	
+					<figure id="descargasCatalogo">
+						<a href="descargar.php"><img src="imagenesSitio/catalogos/icono_descarga.jpg" alt="descargar catálogos"></a>
+					</figure>			
+				</article>
+
+				<article id="homeContenido">
+						<h1>ESTILOS & TENDENCIAS</h1>
+						<article>
+							<section>
+								<p>Actualmente en el diseño moderno de una casa, se toma en cuenta además de la funcionalidad de sus espacios, el cuidado y preservación del medio ambiente. Es por eso que en Zeigler Build se dieron a la tarea de restaurar 31 contenedores marítimos para diseñar una casa de tres niveles en Queensland, Australia.</p><br>
+								<p> Esta casa está rodeada de un frondoso bosque y un río; cuenta con cuatro habitaciones distribuidas en los dos niveles superiores, en los que se encuentran como parte de la decoración, desde grafittis hasta mosaicos.</p><br>
+								<p> En su interior cuenta también con áreas como sala de lectura, estudio de arte, gimnasio y una piscina; todo este lujo contrasta con la primera impresión que puede causar la casa desde el exterior, siendo una auténtica casa de lujo realizada con materiales reciclados.</p><br><br>
+								 
+							</section>
+							<figure> <img src="imagenesSitio/a101.jpg"> </figure>
+							<figcaption>www.arquitecturatiendas.com/diseño</figcaption>
+						</article>
+						<article>
+							<section>
+								<p>El estilo vintage es una manera casual para decorar mezclando elementos antiguos y nuevos; dando como resultado una decoración muy personal.</p><br>
+								<p>Para lograrlo puedes combinar telas antiguas, de colección y de bajo costo para decorar cualquier habitación de tu casa; por ejemplo la cocina.</p><br>
+								<p>
+		Lograr una cocina de inspiración vintage es posible cambiando solo unos pocos detalles; actualmente en el mercado, puedes conseguir estufas de cocina prácticas, muebles, jaladeras y botones con estilo antiguo; además de muchos objetos de cocina en materiales como cerámica, barro y vidrio que te ayudarán a lograr el “look” de una cocina de campo antigua.</p><br><br><br><br>
+							</section>
+							<figure> <img src="imagenesSitio/a201.jpg"></figure>
+							<figcaption>www.arquitecturatiendas.com/diseño</figcaption>
+						</article>
+						<article>
+							<section>
+								<p>Actualmente en el diseño moderno de una casa, se toma en cuenta además de la funcionalidad de sus espacios, el cuidado y preservación del medio ambiente. Es por eso que en Zeigler Build se dieron a la tarea de restaurar 31 contenedores marítimos para diseñar una casa de tres niveles en Queensland, Australia.</p><br>
+								<p> Esta casa está rodeada de un frondoso bosque y un río; cuenta con cuatro habitaciones distribuidas en los dos niveles superiores, en los que se encuentran como parte de la decoración, desde grafittis hasta mosaicos.</p><br>
+								<p> En su interior cuenta también con áreas como sala de lectura, estudio de arte, gimnasio y una piscina; todo este lujo contrasta con la primera impresión que puede causar la casa desde el exterior, siendo una auténtica casa de lujo realizada con materiales reciclados.</p><br><br>
+								 
+							</section>
+							<figure> <img src="imagenesSitio/a101.jpg"> </figure>
+							<figcaption>www.arquitecturatiendas.com/diseño</figcaption>
+						</article>
+						<article>
+							<section>
+								<p>El estilo vintage es una manera casual para decorar mezclando elementos antiguos y nuevos; dando como resultado una decoración muy personal.</p><br>
+								<p>Para lograrlo puedes combinar telas antiguas, de colección y de bajo costo para decorar cualquier habitación de tu casa; por ejemplo la cocina.</p><br>
+								<p>
+		Lograr una cocina de inspiración vintage es posible cambiando solo unos pocos detalles; actualmente en el mercado, puedes conseguir estufas de cocina prácticas, muebles, jaladeras y botones con estilo antiguo; además de muchos objetos de cocina en materiales como cerámica, barro y vidrio que te ayudarán a lograr el “look” de una cocina de campo antigua.</p><br><br><br><br>
+							</section>
+							<figure> <img src="imagenesSitio/a201.jpg"></figure>
+							<figcaption>www.arquitecturatiendas.com/diseño</figcaption>
+						</article>
+				</article>
+
 			</article>
 		</div>	
 		<?php require (".footer.php") ?>

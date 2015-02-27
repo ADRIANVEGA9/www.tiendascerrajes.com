@@ -46,7 +46,7 @@ var op = "op";
 var opcionP = "p";
 function mostrarOcultar(cual, otro)	{
 	document.getElementById(opcionP).style.display = "none";
-	document.getElementById(op).style.background = "#DDD";
+	document.getElementById(op).style.background = "rgb(241, 242, 242)";
 	document.getElementById(op).style.color = "#333";
 	op = cual;
 	opcionP = otro;
@@ -65,13 +65,14 @@ function mostrarOcultar(cual, otro)	{
 					<article class="fondoE">
 						<article id="menuNuevoProd">
 							<ul>
-								<!-- <li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;FACEBOOK</a></li> -->
-								<li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;CERRADURAS</a></li>
-							  	<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;ACCESORIOS PARA BAÑO</a></li>
- 								<li onclick="mostrarOcultar('op2','p2')"><a id="op2">&#8226;&nbsp;&nbsp;ACCESORIOS PARA CLÓSET ELITE</a></li> 
-								<li onclick="mostrarOcultar('op3','p3')" ><a id="op3">&#8226;&nbsp;&nbsp;ACCESORIOS PARA COCINA</a></li> 
-								<!--<li onclick="mostrarOcultar('op4','p4')" ><a id="op4">&#8226;&nbsp;&nbsp;CERRADURAS</a></li> 
-								<li onclick="mostrarOcultar('op5','p5')" class="ultimo"><a id="op5">&#8226;&nbsp;&nbsp;JALADERAS</a></li>  -->
+								<li onclick="mostrarOcultar('op','p')"><a id="op">&#8226;&nbsp;&nbsp;VAUTH-SAGEL</a></li>
+							  	<li onclick="mostrarOcultar('op1','p1')"><a id="op1">&#8226;&nbsp;&nbsp;JALADERAS SHINE</a></li>
+ 								<li onclick="mostrarOcultar('op2','p2')"><a id="op2">&#8226;&nbsp;&nbsp;SISTEMAS KINVARO</a></li> 
+								<!--<li onclick="mostrarOcultar('op3','p3')" ><a id="op3">&#8226;&nbsp;&nbsp;ACCESORIOS PARA COCINA</a></li> 
+								<li onclick="mostrarOcultar('op4','p4')" class="ultimo"><a id="op4">&#8226;&nbsp;&nbsp;CERRADURAS</a></li> -->
+								<li class="ultimo"><a id="op5" class="icon-newtab virtual1" href="http://cerrajes.me/promociones/index.html" target="_blank">&#8226;&nbsp;&nbsp;CATÁLOGO DE PROMOCIÓN</a>
+									<a class="virtual" href="http://cerrajes.me/promociones/index.html" target="_blank"><img src="imagenesSitio/promo/catalog_pagina-4.png"></a>
+								</li>  
 							</ul>
 									<!-- <section id="QR">
 										<img src="imagenesSitio/2014.png" alt="código QR">
@@ -86,18 +87,18 @@ function mostrarOcultar(cual, otro)	{
 				</article>
 				<article id="c_der2">
 					<section id="p">
-						<img src="imagenesSitio/promo/web_cerraduras.jpg">
+						<img src="imagenesSitio/promo/promo_vaut_feb_mar.jpg">
 					</section>
 					<section id="p1">
-						<img src="imagenesSitio/promo/bano_web.jpg">
+						<img src="imagenesSitio/promo/promo_shine_feb_mar.jpg">
 					</section>
-				<section id="p2">
-						<img src="imagenesSitio/promo/elite_web2015.jpg">
+						<section id="p2">
+						<img src="imagenesSitio/promo/promo_kinvaro_feb_mar.jpg">
 					</section>
-	 				<section id="p3">
+	 			<!--	<section id="p3">
 						<img src="imagenesSitio/promo/cocina_web2015.jpg">
 					</section> 
-						<!--<section id="p4">
+						<section id="p4">
 						<img src="imagenesSitio/promo/pag_cerradura.jpg">
 					</section>
 					<section id="p5">

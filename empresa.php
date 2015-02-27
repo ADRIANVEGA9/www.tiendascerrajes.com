@@ -65,20 +65,21 @@ var IE7_PNG_SUFFIX = ".png";
 							<section id="qs2" >
 								<br><br>
 								<span>Misi&oacute;n</span>
-								<br><br><p>Sobrepasar las expectativas de nuestros clientes en herrajes, soluciones integrales y alternativas innovadoras.<br><br>A través del compromiso de nuestro equipo de asociados para proporcionar un servicio de excelencia, creando en cada hogar un espacio Tiendas Cerrajes<!-- ® --></p>
+								<br><br><p>Somos una empresa mexicana que se dedica a satisfacer las necesidades de nuestros clientes en herrajes y accesorios para muebles en Latinoamérica, ofreciendo productos de innovación y tecnología de la más alta calidad; a través de un servicio de excelencia; buscando el éxito comercial y el crecimiento constante del grupo; respaldado por un equipo humano competitivo que ve en su labor diaria una forma de trascender.</p>
 								<br><br>
 								<span>visi&oacute;n</span>
-								<br><br><p>Ser la mejor unidad de negocio del grupo Cerrajes a través de su talento humano, un espacio creativo, innovador y con éxito comercial.</p>
+								<br><br><p>Al 2020 lograremos la institucionalización, la consolidación de los negocios y la expansión continua.</p>
 
 								<br><br>
 								<span>valores</span>
 								<br><br>
-								<section class="valores">respeto</section>
-								<section class="valores">servicio</section>
-								<section class="valores">calidad</section>
-								<section class="valores">integridad</section>
+								<section class="valores">Rentabilidad</section>
 								<section class="valores">Innovación</section>
-								<section class="valores">lealtad</section>
+								<section class="valores">Calidad</section>
+								<section class="valores">Servicio</section>
+								<section class="valores">Compromiso</section>
+								<section class="valores">Respeto</section>
+								<section class="valores">Honestidad</section>
 							</section>	
 				</article>
 			</article>

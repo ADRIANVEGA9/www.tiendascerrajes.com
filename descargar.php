@@ -106,32 +106,30 @@ function mostrarOcultar(cual, op_menu)	{
 									<label for="dirigidoD_4">ama de casa</label>
 							</fieldset>
 							<fieldset id="opcionesCatalogos">
-								<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_0" form="descargasForm" tabindex="10" value="industrial.pdf">
-					    		<label for="descargaCatalogo_8">Catálogo Industrial</label>
+							<!-- 	<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_0" form="descargasForm" tabindex="10" value="industrial.pdf">
+					    		<label for="descargaCatalogo_0">Catálogo Industrial</label> -->
 								<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_1" form="descargasForm" tabindex="11" value="comercial.pdf">
 					    		<label for="descargaCatalogo_1">Catálogo Comercial</label>
-								<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_2" form="descargasForm" tabindex="12" value="jaladeras.pdf">
-					    		<label for="descargaCatalogo_12">Catálogo Jaladeras y Botones</label>
+				<!-- 				<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_2" form="descargasForm" tabindex="12" value="jaladeras.pdf">
+					    		<label for="descargaCatalogo_2">Catálogo Jaladeras y Botones</label> -->
 								<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_3" form="descargasForm" tabindex="13" value="Shine.pdf">
-					    		<label for="descargaCatalogo_9">Catálogo Shine</label>
+					    		<label for="descargaCatalogo_3">Catálogo Shine</label>
 								<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_4" form="descargasForm" tabindex="14" value="vauth-sagel.pdf">
-					    		<label for="descargaCatalogo_11">Catálogo Vauth Sagel</label>
+					    		<label for="descargaCatalogo_4">Catálogo Vauth Sagel</label>
 								<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_5" form="descargasForm" tabindex="15" value="elite.pdf">
-					    		<label for="descargaCatalogo_0">Catálogo Accesorios para clóset Elite</label>
+					    		<label for="descargaCatalogo_5">Catálogo Accesorios para clóset Elite</label>
 								<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_6" form="descargasForm" tabindex="16" value="futura.pdf">
-					    		<label for="descargaCatalogo_2">Catálogo Correderas Futura y única</label>
+					    		<label for="descargaCatalogo_6">Catálogo Correderas Futura y única</label>
 								<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_7" form="descargasForm" tabindex="17" value="impaz.pdf">
-					    		<label for="descargaCatalogo_3">Catálogo Corredera Impaz</label>
-								<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_8" form="descargasForm" tabindex="18" value="prime.pdf">
-					    		<label for="descargaCatalogo_4">Catálogo Corredera Prime</label>
+					    		<label for="descargaCatalogo_7">Catálogo Corredera Impaz</label>
 								<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_9" form="descargasForm" tabindex="19" value="ten.pdf">
-					    		<label for="descargaCatalogo_5">Catálogo Corredera TEN</label>
+					    		<label for="descargaCatalogo_9">Catálogo Corredera TEN</label>
 								<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_10" form="descargasForm" tabindex="20" value="triomax.pdf">
-					    		<label for="descargaCatalogo_6">Catálogo Corredera Triomax</label>
+					    		<label for="descargaCatalogo_10">Catálogo Corredera Triomax</label>
 								<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_11" form="descargasForm" tabindex="21" value="T5.pdf">
-					    		<label for="descargaCatalogo_7">Catálogo Corredera Triomax T5</label>
+					    		<label for="descargaCatalogo_11">Catálogo Corredera Triomax T5</label>
 								<input name="descargaCatalogo[]" type="checkbox" id="descargaCatalogo_12" form="descargasForm" tabindex="22" value="levadizos_salice.pdf">
-					    		<label for="descargaCatalogo_10">Catálogo Sistemas levadizos Salice</label>
+					    		<label for="descargaCatalogo_12">Catálogo Sistemas levadizos Salice</label>
 
 						
 								<button type="submit" id="validar" class="btn btn-default">DESCARGA GRATIS</button>
@@ -143,7 +141,7 @@ function mostrarOcultar(cual, op_menu)	{
 						<?php }
 						elseif (isset($_POST['nombreD']))
 						{ 
-							require '_descarga.php';
+							require ("_descarga.php");
 					 	}//fin else?>
 
 					 	<section id="avisoPrivacidad">
@@ -169,7 +167,7 @@ function mostrarOcultar(cual, op_menu)	{
 		                $('#nombreD').focus();
 		                return false;						
 					}	
-					if (correoText == ""  || correoText.match(/^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+[a-zA-Z0-9-])*$/))
+					if (correoText == "")
 					{
 		                $('.error').text("Por favor ingresa tu correo");
                 		$('#correoD').focus();

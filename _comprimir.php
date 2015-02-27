@@ -1,4 +1,5 @@
 <?php
+set_time_limit(0);
 require('lib/pclzip.lib.php');
 $today = mktime(date("H"), date("i"), date("s"), date("m"), date("d"), date("Y")); 
 $ruta	=	'descarga/catalogosCerrajes'.$today.'.zip';
@@ -11,4 +12,6 @@ $zip = new PclZip($ruta);
 	<a href="<?php print $ruta; ?>" class="btn btn-default descargaPDF" about="_blank">GUARDAR CATÁLOGOS</a>
 	<?php
 }
+
+		require ('.deleteFile.php');
 ?>

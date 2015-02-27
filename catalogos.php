@@ -159,15 +159,6 @@ function mostrarOcultar(cual, op_menu)	{
 
 
 							<figure>
-								<a href="http://www.cerrajes.me/catalogos/virtual/prime/index.html" target="_blank" title="Ver catálogo virtual Corredera Prime">
-									<img src="imagenesSitio/catalogos/cat_prime.png" alt="Corredera Prime"/>
-								<figcaption> Correderas Prime</figcaption>
-								</a>
-								<a id="down" class="icon-download" href="descarga.php" title="Descargar pdf"></a>
-							</figure>
-
-
-							<figure>
 								<a href="http://www.cerrajes.me/catalogos/virtual/ten/index.html" target="_blank" title="Ver catálogo virtual Corredera TEN">
 									<img src="imagenesSitio/catalogos/cat_ten.png" alt="Corredera TEN"/>
 								<figcaption> Correderas TEN</figcaption>
