@@ -79,8 +79,8 @@ var IE7_PNG_SUFFIX = ".png";
 				<article id="c_izq">
 					<div id="tituloProductos" ><span>nuestros productos</span></div>	
 					<?php require 'menu/.menu.php'; ?>	
-					<figure id="descargasCatalogo">
-						<a href="descargar.php"><img src="imagenesSitio/catalogos/icono_descarga.jpg" alt="descargar catálogos"></a>
+					<figure id="descargasHome">
+						<a href="descargar.php"><img src="imagenesSitio/icon_catalog.png" alt="descargar catálogos"></a>
 					</figure>			
 				</article>
 
@@ -88,43 +88,34 @@ var IE7_PNG_SUFFIX = ".png";
 						<h1>ESTILOS & TENDENCIAS</h1>
 						<article>
 							<section>
-								<p>Actualmente en el diseño moderno de una casa, se toma en cuenta además de la funcionalidad de sus espacios, el cuidado y preservación del medio ambiente. Es por eso que en Zeigler Build se dieron a la tarea de restaurar 31 contenedores marítimos para diseñar una casa de tres niveles en Queensland, Australia.</p><br>
-								<p> Esta casa está rodeada de un frondoso bosque y un río; cuenta con cuatro habitaciones distribuidas en los dos niveles superiores, en los que se encuentran como parte de la decoración, desde grafittis hasta mosaicos.</p><br>
-								<p> En su interior cuenta también con áreas como sala de lectura, estudio de arte, gimnasio y una piscina; todo este lujo contrasta con la primera impresión que puede causar la casa desde el exterior, siendo una auténtica casa de lujo realizada con materiales reciclados.</p><br><br>
-								 
+								<p>EeStairs logró dar solución a “lo que la industria estaba esperando”, LA ESCALERA DE ACERO EN ESPIRAL, que permite acceder a azoteas y áticos en tan sólo 1m² o poco más; logrando así, la revolución en escaleras, al no hacer uso de espacio innecesario. 
+								</p><br>
 							</section>
-							<figure> <img src="imagenesSitio/a101.jpg"> </figure>
-							<figcaption>www.arquitecturatiendas.com/diseño</figcaption>
+							<figure> <img src="imagenesSitio/EeStairs.jpg"> </figure>
+							<figcaption>www.eestairs.com</figcaption>
 						</article>
 						<article>
 							<section>
-								<p>El estilo vintage es una manera casual para decorar mezclando elementos antiguos y nuevos; dando como resultado una decoración muy personal.</p><br>
-								<p>Para lograrlo puedes combinar telas antiguas, de colección y de bajo costo para decorar cualquier habitación de tu casa; por ejemplo la cocina.</p><br>
-								<p>
-		Lograr una cocina de inspiración vintage es posible cambiando solo unos pocos detalles; actualmente en el mercado, puedes conseguir estufas de cocina prácticas, muebles, jaladeras y botones con estilo antiguo; además de muchos objetos de cocina en materiales como cerámica, barro y vidrio que te ayudarán a lograr el “look” de una cocina de campo antigua.</p><br><br><br><br>
+								<p>La menor cantidad de muebles, así como,  la división de paneles y el contraste de texturas, permitirán dar continuidad y realce a una habitación, creando un ambiente placentero dentro de un lugar pequeño. Estilo minimalista que busca sólo lo esencial de un espacio.</p><br>
 							</section>
-							<figure> <img src="imagenesSitio/a201.jpg"></figure>
-							<figcaption>www.arquitecturatiendas.com/diseño</figcaption>
+							<figure> <img src="imagenesSitio/division-de-espacio-4-650x430.jpg"></figure>
+							<figcaption>www.decoracion365.com</figcaption>
 						</article>
 						<article>
 							<section>
-								<p>Actualmente en el diseño moderno de una casa, se toma en cuenta además de la funcionalidad de sus espacios, el cuidado y preservación del medio ambiente. Es por eso que en Zeigler Build se dieron a la tarea de restaurar 31 contenedores marítimos para diseñar una casa de tres niveles en Queensland, Australia.</p><br>
-								<p> Esta casa está rodeada de un frondoso bosque y un río; cuenta con cuatro habitaciones distribuidas en los dos niveles superiores, en los que se encuentran como parte de la decoración, desde grafittis hasta mosaicos.</p><br>
-								<p> En su interior cuenta también con áreas como sala de lectura, estudio de arte, gimnasio y una piscina; todo este lujo contrasta con la primera impresión que puede causar la casa desde el exterior, siendo una auténtica casa de lujo realizada con materiales reciclados.</p><br><br>
-								 
+								<p>Las paredes blancas como recurso para crear espacios amplios y su combinación con objetos coloridos, son una tendencia Australiana que se refleja en la arquitectura, diseño y decoración de un hogar. Imprimiendo un estilo joven, fresco y con energía.
+								</p><br>								 
 							</section>
-							<figure> <img src="imagenesSitio/a101.jpg"> </figure>
-							<figcaption>www.arquitecturatiendas.com/diseño</figcaption>
+							<figure> <img src="imagenesSitio/apartamento-australia.jpg"> </figure>
+							<figcaption>arquitecturadecasas.blogspot.mx</figcaption>
 						</article>
 						<article>
 							<section>
-								<p>El estilo vintage es una manera casual para decorar mezclando elementos antiguos y nuevos; dando como resultado una decoración muy personal.</p><br>
-								<p>Para lograrlo puedes combinar telas antiguas, de colección y de bajo costo para decorar cualquier habitación de tu casa; por ejemplo la cocina.</p><br>
-								<p>
-		Lograr una cocina de inspiración vintage es posible cambiando solo unos pocos detalles; actualmente en el mercado, puedes conseguir estufas de cocina prácticas, muebles, jaladeras y botones con estilo antiguo; además de muchos objetos de cocina en materiales como cerámica, barro y vidrio que te ayudarán a lograr el “look” de una cocina de campo antigua.</p><br><br><br><br>
+								<p>Si de espacios reducidos hablamos, un TIP útil es hacer uso del espacio encima del refrigerador; apostando por estanterías para colocar vinos,  libros de cocina o el microondas, generando pequeños pero funcionales espacios de almacenamiento dentro del hogar.
+								</p><br>
 							</section>
-							<figure> <img src="imagenesSitio/a201.jpg"></figure>
-							<figcaption>www.arquitecturatiendas.com/diseño</figcaption>
+							<figure> <img src="imagenesSitio/apartmenttherapy.jpg"></figure>
+							<figcaption>www.apartmenttherapy.com</figcaption>
 						</article>
 				</article>
 
